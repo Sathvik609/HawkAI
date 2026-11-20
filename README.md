@@ -1,112 +1,68 @@
 # HawkAI
 
-**A Retrieval-Augmented Generation platform that connects students to each other's experiences through semantic search.**
+HawkAI helps UNCW sociology students understand a concept through essays written by past students in the course. A student searches for a concept, picks one of up to five essays, reads a quote from it with a short explanation, and can then ask follow-up questions about the essay or the concept.
 
-HawkAI is the first custom LLM application of its kind at UNCW. Rather than generating content from a general-purpose model, it searches a corpus of 500+ student essays by meaning and emotional context, retrieves the most relevant narrative, and generates a structured sociological analysis, enabling students to query and connect with their peers' past work.
-
-Built for the Department of Sociology & Criminology at the University of North Carolina Wilmington as part of ongoing LLM research. 
+Built for the Department of Sociology & Criminology at the University of North Carolina Wilmington as part of ongoing LLM research.
 Research paper: *Generating Connections, Not Content: The Hawk AI Place-Based LLM* (Elliott, Engelman, Oh, Butler).
 
----
+## Changes in 3.0
 
-## The Problem
+- The student chooses from up to five essays, each with a one-line preview, instead of getting one picked for them.
+- Essays are split into passages, so the whole essay is searched, not just the start.
+- Search combines meaning search, keyword search (BM25) and a Gemini rerank of the best passages.
+- The answer streams in, and the student can keep asking follow-up questions about the chosen essay.
+- Follow-up answers mark which parts come from the essay and which come from general sociology.
+- The quote is checked against the essay, and the full essay can be opened with the quote highlighted.
+- A plain-Gemini mode and event logging support the HawkAI vs. Gemini study.
 
-Most LLMs treat users as isolated individuals querying a generic knowledge base. Students writing about shared experiences — identity, community, belonging, inequality — had no way to discover that their peers had grappled with the same concepts. Hundreds of reflective essays sat in folders, disconnected from each other and from future students.
+## Run it locally
 
-## The Solution
-
-HawkAI bridges that gap. A student inputs a sociological concept like *"Anomie"* or *"The Beauty Myth"*, and the system:
-
-1. **Embeds the query** into a high-dimensional vector using Google's `embedding-001` model
-2. **Searches the entire knowledge base** via dot-product similarity, ranking narratives by relevance, not keyword overlap
-3. **Generates a structured response** through Gemini 2.5 Pro: a direct quote from the matched narrative, a contextual summary, and an academic analysis applying the concept
-
-The result is a tool that teaches sociological thinking *through the lived experiences of real students*.
-
----
-
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                     Database Setup                      │
-│                       setup.py                          │
-│                                                         │
-│   .docx / .pdf  ──►  Text Extraction  ──►  Gemini       │
-│     documents         (docx, PyMuPDF)      Embedding    │
-│                                             API         │
-│                            │                            │
-│                            ▼                            │
-│                   embeddingDatabase.json                │
-│                   (vector index cache)                  │
-└─────────────────────────────────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│                   Runtime Pipeline                      │
-│                     runtime.py                          │
-│                                                         │
-│   User Query  ──►  Embed Query  ──►  Dot-Product        │
-│                                      Similarity         │
-│                                      (NumPy)            │
-│                                         │               │
-│                                         ▼               │
-│                                  Best Narrative         │
-│                                         │               │
-│                                         ▼               │
-│                                  Gemini 2.5 Pro         │
-│                                  (Structured Output)    │
-└─────────────────────────────────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────┐
-│                    Flask Web App                        │
-│                       app.py                            │
-│                                                         │
-│   index.html  ◄──►  /api/hawkai  ◄──►  Runtime          │
-│   (frontend)         (POST endpoint)    Functions       │
-└─────────────────────────────────────────────────────────┘
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+cp .env.example .env              # add your Gemini API key
+.venv/bin/python build_index.py   # only once, or after adding essays
+.venv/bin/python warm_cache.py    # pre-computes results for common concepts
+.venv/bin/python app.py
 ```
 
----
+Then open http://localhost:5001.
 
-## Project Structure
+- `?mode=gemini` opens the plain-Gemini version used as the comparison group.
+- `?pid=P07` tags a study participant in the logs.
+- Events are saved to `logs/events-YYYY-MM-DD.jsonl`.
+
+## Adding essays
+
+1. Put the anonymized files in the folder `setup.py` reads from and run it to add them to `embeddingDatabase.json`.
+2. Run `build_index.py` and then `warm_cache.py` again. Essays that were already processed are skipped.
+
+## Files
 
 ```
-HawkAI/
-├── app.py              # Flask web server & API endpoint
-├── runtime.py          # Core logic: embedding, search, generation
-├── setup.py            # ETL pipeline: document ingestion & indexing
-├── main.py             # CLI entry point for testing queries
-├── templates/
-│   └── index.html      # Frontend interface
-└── embeddingDatabase.json  # Cached vector index (not in repo)
+app.py           Flask server and API routes
+retrieval.py     Search and reranking
+generation.py    Prompts and streamed answers
+gemini.py        Gemini client
+build_index.py   Builds data/ from embeddingDatabase.json
+warm_cache.py    Pre-computes search results for common concepts
+event_log.py     Study event logging
+config.py        Settings
+data/            Built search index
+templates/, static/   Front end
+runtime.py, main.py, setup.py   HawkAI 2 pipeline (still works)
 ```
 
----
+## Deploying
 
-# How It Works
+It is a standard Flask app served by gunicorn (see `Procfile`) and needs the `GOOGLE_API_KEY` environment variable. Use threaded workers so answers can stream:
 
-- 1. Set 'GOOGLE_API_KEY' to Gemini API key as environment variable
-- 2. run app.py
-- 3. navigate to 'http://localhost:5001'
-
----
-
-## Tech Stack
-
-- **Language:** Python
-- **Web Framework:** Flask
-- **LLM / Embedding API:** Google Gemini (embedding-001, Gemini 2.5 Pro)
-- **Vector Math:** NumPy
-- **Document Parsing:** python-docx, PyMuPDF (fitz)
-- **Caching:** JSON
-- **Deployment:** PythonAnywhere
-
----
+```
+gunicorn app:app --worker-class gthread --workers 1 --threads 16 --timeout 180
+```
 
 ## Background
 
-This project evolved through 20+ prototype iterations over the course of a year. It started as an exploration of Copilot Studio for classroom engagement, grew into a custom Gemini API integration, and ultimately became the technical foundation for a research paper on place-based LLMs.
+This project evolved through 20+ prototype iterations. It started as an exploration of Copilot Studio for classroom engagement, grew into a custom Gemini API integration, and became the technical foundation for a research paper on place-based LLMs.
 
 The core thesis of the research: LLMs don't have to be tools for individual productivity. They can be platforms for connecting people through shared narrative. HawkAI is the proof of concept.

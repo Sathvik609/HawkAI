@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HawkAI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>HawkAI</title>
+  <meta name="description" content="Understand sociology concepts through essays written by past UNCW students.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23006A66'/%3E%3Ctext x='24' y='34' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23fff'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="container mt-4">
-
-    <h1>HawkAI</h1>
-    <p>Enter a sociological concept to see a relevant narrative and explanation.</p>
-
-    <div class="mb-3">
-        <label for="conceptInput" class="form-label">Sociological Concept:</label>
-        <input type="text" class="form-control" id="conceptInput" placeholder="e.g., Looking-Glass Self">
+<body data-total="{{ total }}" data-options="{{ num_options }}">
+  <header class="bar">
+    <div class="bar-inner">
+      <a class="wordmark" href="#" id="homeLink" aria-label="HawkAI home"><span class="wm-hawk">Hawk</span><span class="wm-ai">AI</span></a>
+      <button class="text-btn" id="newConceptBtn" type="button" hidden>New search</button>
     </div>
+  </header>
 
-    <button id="submitButton" class="btn btn-primary">Explain Concept</button>
+  <main class="column" id="main">
+    <section class="start" id="hero">
+      <h1 id="heroTitle">What concept are you studying?</h1>
+      <p class="lede" id="heroLede">Search {{ total }} essays by past UNCW sociology students and read how the concept showed up in their lives.</p>
+      <div id="startSlot"></div>
+      <p class="concepts-intro" id="conceptsIntro">Or start with a concept from the course:</p>
+      <ul class="concepts" id="tryRow">
+        <li><button type="button" data-q="The Beauty Myth">The Beauty Myth</button></li>
+        <li><button type="button" data-q="Looking-Glass Self">Looking-Glass Self</button></li>
+        <li><button type="button" data-q="Anomie">Anomie</button></li>
+        <li><button type="button" data-q="Presentation of Self">Presentation of Self</button></li>
+        <li><button type="button" data-q="Collective Consciousness">Collective Consciousness</button></li>
+        <li><button type="button" data-q="White Privilege">White Privilege</button></li>
+        <li><button type="button" data-q="Alienation">Alienation</button></li>
+        <li><button type="button" data-q="Stigma">Stigma</button></li>
+      </ul>
+    </section>
 
-    <hr class="my-4">
+    <div class="thread" id="thread" aria-live="polite"></div>
+  </main>
 
-    <h2>Results:</h2>
-    <div id="resultsOutput" class="mt-3 p-3 border rounded bg-light">
-        Enter a concept above and click "Explain Concept".
+  <footer class="dock" id="dock">
+    <div class="dock-inner" id="dockInner">
+      <div class="dock-actions" id="dockActions" hidden>
+        <button type="button" class="text-btn" id="otherStoriesBtn">Choose a different essay</button>
+      </div>
+      <form class="composer" id="composer" autocomplete="off">
+        <label for="input" class="sr-only" id="inputLabel">Concept to search for</label>
+        <textarea id="input" rows="1" maxlength="2000" placeholder="Type a concept, like anomie"></textarea>
+        <button type="submit" class="send" id="sendBtn">Search</button>
+      </form>
     </div>
-    <h3>Similarity Score:</h3>
-    <div id="similarityScore" class="mt-3 p-3 border rounded bg-light"></div>
+  </footer>
 
+  <dialog class="reader" id="reader" aria-labelledby="readerTitle">
+    <div class="reader-head">
+      <div>
+        <p class="reader-kicker">Essay by a past UNCW student</p>
+        <h2 id="readerTitle"></h2>
+        <p class="reader-note" id="readerNote" hidden></p>
+      </div>
+      <button type="button" class="text-btn" id="readerClose">Close</button>
+    </div>
+    <div class="reader-body" id="readerBody"></div>
+  </dialog>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/marked.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/purify.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

@@ -1,89 +1,172 @@
-from pathlib import Path
-from flask import Flask, render_template, request, jsonify
-from google import genai
-# Import your existing functions from runtime.py
-from runtime import loadJSONIndexFromCache, embedUserQuery, findNarrativeUsingDotProduct, generateFinalOutput
+import json
+import time
 
-# --- Configuration ---
-CACHE_FILE = Path("./embeddingDatabase.json") # Path to your cached index
+from flask import Flask, Response, abort, jsonify, render_template, request, stream_with_context
 
-# --- Flask App Setup ---
+import generation
+from config import DATA_DIR, MAX_HISTORY_TURNS, MAX_MESSAGE_CHARS, NUM_OPTIONS
+from event_log import log_event
+from retrieval import NarrativeIndex, Searcher
+
 app = Flask(__name__)
-client = genai.Client() # Assumes GOOGLE_API_KEY is set as env var
-searchIndex = None # Global variable to hold the loaded index
 
-# --- Load Data On Startup ---
-def load_data():
-    """Loads the search index from the cache file into memory."""
-    global searchIndex
-    # Using your existing function from runtime.py
-    searchIndex = loadJSONIndexFromCache(CACHE_FILE)
-    if searchIndex is None:
-        print("❌ CRITICAL ERROR: Failed to load search index. Exiting.")
-        # In a real app, you might raise an exception or handle this differently
-        exit() # Stop the app if data doesn't load
+index = NarrativeIndex(DATA_DIR)
+searcher = Searcher(index)
+print(f"HawkAI ready: {len(index.narratives)} narratives, {len(index.chunk_text)} passages.")
 
-load_data()
 
-# --- Routes ---
-@app.route('/')
-def index():
-    """Serves the main HTML page."""
-    return render_template('index.html')
-@app.route('/api/hawkai', methods=['POST'])
-def handle_hawkai_query():
-    """API endpoint to process a concept and return results."""
-    if searchIndex is None: # ensure database was loaded on startup
-        return jsonify({"error": "Search index not loaded"}), 500
+def _payload() -> dict:
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict):
+        abort(400, "Expected a JSON body.")
+    return data
 
-    data = request.get_json() # get json data from js fetch request
-    userConcept = data.get('concept') # extract concept from json data
 
-    if not userConcept: # return error if no user concept was provided
-        return jsonify({"error": "No concept provided"}), 400
+def _who(data: dict) -> dict:
+    return {"session": str(data.get("session_id", ""))[:64], "pid": str(data.get("pid", ""))[:64],
+            "mode": "gemini" if data.get("mode") == "gemini" else "hawkai"}
 
+
+def _text(value, limit: int = MAX_MESSAGE_CHARS) -> str:
+    return str(value or "").strip()[:limit]
+
+
+def _history(data: dict) -> list[dict]:
+    history = data.get("history") or []
+    if not isinstance(history, list):
+        return []
+    clean = [{"role": "model" if h.get("role") == "model" else "user", "text": _text(h.get("text"), 20000)}
+             for h in history if isinstance(h, dict)]
+    return clean[-MAX_HISTORY_TURNS:]
+
+
+def _narrative(data: dict) -> dict:
+    narrative = index.by_id.get(str(data.get("narrative_id", "")))
+    if not narrative:
+        abort(404, "That narrative was not found.")
+    return narrative
+
+
+def _stream(pieces, on_finish):
+    def generate():
+        full = []
+        try:
+            for piece in pieces:
+                full.append(piece)
+                yield json.dumps({"type": "delta", "text": piece}) + "\n"
+            body, suggestions = generation.split_suggestions("".join(full))
+            extra = on_finish(body, suggestions) or {}
+            yield json.dumps({"type": "done", "text": body, "suggestions": suggestions, **extra}) + "\n"
+        except Exception as exc:
+            print(f"Generation failed: {exc}")
+            yield json.dumps({"type": "error", "message": "HawkAI couldn't finish this answer. Try again in a moment."}) + "\n"
+
+    return Response(stream_with_context(generate()), mimetype="application/x-ndjson",
+                    headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+
+
+@app.errorhandler(400)
+@app.errorhandler(404)
+def _client_error(err):
+    return jsonify({"error": getattr(err, "description", "Bad request")}), err.code
+
+
+@app.get("/")
+def home():
+    return render_template("index.html", num_options=NUM_OPTIONS, total=len(index.narratives))
+
+
+@app.get("/healthz")
+def healthz():
+    return {"ok": True, "narratives": len(index.narratives)}
+
+
+@app.post("/api/search")
+def search():
+    data = _payload()
+    query = _text(data.get("query"), 300)
+    if not query:
+        abort(400, "Type a concept to search for.")
+    started = time.time()
     try:
-        # Embed the query
-        print(f"Embedding query: '{userConcept}'")
-        embeddedQuery = embedUserQuery(userQuery=userConcept, client=client) # embed user query
+        result = searcher.search(query)
+    except Exception as exc:
+        print(f"Search failed: {exc}")
+        return jsonify({"error": "Search is unavailable right now. Try again in a moment."}), 502
+    result = {**result, "options": [{**o, "content_note": index.notes.get(o["id"], [])} for o in result["options"]]}
+    log_event("search", **_who(data), query=query, concept=result["concept"],
+              options=[o["id"] for o in result["options"]], cached=result.get("cached", False),
+              seconds=round(time.time() - started, 2))
+    return jsonify(result)
 
-        # --- 1. UNPACK THE TUPLE ---
-        # Find the most relevant narrative based on dot product
-        print("Finding relevant narrative...")
-        mostRelatedNarrative, score = findNarrativeUsingDotProduct(
-            embeddedQuery=embeddedQuery,
-            searchIndex=searchIndex
-        )
-        # --- END CHANGE ---
 
-        # --- 2. UPDATE THE ERROR CHECK ---
-        # Check if the score is None, which indicates an error
-        if score is None:
-             # mostRelatedNarrative now holds the error message
-             print(f"❌ Error during search: {mostRelatedNarrative}")
-             return jsonify({"error": mostRelatedNarrative}), 500
-        # --- END CHANGE ---
+@app.get("/api/narrative/<nid>")
+def narrative(nid):
+    n = index.by_id.get(nid)
+    if not n:
+        abort(404, "That narrative was not found.")
+    return jsonify({"id": n["id"], "title": n["title"], "concepts": n["concepts"], "text": n["text"],
+                    "content_note": index.notes.get(n["id"], [])})
 
-        # Generate the final output
-        print("Generating final output...")
-        finalOutput = generateFinalOutput(
-            userConcept=userConcept,
-            narrativeText=mostRelatedNarrative, # Pass only the text
-            client=client
-        )
 
-        # --- 3. USE THE REAL SCORE VARIABLE ---
-        # Return the result as JSON - containing final output string
-        print("✅ Request processed successfully.")
-        return jsonify({"result": finalOutput, "score": score}) # Use the variable 'score'
-        # --- END CHANGE ---
+@app.post("/api/explain")
+def explain():
+    data = _payload()
+    narrative = _narrative(data)
+    concept = _text(data.get("concept"), 200) or "this concept"
+    who = _who(data)
+    log_event("select", **who, concept=concept, narrative_id=narrative["id"])
+    started = time.time()
 
-    except Exception as e:
-        print(f"❌ An unexpected error occurred: {e}")
-        # Log the full error in a real application
-        return jsonify({"error": "An internal server error occurred"}), 500
-    
-    
-if __name__ == '__main__':
-    load_data() # Load embedded database before starting the server
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    def finish(body, suggestions):
+        quote = generation.verify_quote(body, narrative["text"])
+        log_event("explain", **who, concept=concept, narrative_id=narrative["id"], quote_check=quote,
+                  response=body, seconds=round(time.time() - started, 2))
+        return {"quote_check": quote, "quote": generation.extract_quote(body)}
+
+    return _stream(generation.stream_explain(concept, narrative), finish)
+
+
+@app.post("/api/chat")
+def chat():
+    data = _payload()
+    who = _who(data)
+    message = _text(data.get("message"))
+    if not message:
+        abort(400, "Type a question first.")
+    history = _history(data)
+    started = time.time()
+
+    if who["mode"] == "gemini":
+        pieces = generation.stream_gemini(history, message)
+        context = {}
+    else:
+        narrative = _narrative(data)
+        concept = _text(data.get("concept"), 200) or "this concept"
+        initial = _text(data.get("initial"), 20000)
+        pieces = generation.stream_chat(concept, narrative, initial, history, message)
+        context = {"concept": concept, "narrative_id": narrative["id"]}
+
+    def finish(body, suggestions):
+        log_event("chat", **who, **context, turn=len(history) // 2 + 1, message=message, response=body,
+                  seconds=round(time.time() - started, 2))
+
+    return _stream(pieces, finish)
+
+
+@app.post("/api/hawkai")
+def legacy_one_shot():
+    data = _payload()
+    concept = _text(data.get("concept"), 300)
+    if not concept:
+        return jsonify({"error": "No concept provided"}), 400
+    result = searcher.search(concept)
+    if not result["options"]:
+        return jsonify({"error": result["message"]}), 404
+    best = index.by_id[result["options"][0]["id"]]
+    body, _ = generation.split_suggestions("".join(generation.stream_explain(result["concept"], best)))
+    return jsonify({"result": body, "score": float(result["options"][0]["relevance"] or 0) / 10})
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5001, threaded=True)
