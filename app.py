@@ -1,5 +1,6 @@
 import json
 import time
+from collections import Counter
 
 from flask import Flask, Response, abort, jsonify, render_template, request, stream_with_context
 
@@ -10,9 +11,24 @@ from retrieval import NarrativeIndex, Searcher
 
 app = Flask(__name__)
 
+STARTERS = ["The Beauty Myth", "Looking-Glass Self", "Anomie", "Presentation of Self",
+            "Collective Consciousness", "White Privilege", "Alienation", "Stigma"]
+
 index = NarrativeIndex(DATA_DIR)
 searcher = Searcher(index)
 print(f"HawkAI ready: {len(index.narratives)} narratives, {len(index.chunk_text)} passages.")
+
+
+def _concept_names() -> list[str]:
+    names = {}
+    tags = Counter(c.strip() for n in index.narratives for c in n["concepts"])
+    found = [c["concept"] for c in searcher.concepts.values() if c.get("options")]
+    for name in [*STARTERS, *found, *[t for t, k in tags.most_common() if k >= 3]]:
+        names.setdefault(Searcher._key(name), name)
+    return [n for k, n in names.items() if k]
+
+
+CONCEPT_NAMES = _concept_names()
 
 
 def _payload() -> dict:
@@ -47,7 +63,7 @@ def _narrative(data: dict) -> dict:
     return narrative
 
 
-def _stream(pieces, on_finish):
+def _stream(pieces, on_finish, clean=None):
     def generate():
         full = []
         try:
@@ -55,6 +71,10 @@ def _stream(pieces, on_finish):
                 full.append(piece)
                 yield json.dumps({"type": "delta", "text": piece}) + "\n"
             body, suggestions = generation.split_suggestions("".join(full))
+            body, keys = generation.split_keys(body)
+            body = generation.mark_keys(body, keys)
+            if clean:
+                body = clean(body)
             extra = on_finish(body, suggestions) or {}
             yield json.dumps({"type": "done", "text": body, "suggestions": suggestions, **extra}) + "\n"
         except Exception as exc:
@@ -73,7 +93,12 @@ def _client_error(err):
 
 @app.get("/")
 def home():
-    return render_template("index.html", num_options=NUM_OPTIONS, total=len(index.narratives))
+    starters = []
+    for name in STARTERS:
+        hit = searcher.cached(name) or {}
+        starters.append({"name": name, "definition": hit.get("definition") or "",
+                         "count": len(hit.get("options") or [])})
+    return render_template("index.html", num_options=NUM_OPTIONS, total=len(index.narratives), starters=starters, concept_names=CONCEPT_NAMES)
 
 
 @app.get("/healthz")
@@ -139,7 +164,7 @@ def chat():
 
     if who["mode"] == "gemini":
         pieces = generation.stream_gemini(history, message)
-        context = {}
+        context, clean = {}, None
     else:
         narrative = _narrative(data)
         concept = _text(data.get("concept"), 200) or "this concept"
@@ -147,11 +172,15 @@ def chat():
         pieces = generation.stream_chat(concept, narrative, initial, history, message)
         context = {"concept": concept, "narrative_id": narrative["id"]}
 
+        def clean(body):
+            body, context["tags_removed"] = generation.check_tags(body, narrative["text"])
+            return body
+
     def finish(body, suggestions):
         log_event("chat", **who, **context, turn=len(history) // 2 + 1, message=message, response=body,
                   seconds=round(time.time() - started, 2))
 
-    return _stream(pieces, finish)
+    return _stream(pieces, finish, clean)
 
 
 @app.post("/api/hawkai")
@@ -165,6 +194,7 @@ def legacy_one_shot():
         return jsonify({"error": result["message"]}), 404
     best = index.by_id[result["options"][0]["id"]]
     body, _ = generation.split_suggestions("".join(generation.stream_explain(result["concept"], best)))
+    body, _ = generation.split_keys(body)
     return jsonify({"result": body, "score": float(result["options"][0]["relevance"] or 0) / 10})
 
 

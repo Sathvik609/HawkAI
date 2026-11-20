@@ -7,10 +7,15 @@ import gemini
 from config import CHAT_THINKING, EXPLAIN_THINKING, GEN_MODEL, SUGGESTIONS
 
 SUGGEST_MARKER = "<<SUGGEST>>"
+KEY_MARKER = "<<KEY>>"
 
 SUGGEST_RULE = (f"\n\nAfter your answer, on a new line, write {SUGGEST_MARKER} followed by three short, plain follow-up questions "
-                "a curious student might ask next, separated by \" || \". Each under 12 words, written in the student's voice."
+                "a curious student might ask next, separated by \" || \". Each under 12 words, written the way the person you are helping would ask them."
                 if SUGGESTIONS else "")
+
+NAMING_RULE = """
+
+Naming: call the text "the narrative", never essay, paper, story or piece. Call the person who wrote it "the student", never the author, writer or student writer. Refer to the student as "they" unless the narrative itself makes their gender clear. Speak to the person you are helping as "you"."""
 
 STYLE_RULE = """
 
@@ -19,36 +24,37 @@ Never use em dashes. Never use dramatic or inflated words such as harrowing, pro
 Never use "not just X, but Y" or "not simply X, but Y" constructions. No sweeping claims about society or generations, no rhetorical questions, no closing summary."""
 
 EXPLAIN_PROMPT = """You are HawkAI, a sociology teaching assistant at the University of North Carolina Wilmington (UNCW).
-You teach sociological concepts through real reflective essays written by past UNCW students.
+You teach sociological concepts through real reflective narratives written by UNCW students.
 
-The student wants to understand: {concept}
+The person you are helping wants to understand: {concept}
 
-They chose this essay by a past UNCW student:
+They chose this narrative by a UNCW student:
 <narrative>
 {narrative}
 </narrative>
 
 Write a response with exactly these three sections. Use these exact Markdown headings and write nothing before the first heading.
 
-### From the essay
-One passage of 3 to 5 consecutive sentences copied word-for-word from the narrative: the moment where the author's feelings or lived experience most clearly show {concept}. Format it as one Markdown blockquote (every line starts with "> "). Do not fix, change, or trim any words inside the passage.
-Inside the quote, wrap the 1 to 3 short phrases (2 to 8 words each) that most directly show {concept} in **double asterisks**. Only add the asterisks; the words stay exactly as written.
+### Narrative Quote
+One passage of 3 to 5 consecutive sentences copied word-for-word from the narrative: the moment where the author's feelings or lived experience most clearly show {concept}. Format it as one Markdown blockquote (every line starts with "> "). Write the passage once. Do not fix, change, trim, or mark up any words inside it.
 
-### What happened
+### Narrative Context
 Exactly 3 bullet points giving the context a reader needs to understand the quote: the situation, what happened, and what it meant to the student.
 
-### What this shows about {concept}
+### Sociological Explanation
 Exactly 4 bullet points:
 - A clear definition of {concept}, naming the theorist where relevant.
 - How the concept works and one everyday place we see it.
 - What the quote shows when you read it through the concept.
 - How the concept helps explain this student's experience, and where other students might notice it in their own lives.
 
-Rules: call the author "the student" or "this student"; never invent details that are not in the narrative; write for a first-year college student; no introduction or closing remarks.""" + STYLE_RULE + SUGGEST_RULE
+Rules: never invent details that are not in the narrative; write for a first-year college student; no introduction or closing remarks.
 
-CHAT_SYSTEM = """You are HawkAI, a sociology teaching assistant at UNCW. You teach sociological concepts through real reflective essays written by past UNCW students.
+After the last section, on a new line, write """ + KEY_MARKER + """ followed by the 1 to 3 short phrases (2 to 8 words each) from your quote that most directly show {concept}, copied exactly, separated by " || ".""" + NAMING_RULE + STYLE_RULE + SUGGEST_RULE
 
-The student is exploring {concept} through this essay by a past UNCW student:
+CHAT_SYSTEM = """You are HawkAI, a sociology teaching assistant at UNCW. You teach sociological concepts through real reflective narratives written by UNCW students.
+
+The person you are helping is exploring {concept} through this narrative by a UNCW student:
 <narrative>
 {narrative}
 </narrative>
@@ -65,7 +71,7 @@ How to answer their follow-up questions:
 4. Label every paragraph or bullet by ending it with exactly one tag: [N] if it comes from the narrative, [G] if it comes from general sociological knowledge, [N+G] if it combines both.
 5. Be conversational and concise: usually 80-200 words, short paragraphs or bullets.
 6. Keep them engaged with the narrative: where it fits, point to a part of the story worth a closer look.
-7. Stay on sociology and the narrative; briefly redirect unrelated requests.""" + STYLE_RULE + SUGGEST_RULE
+7. Stay on sociology and the narrative; briefly redirect unrelated requests.""" + NAMING_RULE + STYLE_RULE + SUGGEST_RULE
 
 GEMINI_SYSTEM = """You are a helpful assistant that helps college students understand sociological concepts.
 When you explain a concept, teach it through an illustrative anecdote or short story that makes it concrete, then explain the concept and how the story illustrates it.
@@ -99,6 +105,43 @@ def split_suggestions(full: str) -> tuple[str, list[str]]:
     return body.strip(), [s for s in suggestions if s][:3]
 
 
+def split_keys(body: str) -> tuple[str, list[str]]:
+    body, _, tail = body.partition(KEY_MARKER)
+    keys = [k.strip(" -*\"'“”\n") for k in tail.split("||")] if tail else []
+    return body.strip(), [k for k in keys if len(k.split()) >= 2][:3]
+
+
+def _phrase_pattern(phrase: str) -> re.Pattern:
+    parts = []
+    for ch in phrase:
+        if ch in "'’‘":
+            parts.append("['’‘]")
+        elif ch in '"“”':
+            parts.append('["“”]')
+        elif ch.isspace():
+            parts.append(r"\s+")
+        else:
+            parts.append(re.escape(ch))
+    return re.compile("".join(parts), re.I)
+
+
+def mark_keys(body: str, keys: list[str]) -> str:
+    lines = body.split("\n")
+    quote = [i for i, ln in enumerate(lines) if ln.lstrip().startswith(">")]
+    for key in keys:
+        pattern = _phrase_pattern(key.replace("**", ""))
+        for i in quote:
+            parts = lines[i].split("**")
+            for j in range(0, len(parts), 2):
+                parts[j], count = pattern.subn(lambda m: f"**{m.group(0)}**", parts[j], count=1)
+                if count:
+                    break
+            if count:
+                lines[i] = "**".join(parts)
+                break
+    return "\n".join(lines)
+
+
 def _normalise(text: str) -> str:
     text = text.lower().replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
     text = re.sub(r"[\"*_]", "", text)
@@ -112,9 +155,31 @@ def extract_quote(body: str) -> str:
 
 def verify_quote(body: str, narrative_text: str) -> str:
     quote = _normalise(extract_quote(body))
-    source = _normalise(narrative_text)
     if not quote:
         return "unverified"
+    return _match(quote, _normalise(narrative_text))
+
+
+QUOTED = re.compile(r'"([^"\n]+)"|“([^”\n]+)”')
+TAG = re.compile(r"\s*\[(N\+G|N|G)\]\s*$")
+
+
+def check_tags(body: str, narrative_text: str) -> tuple[str, int]:
+    source = _normalise(narrative_text)
+    lines, fixed = body.split("\n"), 0
+    for i, line in enumerate(lines):
+        tag = TAG.search(line)
+        if not tag or tag.group(1) == "G":
+            continue
+        spans = [a or b for a, b in QUOTED.findall(line[:tag.start()])]
+        spans = [sp for sp in spans if len(sp.split()) >= 4]
+        if any(_match(_normalise(sp), source) == "unverified" for sp in spans):
+            fixed += 1
+            lines[i] = line[:tag.start()] + (" [G]" if tag.group(1) == "N+G" else "")
+    return "\n".join(lines), fixed
+
+
+def _match(quote: str, source: str) -> str:
     if quote in source:
         return "exact"
     match = difflib.SequenceMatcher(None, source, quote, autojunk=False).find_longest_match(0, len(source), 0, len(quote))

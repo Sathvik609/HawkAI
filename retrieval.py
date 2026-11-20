@@ -62,14 +62,14 @@ class QueryUnderstanding(BaseModel):
     is_sociology_topic: bool = Field(description="False if the request is not about a sociological concept, issue or experience.")
     concept: str = Field(description="The standard name of the concept the student wants to understand.")
     definition: str = Field(description="One plain, neutral sentence under 30 words defining the concept, naming the theorist if there is one. No dramatic words.")
-    keywords: list[str] = Field(description="6-12 words or short phrases an essay about this concept would use, including key theorists.")
+    keywords: list[str] = Field(description="6-12 words or short phrases a narrative about this concept would use, including key theorists.")
     experience_sketch: str = Field(description="2-3 sentences, written in first person as a college student, describing a lived experience that shows the concept.")
 
 
 class RankedOption(BaseModel):
     id: str
     relevance: int = Field(description="1-10: how well this narrative helps a student understand the concept through lived experience.")
-    title: str = Field(description="3-6 plain words saying what the essay is about, the way a librarian would label it, e.g. 'Swim team and an eating disorder'. Sentence case. No names, no dramatic words.")
+    title: str = Field(description="3-6 plain words saying what the narrative is about, the way a librarian would label it, e.g. 'Swim team and an eating disorder'. Sentence case. No names, no dramatic words.")
     preview: str = Field(description="One plain sentence, at most 25 words, saying what happened to the student. Start with the event itself, not with 'A student'. No dramatic words, no em dashes.")
 
 
@@ -77,19 +77,19 @@ class Reranked(BaseModel):
     options: list[RankedOption]
 
 
-UNDERSTAND_PROMPT = """A student using HawkAI (a tool that teaches sociology through essays written by past UNCW students) typed:
+UNDERSTAND_PROMPT = """A student using HawkAI (a tool that teaches sociology through narratives written by past UNCW students) typed:
 "{query}"
 
 Work out which sociological concept they want to understand and describe it for a search engine."""
 
-RERANK_PROMPT = """You are choosing which reflective essays by past UNCW sociology students to offer a current student
+RERANK_PROMPT = """You are choosing which reflective narratives by past UNCW sociology students to offer a current student
 who wants to understand: {concept} ({definition})
 
 Candidates (each with its most relevant passages):
 {candidates}
 
 Choose up to {k} narratives that would best help a first-year student understand {concept} through a real lived experience.
-- The essay must genuinely engage with {concept} or clearly illustrate it.
+- The narrative must genuinely engage with {concept} or clearly illustrate it.
 - Prefer vivid, specific personal stories over abstract summaries of readings.
 - Prefer variety: different kinds of experiences, not near-identical stories.
 - Score relevance 1-10 honestly. Leave out anything below {min_rel}.
@@ -179,6 +179,10 @@ class Searcher:
         except OSError:
             pass
 
+    def cached(self, query: str) -> dict | None:
+        with self.lock:
+            return self.concepts.get(self.queries.get(self._key(query)))
+
     def search(self, query: str) -> dict:
         qkey = self._key(query)
         with self.lock:
@@ -211,7 +215,7 @@ class Searcher:
 
         result = {"concept": understood.concept, "definition": understood.definition, "options": options,
                   "message": None if options else
-                  f"No past student essays clearly illustrate {understood.concept}. Try a related concept."}
+                  f"No past student narratives clearly illustrate {understood.concept}. Try a related concept."}
         with self.lock:
             self.concepts[ckey] = result
             self.queries[qkey] = ckey
