@@ -1,0 +1,7 @@
+{
+ "embed_model": "gemini-embedding-2",
+ "embed_dim": 1536,
+ "narratives": 628,
+ "chunks": 4089,
+ "built_at": "2026-11-19T22:13:40+00:00"
+}
