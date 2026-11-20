@@ -33,7 +33,8 @@ Then open http://localhost:5001.
 
 - `?mode=gemini` opens the plain-Gemini version used as the comparison group.
 - `?pid=P07` tags a study participant in the logs.
-- Events are saved to `logs/events-YYYY-MM-DD.jsonl`.
+- Events are saved to the `events` table of the Postgres database in `DATABASE_URL` when it is set, and to `logs/events-YYYY-MM-DD.jsonl` otherwise.
+- `DATABASE_URL=... .venv/bin/python export_logs.py [YYYY-MM-DD]` downloads the study events (optionally from a date on) to `exports/` as JSONL and CSV.
 
 ## Adding essays
 
@@ -51,6 +52,7 @@ build_index.py   Builds data/ from embeddingDatabase.json
 warm_cache.py    Pre-computes search results for common concepts
 content_notes.py Tags essays on sensitive topics
 event_log.py     Study event logging
+export_logs.py   Downloads study events as JSONL and CSV
 config.py        Settings
 data/            Built search index
 templates/, static/   Front end
@@ -59,7 +61,7 @@ runtime.py, main.py, setup.py   HawkAI 2 pipeline (still works)
 
 ## Deploying
 
-On Vercel, import the GitHub repo as a new project and add `GOOGLE_API_KEY` under Settings > Environment Variables. `vercel.json` and `.vercelignore` keep the essay PDFs and backups out of the deployment. Files written on Vercel go to `/tmp` and are lost when the instance stops, so study logs need an external database there.
+On Vercel, import the GitHub repo as a new project and add `GOOGLE_API_KEY` under Settings > Environment Variables. `vercel.json` and `.vercelignore` keep the essay PDFs and backups out of the deployment. Study events go to a Postgres database: add one under the project's Storage tab (Neon, free plan) so Vercel sets `DATABASE_URL`, then redeploy. Without it, events are written to `/tmp` and lost.
 
 Elsewhere it is a standard Flask app served by gunicorn (see `Procfile`) and needs the `GOOGLE_API_KEY` environment variable. Use threaded workers so answers can stream:
 

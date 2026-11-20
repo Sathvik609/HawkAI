@@ -10,6 +10,7 @@ NarrativeDatabase
 __pycache__/
 *.pyc
 logs/
+exports/
 cache/
 data/metadata_cache.json
 .DS_Store

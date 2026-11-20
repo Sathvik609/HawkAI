@@ -10,6 +10,7 @@ DATA_DIR = BASE_DIR / "data"
 WRITABLE = Path("/tmp/hawkai") if os.getenv("VERCEL") else BASE_DIR
 LOG_DIR = Path(os.getenv("HAWKAI_LOG_DIR", WRITABLE / "logs"))
 CACHE_DIR = Path(os.getenv("HAWKAI_CACHE_DIR", WRITABLE / "cache"))
+DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")
 
 # gemini-2.5-flash is retired for new keys and 2.5-pro is too slow for chat.
 GEN_MODEL = os.getenv("HAWKAI_GEN_MODEL", "gemini-3.8-flash")
