@@ -1,0 +1,11 @@
+.venv
+.env
+logs
+cache
+backupDBs
+documentNarrativeDatabase
+exampleAPIUsage
+embeddingDatabase.json
+data/metadata_cache.json
+promptv1.txt
+promptv2.txt

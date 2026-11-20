@@ -37,7 +37,7 @@ Then open http://localhost:5001.
 
 ## Adding essays
 
-1. Put the anonymized files in the folder `setup.py` reads from and run it to add them to `embeddingDatabase.json`.
+1. Install the extra packages with `.venv/bin/pip install -r requirements-setup.txt`, put the anonymized files in the folder `setup.py` reads from and run it to add them to `embeddingDatabase.json`.
 2. Run `build_index.py`, `content_notes.py` and then `warm_cache.py` again. Essays that were already processed are skipped.
 
 ## Files
@@ -59,7 +59,9 @@ runtime.py, main.py, setup.py   HawkAI 2 pipeline (still works)
 
 ## Deploying
 
-It is a standard Flask app served by gunicorn (see `Procfile`) and needs the `GOOGLE_API_KEY` environment variable. Use threaded workers so answers can stream:
+On Vercel, import the GitHub repo as a new project and add `GOOGLE_API_KEY` under Settings > Environment Variables. `vercel.json` and `.vercelignore` keep the essay PDFs and backups out of the deployment. Files written on Vercel go to `/tmp` and are lost when the instance stops, so study logs need an external database there.
+
+Elsewhere it is a standard Flask app served by gunicorn (see `Procfile`) and needs the `GOOGLE_API_KEY` environment variable. Use threaded workers so answers can stream:
 
 ```
 gunicorn app:app --worker-class gthread --workers 1 --threads 16 --timeout 180

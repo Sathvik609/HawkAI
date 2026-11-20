@@ -7,8 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
 DATA_DIR = BASE_DIR / "data"
-LOG_DIR = Path(os.getenv("HAWKAI_LOG_DIR", BASE_DIR / "logs"))
-CACHE_DIR = Path(os.getenv("HAWKAI_CACHE_DIR", BASE_DIR / "cache"))
+WRITABLE = Path("/tmp/hawkai") if os.getenv("VERCEL") else BASE_DIR
+LOG_DIR = Path(os.getenv("HAWKAI_LOG_DIR", WRITABLE / "logs"))
+CACHE_DIR = Path(os.getenv("HAWKAI_CACHE_DIR", WRITABLE / "cache"))
 
 # gemini-2.5-flash is retired for new keys and 2.5-pro is too slow for chat.
 GEN_MODEL = os.getenv("HAWKAI_GEN_MODEL", "gemini-3.8-flash")

@@ -4,6 +4,3 @@ numpy==2.5.5
 pydantic==2.14.4
 python-dotenv==1.2.4
 gunicorn==27.0.1
-# Only needed to ingest new .docx/.pdf essays with setup.py
-python-docx
-pymupdf

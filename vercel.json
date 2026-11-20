@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "app.py": {
+      "maxDuration": 120,
+      "excludeFiles": "{backupDBs,documentNarrativeDatabase,exampleAPIUsage,logs,cache,.venv}/**"
+    }
+  }
+}
