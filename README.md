@@ -13,6 +13,7 @@ Research paper: *Generating Connections, Not Content: The Hawk AI Place-Based LL
 - The answer streams in, and the student can keep asking follow-up questions about the chosen essay.
 - Follow-up answers mark which parts come from the essay and which come from general sociology.
 - The quote is checked against the essay, and the full essay can be opened with the quote highlighted.
+- The phrases in the quote that show the concept are highlighted.
 - Essays that discuss suicide, self-harm, eating disorders, sexual violence, abuse or addiction carry a content note.
 - A plain-Gemini mode and event logging support the HawkAI vs. Gemini study.
 
