@@ -4,3 +4,12 @@
 originals
 NarrativeDatabase
 
+
+# Local environment, study logs and caches
+.venv/
+__pycache__/
+*.pyc
+logs/
+cache/
+data/metadata_cache.json
+.DS_Store
