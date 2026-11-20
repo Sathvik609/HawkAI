@@ -13,6 +13,7 @@ Research paper: *Generating Connections, Not Content: The Hawk AI Place-Based LL
 - The answer streams in, and the student can keep asking follow-up questions about the chosen essay.
 - Follow-up answers mark which parts come from the essay and which come from general sociology.
 - The quote is checked against the essay, and the full essay can be opened with the quote highlighted.
+- Essays that discuss suicide, self-harm, eating disorders, sexual violence, abuse or addiction carry a content note.
 - A plain-Gemini mode and event logging support the HawkAI vs. Gemini study.
 
 ## Run it locally
@@ -22,6 +23,7 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 cp .env.example .env              # add your Gemini API key
 .venv/bin/python build_index.py   # only once, or after adding essays
+.venv/bin/python content_notes.py # tags essays that need a content note
 .venv/bin/python warm_cache.py    # pre-computes results for common concepts
 .venv/bin/python app.py
 ```
@@ -35,7 +37,7 @@ Then open http://localhost:5001.
 ## Adding essays
 
 1. Put the anonymized files in the folder `setup.py` reads from and run it to add them to `embeddingDatabase.json`.
-2. Run `build_index.py` and then `warm_cache.py` again. Essays that were already processed are skipped.
+2. Run `build_index.py`, `content_notes.py` and then `warm_cache.py` again. Essays that were already processed are skipped.
 
 ## Files
 
@@ -46,6 +48,7 @@ generation.py    Prompts and streamed answers
 gemini.py        Gemini client
 build_index.py   Builds data/ from embeddingDatabase.json
 warm_cache.py    Pre-computes search results for common concepts
+content_notes.py Tags essays on sensitive topics
 event_log.py     Study event logging
 config.py        Settings
 data/            Built search index

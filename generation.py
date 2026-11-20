@@ -32,7 +32,6 @@ Write a response with exactly these three sections. Use these exact Markdown hea
 
 ### From the essay
 One passage of 3 to 5 consecutive sentences copied word-for-word from the narrative: the moment where the author's feelings or lived experience most clearly show {concept}. Format it as one Markdown blockquote (every line starts with "> "). Do not fix, change, or trim any words inside the passage.
-Inside the quote, wrap the 1 to 3 short phrases (2 to 8 words each) that most directly show {concept} in **double asterisks**. Only add the asterisks; the words stay exactly as written.
 
 ### What happened
 Exactly 3 bullet points giving the context a reader needs to understand the quote: the situation, what happened, and what it meant to the student.
@@ -107,7 +106,7 @@ def _normalise(text: str) -> str:
 
 def extract_quote(body: str) -> str:
     lines = [ln.lstrip("> ").strip() for ln in body.splitlines() if ln.lstrip().startswith(">")]
-    return " ".join(lines).replace("**", "").strip().strip('"“”')
+    return " ".join(lines).strip().strip('"“”')
 
 
 def verify_quote(body: str, narrative_text: str) -> str:

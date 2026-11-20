@@ -109,7 +109,6 @@ body.started .start { display: none; }
 .md blockquote { margin: 12px 0 8px; padding: 2px 0 2px 20px; border-left: 3px solid var(--teal); font: 400 1.2rem/1.6 var(--serif); color: var(--ink); }
 .md blockquote p { margin: 0 0 8px; }
 .md blockquote p:last-child { margin-bottom: 0; }
-.md blockquote strong { font-weight: inherit; background: var(--highlight); padding: 0 2px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 .quote-check { display: flex; align-items: center; gap: 6px; font-size: .85rem; color: var(--ink-2); margin: 0 0 4px 23px; }
 .quote-check svg { width: 14px; height: 14px; color: var(--teal); flex: none; }

@@ -111,6 +111,8 @@ class NarrativeIndex:
         self.vectors = np.load(data_dir / "chunk_embeddings.npy")
         self.bm25 = BM25(self.chunk_text)
         self.strength = np.asarray([n["story_strength"] for n in self.narratives], dtype=np.float32)
+        notes_file = data_dir / "content_notes.json"
+        self.notes = json.loads(notes_file.read_text()) if notes_file.exists() else {}
 
     def _per_essay_max(self, chunk_scores: np.ndarray) -> np.ndarray:
         out = np.full(len(self.narratives), -np.inf, dtype=np.float32)
