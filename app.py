@@ -253,6 +253,8 @@ def review_export():
     writer = csv.writer(out)
     writer.writerow(["reviewer", "narrative_id", "narrative_title", "chunk", "type", "label", "mark", "note", "updated_at"])
     for r in sorted(review_store.load(), key=lambda r: (r["reviewer"], r["narrative_id"], r["chunk"])):
+        if not r["mark"] and not (r["note"] or "").strip():
+            continue
         n = sample.get(r["narrative_id"], {})
         c = n.get("chunks", [])[r["chunk"] - 1] if r["chunk"] else {}
         writer.writerow([r["reviewer"], r["narrative_id"], n.get("title", ""), r["chunk"] or "whole narrative",
