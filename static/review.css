@@ -73,3 +73,5 @@
   .rv-name-row { flex-direction: column; }
 }
 
+
+.rv-lede, .rv-help, .rv-words p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }

@@ -28,7 +28,7 @@
     const { mark, note } = entry(nid, chunk);
     statusEl.textContent = "Saving";
     try {
-      const res = await fetch("/api/review/mark", {
+      const res = await fetchRetry("/api/review/mark", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reviewer: state.reviewer, narrative_id: nid, chunk, mark, note }),
@@ -129,11 +129,22 @@
     window.scrollTo({ top: 0 });
   }
 
+  async function fetchRetry(url, options, tries = 4) {
+    for (let i = 1; ; i++) {
+      try {
+        return await fetch(url, options);
+      } catch (err) {
+        if (i >= tries) throw new Error("Could not reach HawkAI. Please wait a moment and try again.");
+        await new Promise((r) => setTimeout(r, 1500 * i));
+      }
+    }
+  }
+
   async function begin(name) {
     state.reviewer = name;
     showError("");
     try {
-      const res = await fetch(`/api/review?reviewer=${encodeURIComponent(name)}`);
+      const res = await fetchRetry(`/api/review?reviewer=${encodeURIComponent(name)}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Could not load the review");
       state.narratives = data.narratives;
