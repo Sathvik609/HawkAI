@@ -31,7 +31,11 @@ PROMPT = """You are helping sociology researchers at UNCW. Below is a narrative 
 
 Split the whole narrative into chunks. Each chunk is a run of consecutive sentences.
 - An "experience" chunk is one specific thing the student lived through or saw happen in their own life: one event, situation or period, with the people and setting involved. Start a new chunk when the student moves to a different event, time or relationship.
-- A "reflection" chunk is anything else: the introduction, explaining a sociological concept, general claims about society, or the conclusion. This course itself (class discussions, readings, videos shown in class, writing this essay) and reactions to a book, film or the news are reflection, not experience. So is work or career background on its own (having a job, career plans, a family member's job history) unless something happened there. Join neighbouring reflection sentences into one chunk.
+- A "reflection" chunk is anything else: the introduction, explaining a sociological concept, general claims about society, or the conclusion. This course itself (class discussions, readings, videos shown in class, writing this essay) and reactions to a book, film or the news are reflection, not experience. Thinking through a reading, theory or thought experiment is reflection even when the student describes their own feelings or opinions about it. So is work or career background on its own (having a job, career plans, a family member's job history) unless something happened there. Join neighbouring reflection sentences into one chunk.
+
+Each experience chunk must make sense when read on its own, without the chunks around it:
+- Keep the whole event together, from the sentence where the student starts telling it to the sentence where they finish it.
+- End a chunk only at the end of a thought, never right after a sentence that announces something still to come.
 
 Every sentence must belong to exactly one chunk, in order, with no gaps or overlaps. The first chunk starts at sentence 1 and the last chunk ends at sentence {count}.
 
@@ -51,8 +55,11 @@ Narrative:
 {numbered}"""
 
 
+PAGE_HEADER = re.compile(r"\d{1,3}|[A-Z][A-Za-z'’-]+( [A-Z][A-Za-z'’-]+)? \d{1,3}")
+
+
 def paragraphs(text: str) -> list[str]:
-    lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
+    lines = [ln.strip() for ln in text.split("\n") if ln.strip() and not PAGE_HEADER.fullmatch(ln.strip())]
     lens = sorted(len(ln) for ln in lines)
     median = lens[len(lens) // 2] if lens else 0
     if median > 150:
@@ -83,6 +90,24 @@ def sentences(text: str) -> list[list[str]]:
     return result
 
 
+BACK_REF = re.compile(r"\W*(this|these|that|those|such)\b"
+                      r"|.*\b(this|these) (idea|statistic|theor\w*|concept|part|approach|point|example)s?\b", re.I)
+PRONOUN_START = re.compile(r"\W*(it|they|this|these)\b", re.I)
+
+
+def pull_setup_sentence(chunks: list[Chunk], flat: list[str]) -> None:
+    for prev, c in zip(chunks, chunks[1:]):
+        if c.kind != "experience" or prev.kind != "reflection" or not BACK_REF.match(flat[c.first - 1]):
+            continue
+        for _ in range(2):
+            if prev.last == prev.first:
+                break
+            prev.last -= 1
+            c.first -= 1
+            if not PRONOUN_START.match(flat[c.first - 1]):
+                break
+
+
 def valid(chunks: list[Chunk], count: int) -> bool:
     expected = 1
     for c in chunks:
@@ -90,6 +115,36 @@ def valid(chunks: list[Chunk], count: int) -> bool:
             return False
         expected = c.last + 1
     return expected == count + 1
+
+
+RUNS = 3
+
+
+def one_run(prompt: str, flat: list[str], nid: str) -> list[Chunk]:
+    for _ in range(3):
+        result = gemini.generate_json(GEN_MODEL, prompt, Chunks, budget=1024, temperature=0).chunks
+        if valid(result, len(flat)):
+            pull_setup_sentence(result, flat)
+            return result
+    raise ValueError(f"{nid}: chunks did not cover the narrative")
+
+
+def most_agreed(runs: list[list[Chunk]], count: int) -> list[Chunk]:
+    def experience(run):
+        return [any(c.kind == "experience" and c.first <= i <= c.last for c in run) for i in range(1, count + 1)]
+
+    def edges(run):
+        return {c.first for c in run}
+
+    flags = [experience(r) for r in runs]
+    majority = [sum(f[i] for f in flags) * 2 > len(runs) for i in range(count)]
+
+    def distance(k):
+        kind_miss = sum(a != b for a, b in zip(flags[k], majority))
+        edge_miss = sum(len(edges(runs[k]) ^ edges(r)) for r in runs)
+        return kind_miss * 100 + edge_miss
+
+    return runs[min(range(len(runs)), key=distance)]
 
 
 def chunk(narrative: dict) -> dict:
@@ -103,12 +158,8 @@ def chunk(narrative: dict) -> dict:
             lines.append(f"[{len(flat)}] {s}")
         numbered.append("\n".join(lines))
     prompt = PROMPT.format(count=len(flat), numbered="\n\n".join(numbered))
-    for _ in range(3):
-        result = gemini.generate_json(GEN_MODEL, prompt, Chunks, budget=4096).chunks
-        if valid(result, len(flat)):
-            break
-    else:
-        raise ValueError(f"{narrative['id']}: chunks did not cover the narrative")
+    runs = [one_run(prompt, flat, narrative["id"]) for _ in range(RUNS)]
+    result = most_agreed(runs, len(flat))
     out = []
     for n, c in enumerate(result, 1):
         text, last_para = "", None
@@ -125,13 +176,21 @@ def main():
     ap.add_argument("--seed", type=int, default=2026)
     ap.add_argument("--out", default=str(DATA_DIR / "experience_chunks_sample.json"))
     ap.add_argument("--clear-only", action="store_true", help="sample only narratives with a clear student experience")
+    ap.add_argument("--redo", action="store_true", help="re-chunk the narratives already in --out")
     args = ap.parse_args()
     narratives = json.loads((DATA_DIR / "narratives.json").read_text())
-    if args.clear_only:
-        checks = json.loads((DATA_DIR / "experience_check.json").read_text())
-        clear = {c["id"] for c in checks if c["level"] == "clear"}
-        narratives = [n for n in narratives if n["id"] in clear]
-    sample = random.Random(args.seed).sample(narratives, args.count)
+    if args.redo:
+        old = json.loads(open(args.out).read())
+        by_id = {n["id"]: n for n in narratives}
+        sample = [by_id[r["id"]] for r in old["narratives"]]
+        args.seed, args.clear_only = old["seed"], old["clear_only"]
+        narratives = [None] * old["pool"]
+    else:
+        if args.clear_only:
+            checks = json.loads((DATA_DIR / "experience_check.json").read_text())
+            clear = {c["id"] for c in checks if c["level"] == "clear"}
+            narratives = [n for n in narratives if n["id"] in clear]
+        sample = random.Random(args.seed).sample(narratives, args.count)
     with ThreadPoolExecutor(5) as pool:
         results = list(pool.map(chunk, sample))
     with open(args.out, "w") as f:
