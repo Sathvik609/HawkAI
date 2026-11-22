@@ -49,34 +49,22 @@
     timers[key(nid, chunk)] = setTimeout(() => save(nid, chunk, statusEl), delay);
   }
 
-  function marked(n) {
-    return n.chunks.filter((c) => entry(n.id, c.chunk).mark).length;
-  }
-
   function renderNav() {
     const list = $("narrList");
     list.replaceChildren();
-    let done = 0;
-    let all = 0;
     state.narratives.forEach((n, i) => {
-      const count = marked(n);
-      done += count;
-      all += n.chunks.length;
       const btn = el("button", "rv-item" + (i === state.current ? " current" : ""));
       btn.type = "button";
       if (i === state.current) btn.setAttribute("aria-current", "true");
       btn.append(el("span", "rv-num", String(i + 1)));
       const text = el("span", "rv-item-text");
       text.append(el("span", "rv-item-title", n.title));
-      text.append(el("span", "rv-item-count" + (count === n.chunks.length ? " done" : ""),
-        count === n.chunks.length ? "All chunks marked" : `${count} of ${n.chunks.length} marked`));
       btn.append(text);
       btn.addEventListener("click", () => open(i));
       const li = el("li");
       li.append(btn);
       list.append(li);
     });
-    $("total").textContent = `${done} of ${all} chunks marked`;
   }
 
   function chunkCard(n, c) {
@@ -85,21 +73,7 @@
     head.append(el("span", "rv-chunk-num", `Chunk ${c.chunk}`));
     head.append(el("span", `rv-kind ${c.kind}`, c.kind === "experience" ? "Experience" : "Reflection"));
     card.append(head);
-    card.append(el("h3", "rv-label", c.label));
-    card.append(el("p", "rv-what", c.what_happened));
-
-    if (c.kind === "experience") {
-      const facts = el("dl", "rv-facts");
-      [["Feelings", c.feelings], ["People", c.people], ["Life area", c.life_area]].forEach(([k, v]) => {
-        const row = el("div");
-        row.append(el("dt", null, k), el("dd", null, v));
-        facts.append(row);
-      });
-      card.append(facts);
-    }
-
     const words = el("div", "rv-words");
-    words.append(el("p", "rv-words-label", "The student's words"));
     c.text.split(/\n\n+/).forEach((para) => words.append(el("p", null, para)));
     card.append(words);
 
@@ -138,29 +112,11 @@
     return card;
   }
 
-  const LEVELS = {
-    clear: "has a clear lived experience",
-    brief: "mentions a lived experience only briefly",
-    none: "has no lived experience",
-  };
-
-  function renderCheck(n) {
-    const box = $("check");
-    if (!n.experience_level) { box.hidden = true; return; }
-    const parts = [el("p", "rv-check-line", `Whole narrative: HawkAI found that it ${LEVELS[n.experience_level] || n.experience_level}.`)];
-    if (n.experience_evidence) {
-      parts.push(el("p", "rv-check-label", "The sentence that shows it"), el("p", "rv-check-quote", n.experience_evidence));
-    }
-    box.replaceChildren(...parts);
-    box.hidden = false;
-  }
-
   function open(i) {
     state.current = Math.max(0, Math.min(state.narratives.length - 1, i));
     const n = state.narratives[state.current];
     $("pos").textContent = `Narrative ${state.current + 1} of ${state.narratives.length}`;
     $("title").textContent = n.title;
-    renderCheck(n);
     $("chunks").replaceChildren(...n.chunks.map((c) => chunkCard(n, c)));
     const overall = $("overallNote");
     overall.value = entry(n.id, 0).note || "";

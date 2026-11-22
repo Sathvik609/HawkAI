@@ -16,7 +16,6 @@
 <body class="review-page">
   <header class="bar">
     <div class="bar-inner">
-      <p class="rv-crumb">Experience chunk review</p>
       <span class="wordmark"><span class="wm-hawk">Hawk</span><span class="wm-ai">AI</span></span>
       <div class="rv-who" id="who" hidden>
         <span id="whoName"></span>
@@ -27,14 +26,8 @@
 
   <main>
     <section class="rv-start" id="start" hidden>
-      <h1>Check how HawkAI split these narratives</h1>
-      <p class="rv-lede">HawkAI split 10 student narratives into chunks and labeled what the student experienced in each one. Please mark whether each chunk is right.</p>
-      <ul class="rv-howto">
-        <li><strong>Experience</strong> chunks are something the student lived through or saw happen in their own life.</li>
-        <li><strong>Reflection</strong> chunks are everything else: introduction, explaining a concept, general claims, conclusion.</li>
-        <li>For each chunk, choose <strong>Correct</strong>, <strong>Partly</strong> or <strong>Wrong</strong>, and add a note if something should change.</li>
-        <li>Everything saves as you go. You can stop and come back later with the same name.</li>
-      </ul>
+      <h1>See how the narratives are split into chunks</h1>
+      <p class="rv-lede">Enter your name to start. To see your marks and notes again later, enter the same name.</p>
       <form class="rv-name" id="nameForm" autocomplete="off">
         <label for="nameInput">Your name</label>
         <div class="rv-name-row">
@@ -48,14 +41,12 @@
       <nav class="rv-nav" aria-labelledby="navTitle">
         <p class="label" id="navTitle">Narratives</p>
         <ol class="rv-list" id="narrList"></ol>
-        <p class="rv-total" id="total"></p>
         <a class="rv-download" href="/review/export.csv">Download all marks (spreadsheet)</a>
       </nav>
 
       <div class="rv-main">
         <p class="rv-pos" id="pos"></p>
         <h1 id="title"></h1>
-        <div class="rv-check" id="check" hidden></div>
         <div id="chunks"></div>
 
         <section class="rv-overall">
