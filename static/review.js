@@ -2,6 +2,7 @@
   const $ = (id) => document.getElementById(id);
   const MARKS = [["correct", "Correct"], ["partly", "Partly"], ["wrong", "Wrong"]];
   const state = { reviewer: "", narratives: [], marks: {}, drafts: {}, current: 0 };
+  const clearTimers = {};
 
   const store = {
     get(key) { try { return localStorage.getItem(key) || ""; } catch { return ""; } },
@@ -45,18 +46,25 @@
     const k = key(nid, chunk);
     const saved = () => entry(nid, chunk).note || "";
     textarea.value = k in state.drafts ? state.drafts[k] : saved();
-    const refresh = () => { button.hidden = textarea.value === saved(); };
+    const empty = () => !textarea.value.trim();
+    const refresh = () => { button.hidden = empty() || textarea.value === saved(); };
+    const persist = async (value) => {
+      if (await save(nid, chunk, { note: value }) && textarea.value === value) delete state.drafts[k];
+      refresh();
+    };
     textarea.oninput = () => {
+      clearTimeout(clearTimers[k]);
       if (textarea.value === saved()) delete state.drafts[k];
       else state.drafts[k] = textarea.value;
+      if (empty() && saved()) {
+        clearTimers[k] = setTimeout(() => { if (empty() && saved()) persist(""); }, 1000);
+      }
       refresh();
     };
     button.onclick = async () => {
       button.disabled = true;
-      const value = textarea.value;
-      if (await save(nid, chunk, { note: value }) && textarea.value === value) delete state.drafts[k];
+      await persist(textarea.value);
       button.disabled = false;
-      refresh();
     };
     refresh();
   }
