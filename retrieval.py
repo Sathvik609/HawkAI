@@ -233,6 +233,8 @@ class Searcher:
                                       candidates="\n\n".join(blocks), k=NUM_OPTIONS, min_rel=MIN_RELEVANCE)
         try:
             ranked = gemini.generate_json(FAST_MODEL, prompt, Reranked, budget=1024).options
+            if not ranked:
+                ranked = gemini.generate_json(FAST_MODEL, prompt, Reranked, budget=1024).options
         except Exception as exc:
             print(f"Rerank failed, using hybrid order: {exc}")
             return [self._option(n) for n, _ in candidates[:NUM_OPTIONS]]

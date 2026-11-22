@@ -179,6 +179,10 @@ def main():
     narratives = [{"id": e["id"], "title": e["title"], "preview": e["preview"], "concepts": e["concepts"],
                    "has_personal_story": e["has_personal_story"], "story_strength": e["story_strength"],
                    "words": len(e["text"].split()), "text": e["text"]} for e in essays]
+    grades = DATA_DIR / "experience_check.json"
+    if grades.exists():
+        from experience_check import apply_grades
+        apply_grades(narratives, grades)
     (DATA_DIR / "narratives.json").write_text(json.dumps(narratives, indent=1, ensure_ascii=False))
     (DATA_DIR / "chunks.json").write_text(json.dumps(chunks, ensure_ascii=False))
     np.save(DATA_DIR / "chunk_embeddings.npy", vectors)

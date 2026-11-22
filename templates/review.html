@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex">
+  <title>Chunk Review · HawkAI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23006A66'/%3E%3Ctext x='24' y='34' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23fff'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='review.css') }}">
+</head>
+<body class="review-page">
+  <header class="bar">
+    <div class="bar-inner">
+      <p class="rv-crumb">Experience chunk review</p>
+      <span class="wordmark"><span class="wm-hawk">Hawk</span><span class="wm-ai">AI</span></span>
+      <div class="rv-who" id="who" hidden>
+        <span id="whoName"></span>
+        <button type="button" class="link-btn" id="switchBtn">Switch reviewer</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="rv-start" id="start" hidden>
+      <h1>Check how HawkAI split these narratives</h1>
+      <p class="rv-lede">HawkAI split 10 student narratives into chunks and labeled what the student experienced in each one. Please mark whether each chunk is right.</p>
+      <ul class="rv-howto">
+        <li><strong>Experience</strong> chunks are something the student lived through or saw happen in their own life.</li>
+        <li><strong>Reflection</strong> chunks are everything else: introduction, explaining a concept, general claims, conclusion.</li>
+        <li>For each chunk, choose <strong>Correct</strong>, <strong>Partly</strong> or <strong>Wrong</strong>, and add a note if something should change.</li>
+        <li>Everything saves as you go. You can stop and come back later with the same name.</li>
+      </ul>
+      <form class="rv-name" id="nameForm" autocomplete="off">
+        <label for="nameInput">Your name</label>
+        <div class="rv-name-row">
+          <input id="nameInput" maxlength="60" placeholder="For example, Shane" required>
+          <button type="submit" class="btn-primary">Start reviewing</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="rv-layout" id="workspace" hidden>
+      <nav class="rv-nav" aria-labelledby="navTitle">
+        <p class="label" id="navTitle">Narratives</p>
+        <ol class="rv-list" id="narrList"></ol>
+        <p class="rv-total" id="total"></p>
+        <a class="rv-download" href="/review/export.csv">Download all marks (spreadsheet)</a>
+      </nav>
+
+      <div class="rv-main">
+        <p class="rv-pos" id="pos"></p>
+        <h1 id="title"></h1>
+        <div id="chunks"></div>
+
+        <section class="rv-overall">
+          <h2>Anything missing in this narrative?</h2>
+          <p class="rv-help">For example, an experience that should have its own chunk, or a chunk that should be split or joined.</p>
+          <textarea id="overallNote" rows="3" placeholder="Optional"></textarea>
+          <p class="rv-saved" id="overallSaved" aria-live="polite"></p>
+        </section>
+
+        <nav class="rv-pager">
+          <button type="button" class="btn-quiet" id="prevBtn">Previous narrative</button>
+          <button type="button" class="btn-primary" id="nextBtn">Next narrative</button>
+        </nav>
+      </div>
+    </section>
+
+    <p class="rv-error" id="error" hidden></p>
+  </main>
+
+  <script src="{{ url_for('static', filename='review.js') }}"></script>
+</body>
+</html>

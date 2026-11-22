@@ -1,0 +1,750 @@
+{
+  "seed": 2026,
+  "model": "gemini-3.8-flash",
+  "clear_only": true,
+  "pool": 175,
+  "narratives": [
+    {
+      "id": "nc7b980e0",
+      "title": "Questioning Religion and Finding Personal Spirituality",
+      "words": 1508,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            7
+          ],
+          "text": "Have you or someone you know ever questioned religion or what religion means to you? I have. Religion is something that many people consider a top priority in their lives. It gives people a way to frame their morals and a way to direct the choices that they make throughout their lives. It can act as a pathway to guide your life. However, religion is something that many people also question. People who are very religious and grounded by religion can sometimes judge those who question religion or aren’t as grounded by it.",
+          "kind": "reflection",
+          "label": "Questioning religion and moral frameworks",
+          "what_happened": "The student introduces the concept of religion, explaining how it guides morals and behavior while also noting that religious people sometimes judge those who question it.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "religion"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            8,
+            10
+          ],
+          "text": "This idea was something I was worried about when I began to question religion. My whole life I was surrounded by family and friends who put religion as one of the top priorities in their life. They questioned me when I began to ponder the importance of religion in my own life.",
+          "kind": "experience",
+          "label": "Family and friends questioning the student's doubts",
+          "what_happened": "The student felt worried about questioning religion because their religious family and friends questioned them when they pondered its importance.",
+          "feelings": "worried",
+          "people": "family, friends",
+          "life_area": "family"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            11,
+            41
+          ],
+          "text": "Religion is one of the founding principles of sociology and arguably is one of the biggest influences in one’s life; from day-to-day conditions to pathways in which one guides their life. Religion throughout the timeline of society has continuously developed and gained more and more importance. At the beginning of society, religion helped shape language and create social groups as well as being something that didn’t make you lesser-than or different than someone else. Currently, religion still creates social groups but can also play a role in the creation of stereotypes and in “othering” people who don’t have the same beliefs as you may. In earlier periods of society, religion was more important to define social groups than it currently is now\n\nReligion has been an important aspect of society for centuries and continues to grow with society as society develops. You may be wondering why religion is so important and what exactly religion has done for society. In present-day society, there are many different religions as well as different groups formed out of a broader religion. For example, Christianity has many different branches. There’s Presbyterian, Catholic, Eastern Orthodox, and many more. Most religions have different branches based on one broad idea. While each one has similarities, they are all separated by smaller beliefs that categorize people into groups of religion within a religion. Religion today has grown into something that is more than a personal belief; it is involved in government, politics, and protests. In the earlier periods of society, religion was something that was used to create languages and cognition as well as being used as a tool to create groups within a society. So, while religion has changed and developed over time, the founding principle of social group creation still exists.\n\nAt the beginning of society, religion was analyzed as a tool that helped to create social groups and develop language and cognition. In the essay, Neurology of Religion, by Alexandra Maryanski and Jonathan H. Turner, they go into depth about the effects of religion in earlier society. They argue that religion helped to “work on a facility…on the hominin brain to increase sociality and capacities for group formation among humans’ ancestors. (Pages 113-114)” Religion played an interesting role in organizing rituals and increasing religious behavior and social groups. The largest effect of religion as argued by Maryanski and Turner is the social group forming factor. In the period of society discussed in the essay, religion wasn’t used in a group form to create social standards or stereotypes, but rather provide individuals with a proper place to fit into society. It helped to create a deeper level of cognition, and over time has changed into a way to be categorized in society.\n\nAs argued by Durkheim, religion “provides social cohesion to help maintain social solidarity through shared religious beliefs.” This means that religion was a form of unity and played a major role in shaping society as we know it today. I believe that without the formation of religious groups, society would not be the same. Without the formation of religion, society wouldn’t have a unifying factor that allowed people to find their social group and expand their beliefs. Religion acts as a form of expression, and that is one idea that hasn’t changed as society has developed throughout the centuries.\n\nReligion has continuously shifted throughout society. As stated previously, religion acted as a tool for the formation of social groups and aided in increasing cognition. Currently, religion still creates social groups, but in a different way than in earlier periods.",
+          "kind": "reflection",
+          "label": "Sociological theories and historical functions of religion",
+          "what_happened": "The student explains sociological concepts of religion, citing Maryanski, Turner, and Durkheim to discuss how religion shapes language, cognition, and social cohesion.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "religion"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            42,
+            44
+          ],
+          "text": "My experience with religion hasn’t always been smooth sailing. I grew up in a Christian household, with a mom who took my brother and I to church every Sunday and even some Wednesdays for small group studies. I also went to a Christian school from kindergarten to third grade.",
+          "kind": "experience",
+          "label": "Growing up in a Christian household and school",
+          "what_happened": "The student grew up attending church on Sundays and Wednesdays with their mother and brother, and attended a Christian school through third grade.",
+          "feelings": "not stated",
+          "people": "mother, brother",
+          "life_area": "religion"
+        },
+        {
+          "chunk": 5,
+          "sentences": [
+            45,
+            48
+          ],
+          "text": "I didn’t begin to question religion until I went through a traumatic experience. After this, I began to wonder why God would allow such a bad thing to happen to me and my family at such a young age, so I started looking into other religions or even into spirituality. I eventually settled on more of a belief of spirituality rather than a specific religion, and it was at first something very hard for my mother to understand. Once I voiced to her why I questioned it, however, she began to become more understanding and respect my new beliefs.",
+          "kind": "experience",
+          "label": "Questioning religion after trauma and embracing spirituality",
+          "what_happened": "Following a traumatic experience, the student questioned why God allowed it, explored spirituality, and explained their doubts to their mother, who became understanding.",
+          "feelings": "not stated",
+          "people": "mother, family",
+          "life_area": "religion"
+        },
+        {
+          "chunk": 6,
+          "sentences": [
+            49,
+            63
+          ],
+          "text": "I know quite a few people who have gone through something similar in regards to questioning religion and I think it is a very interesting thing to occur when someone begins to question it. While I do not belong to a specific religion when meeting and interacting with other spiritual people I feel that I am a part of a social group. This is something important to analyze because religions are very specific groups in society and if you don’t fit into one of those groups, you can be seen as an outsider. I have only felt this way a few times, but for the most part, I do still feel like I belong to a group in society, whether or not religious people would view me as an “other”.\n\nAnother major way that religion has shifted in society over time is through the way that it is used and how it affects people in society. While religion was once used as a tool for belonging in society, it is now used in government and politics as well as creating a sense of belonging in society. People in the government, as well as politicians, have come to realize the power that religion has over people, and have started using it against people in things like trying to gain a vote in an election. This is also something that I think is important to analyze because, in the earlier periods of society, religion was seen as a positive aspect of society that captured ones’ beliefs and morals. While this is still true, it is also used as a tool against people in present-day society. Religion has gone from something with such a positive connotation to something with a slightly negative connotation.\n\nI believe that religion was a more important aspect of society during the earlier time periods because it is now used as a tool against people, rather than something that solely helps to create social groups. As argued throughout the essay, religion does continue to aid in the creation of social groups, but often is not a positive thing and can push people to be considered “others” of society if they do not agree with the majority of people’s religious beliefs. The evidence that supports this is mainly involved with government and politics. People involved in the government now use religion as a way to get people to follow them, not as something that is ones’ thoughts. It has shifted from being a social group created to a way to categorize people, but not always in a positive way.",
+          "kind": "reflection",
+          "label": "Religion, social groups, and political power",
+          "what_happened": "The student reflects on finding community among spiritual people and discusses how modern society and politicians use religion to categorize and manipulate people.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "religion"
+        },
+        {
+          "chunk": 7,
+          "sentences": [
+            64,
+            66
+          ],
+          "text": "This is shown with my situation when I questioned religion and changed my religious beliefs from the ones’ of my parents to my own beliefs. Much of my family still doesn’t know that I do not belong to a specific religious group because they wouldn’t support this change that I decided. I was very lucky to have supportive parents that don’t think religion is the most important part of someones’ life and that respected my new beliefs as I grew up and developed my own beliefs and morals.",
+          "kind": "experience",
+          "label": "Parental support and keeping beliefs from extended family",
+          "what_happened": "The student kept their new religious beliefs hidden from unsupportive extended family, but felt lucky to have supportive parents who respected their personal morals.",
+          "feelings": "lucky",
+          "people": "parents, family",
+          "life_area": "family"
+        },
+        {
+          "chunk": 8,
+          "sentences": [
+            67,
+            70
+          ],
+          "text": "This is relevant in present-day society because as stated before, there have been more and more people who question their religious beliefs.\n\nIn conclusion, I believe that religion has shifted throughout society to be something that hurts society more than it helps it. Society was built on the principles of individual thought, however, when someone begins to question religion society sees it from a negative point of view rather than a positive point of view. I also believe that religion should be something that people should be able to decide for themselves and not experience pressure from society to conform to a specific religion.",
+          "kind": "reflection",
+          "label": "Concluding thoughts on individual religious choice",
+          "what_happened": "The student concludes that society should view questioning religion positively and allow individuals to choose their own beliefs without societal pressure.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "religion"
+        }
+      ]
+    },
+    {
+      "id": "n534e49b7",
+      "title": "Deciding Against College Fraternity Culture",
+      "words": 1756,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            8
+          ],
+          "text": "The Appeal of Greek Life to Young Men: A Sociological Analysis\n\nWhy are fraternities such an appealing aspect of upper-level education for young men? It seems that every university across the nation has implemented Greek life as a means to promote a “brotherhood” among their environments. The largest college campuses in the country are riddled with different sectors of Greek houses. Furthermore, fraternity parties are the big events in town on the weekends. Of course, college students love to party, the only issue is that men who are not in the fraternity cannot participate in fraternity parties or events. So how is it that Greek life at large universities has taken such a big stand in developing the social aspect of a college? It has to do with certain societal norms and concepts illustrated by ideas like “doing gender” and “hegemonic masculinity,” and the appeal carries significant relevance to Brian Stoudt’s “In or Out” dilemma involving the Rockport boys.",
+          "kind": "reflection",
+          "label": "Introduction to fraternities and sociological concepts",
+          "what_happened": "The student introduces the appeal of fraternities in college and outlines sociological concepts including doing gender, hegemonic masculinity, and Brian Stoudt's study.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "school"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            9,
+            18
+          ],
+          "text": "Prior to coming to university, I had minimal knowledge of what a fraternity is. I knew that pledges (people who have pledged to the fraternity and are going through their initiation) are hazed for weeks on end. There are stories of people having to do some outrageous things in order to show their allegiance to the fraternity. When I arrived at UNCW for my first semester in the fall, I learned about “rush week.” This is when students attend dozens of fraternity events at numerous different houses, and decide which frat seemed best for them. I had a blast, attending parties here and there and meeting new people. However, every time I would meet a new person, the conversation always ended up with, “hey man, are you rushing?” It was almost like that becomes your new personality trait; as if rushing a fraternity made you a more appealing person. When rush week ended, parties became closed to the general public, meaning only females, and the pledges could attend. The whole process changed my point of view on fraternities entirely.",
+          "kind": "experience",
+          "label": "Attending rush week parties at UNCW",
+          "what_happened": "The student arrived at UNCW for their first semester and attended rush week parties, where everyone asked about rushing and parties became closed to non-pledges afterwards.",
+          "feelings": "had a blast",
+          "people": "new people, pledges, females",
+          "life_area": "school"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            19,
+            25
+          ],
+          "text": "Sure, it was fun to go to these parties and experience college a little bit, but would it have been worth it to rush? After seeing some of my peers go through the process, I reassured myself I made the right decision. Some of them would miss class, some were exhausted all of the time, others disappeared from my daily routes to class, and all of them wore suits for a semester. Who would want to give up half of their first school year to wear suits in 80-degree weather, get bossed around, and do unspeakable things for a semester? Perhaps people would say it is worth it after the semester when they get to party, but this is where I formed my dilemma. What is so appealing about suffering for a semester to most college guys? Why does it become a personality trait, and why is it a huge part of college in the first place?",
+          "kind": "experience",
+          "label": "Observing peers go through fraternity pledging",
+          "what_happened": "The student watched peers go through fraternity pledging, noticing they missed class, were exhausted, and wore suits in hot weather, leading the student to question why men endure the process.",
+          "feelings": "reassured",
+          "people": "peers",
+          "life_area": "school"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            26,
+            92
+          ],
+          "text": "Doing gender is a sociological concept by Candace West and Don Zimmerman that refers to the ways in which people actively perform their gender roles and behaviors in a social setting. The idea is that gender is not just the sex we were born as, but rather something we need to learn and perform to fit the societal role. During this process, people will actively participate in maintaining gender through their actions and interactions. We each learn to behave in accordance with what society deems normal for what a gender is and should be. People are ultimately rewarded through these norms and face negative backlash for failing to conform to these roles. Doing gender for a guy may be holding the door open for a lady or carrying the heavy groceries in from inside. Doing gender for a woman may be cleaning up around the house and being emotional support for men.\n\nHegemonic masculinity is another sociological concept that refers to the dominant form of masculinity that is idealized and reinforced in a particular culture or society. It represents the specific set of traits and behaviors that are socially valued and associated with being a \"real man\". Hegemonic masculinity is characterized by traits such as strength, toughness, and independence, as well as the ability to control and dominate others. Another important aspect of hegemonic masculinity is not showing emotion. This idealized form of masculinity is often associated with power and privilege, and it is reinforced especially through media, sports, entertainment, and society itself. Men who conform to this ideal are given status and respect, while those who do not adapt may face negative consequences such as discrimination or marginalization.\n\nIn Brian Stroudt’s “In or Out,” he conducts a social experiment in an all-boys prestigious private school called “Rockport.” The boys in Rockport are part of a culture that values traditional forms of masculinity, which includes traits such as physical strength, aggression, and toughness. In order to be accepted and respected within their peer group, the boys must conform to these masculine norms and expectations. They engage in activities such as playing sports, fighting, hazing, and bullying as a way of demonstrating their masculinity and asserting their social status. The boys often make sexist jokes with teachers and pick on the boys that aren’t “manly enough.” However, the study also reveals a few outliers in the school. For example, some boys show plenty of emotion and view woman as equals. Some reject the masculine ideology all-together. A few have even criticized the school for not learning the teachings of some famous women. Although, there are a few outliers, many support the hegemonic masculinity and culture created at this school and embrace it.\n\nI know I am a culprit of doing gender myself. As a straight male, I was raised to conform to the traditional societal roles of being a man. My mom taught me to be a gentleman, hold the door, and help females with the heavy lifting. I always make sure I shake someone’s hand and look them in the eye as well. When I am older, I know that I must have a successful job to provide for my family (because that is the traditional job of the male). Fraternities are clearly endorsers of this philosophy. As an all-male institution inside of a university, they must show certain characteristics to the school. These fraternities must uphold a standard to the community to stay alive and recognized by the university. Therefore, fraternities attend community events, hold fundraisers for charity, and set a moral code on campus. These ideas promote doing gender in a way where men must be successful and prosperous. They must act without recognition from the community. This is why fraternities often make their pledges wear suits around campus; to show that they are part of a successful brotherhood. You will never see a fraternity brother act like a female, where female clothes, or fail to promote characteristics of a male.\n\nOn a larger scale, hegemonic masculinity is perhaps the most prominent concept upheld by fraternities. I, myself, don’t believe I support hegemonic masculinity throughout my everyday actions. However, I am someone who has played sports my entire life. Football is especially one of those sports where you must compete and dominate your opponent. Fraternities often engage in rituals and competitions to assert dominance and be more “manly” than their counterparts. For example, fraternities will often engage in excessive alcohol consumption, or compete for women. In this way each brother can compete to win. They often treat woman as sexual objects rather than people. Alcohol use attests to their tolerance and if they can hold their beer better than others or have more to get them drunk. Furthermore, hazing is a huge part of the process. The pledges must go through hazing to see if they are man enough to be a part of the fraternity. They must pass the test to the rest of the brothers. The higher-ups in the fraternity are also asserting their power over the newer members by making them do things for them through hazing. Each of these aspects are fundamental features of fraternity life, and they cater directly to the sociological concept of hegemonic masculinity.\n\nBrian Stroudt’s social study of the Rockport boys in his “In or Out” is perhaps the most effective comparison to fraternity life. The Rockport boys show numerous examples of using hegemonic masculinity to gain an edge over their classmates, while each of them is being taught every day how to be a man (doing gender). The teachers are noted making sexist jokes with the boys, while many of the boys exclaim that woman are more of sexual gratification and trophies to be competed over. The all-male institution is very similar to a fraternity; mostly because the boys compete with others in athletic competitions and school. It is also mentioned that many of them haze the younger students to see if they can be a part of the elite group at the school. The entire theme of the school is to be prestigious and superior and make it the highest level of education that they can. Many of these students will end up pledging to a fraternity to achieve the same status and competition as they did at Rockport. Whether they were being hazed, competing for girls, or supporting the successful agenda, they are each devoting themselves to hegemonic masculinity. Furthermore, they are all athletic, successful, and are working towards building a future for their upcoming families, all of which are traits for doing gender.\n\nFraternities are breeding grounds for the traditional aspects of male society. The reason they are so appealing to young men in universities is due to the male instincts involved with the institution. Whether it be upholding the general roles of what it takes to be a man, being involved in a brotherhood, or competing with other men to assert dominance and eventually build relationships, the aspects of doing gender and hegemonic masculinity are being presented. Brian Stroudt’s study of the Rockport boys is a perfect example of why fraternities are built the way they are. Why would someone want to engage in a fraternity, even with knowing the hazing and toxic masculinity are involved? It is because these aspects are fundamental to the primal instincts of men. There are positives and negatives, but no matter the case, these sociological concepts will cater directly into the unconscious instincts of men. It may be one of the few traditional male institutions remaining in our consistently-changing world.",
+          "kind": "reflection",
+          "label": "Sociological analysis of fraternities and masculinity",
+          "what_happened": "The student explains doing gender, hegemonic masculinity, and Brian Stoudt's Rockport study, applying these concepts to fraternities, personal upbringing, and societal expectations of men.",
+          "feelings": "not stated",
+          "people": "mother",
+          "life_area": "school"
+        }
+      ]
+    },
+    {
+      "id": "n83bf8aaf",
+      "title": "Overcoming Perceived Judgments in Adolescence",
+      "words": 1231,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            8
+          ],
+          "text": "Self-esteem issues and negative personal identity can be very problematic for people no matter age, race, gender, or sexuality. The negative effects of low self-esteem and a negative personal identity have the potential to reduce the quality of life dramatically of an individual suffering from these afflictions. People who suffer from low self-esteem often have trouble trying new things because of their increased self-doubt. These individuals also have low resilience to challenges presented in front of them because they do not have the confidence or courage that they can handle the task at hand. They may not feel the need to fully take care of themselves. Young people in particular are prone to suffering from low self-esteem because they are still forming a sense of identity and self-worth. Places such as middle schools and high schools can sometimes feel like you are falling into a sink hole. To counteract the negative effects that low self-esteem can have on individuals, young people must challenge their own assumptions of what other people think about them to regain confidence and not suffer the results of low self-esteem.",
+          "kind": "reflection",
+          "label": "Effects of low self-esteem in young people",
+          "what_happened": "The student explains how low self-esteem and negative identity harm quality of life, especially for youth in middle and high school, and emphasizes challenging assumptions.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "school"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            9,
+            20
+          ],
+          "text": "The way that I viewed myself in middle school and my first two years of high school (pre covid) was a lot lower than the way that I view myself now. During this time, I did not have a lot of confidence in myself for several reasons. In my head there was a hierarchy of popularity that held incredible significance to me. In this hierarchy, I was in the middle of the spectrum. I was not popular, but I was also not at the bottom where the weird kids resided. The perception of my lower position on the spectrum of popularity carried real weight and it lowered my self-esteem significantly. I presumed that other people glanced at me and concluded that I did not meet the high standard that only popular people could live up to. I assumed people did not think the way I looked or how I acted was cool. I thought that they thought that the way I interacted with them was uncool and weird. Another reason for my decreased level of confidence was my perception 2 of my own abilities as a student. All my friends took advanced classes and were in the gifted program. The classes I took were honors, but they were not the really tough classes my peers were taking, and they made sure to pick fun of me.",
+          "kind": "experience",
+          "label": "Self-doubt about popularity and academics in school",
+          "what_happened": "In middle school and early high school, the student felt low self-esteem from viewing themselves in the middle of the popularity hierarchy and taking less advanced classes than friends.",
+          "feelings": "low confidence, lowered self-esteem",
+          "people": "friends, peers",
+          "life_area": "school"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            21,
+            28
+          ],
+          "text": "When I was in 8th grade, I was taking all honors courses, except English. My friends would poke fun at me for taking a “regular” class and I would laugh along with them. The toll that this had on me was not huge, but it did lower my confidence in my abilities as a student slightly and this weighed into my overall lower self-esteem during this time. This combined with the perception of my rank on the popularity hierarchy resulted in myself not being able to gain a lot of confidence in myself and my abilities. I thought everything I did was subpar, and I was not at the level of my classmates. This lower perception of myself affected my confidence in my physical abilities and my social skills. I did not think I was adequately physically fit at the time and even to this day I find it hard to talk to people I respect because I think I do not have the adequate social skills to have a successful conversation with them. In other words, I think that they will think that I was bad at conversation, and they will look down on me for that.",
+          "kind": "experience",
+          "label": "Teasing about 8th grade English and lasting insecurity",
+          "what_happened": "In 8th grade, the student took a regular English class while friends took honors, and friends poked fun at them, lowering the student's confidence in their academic, physical, and social abilities.",
+          "feelings": "lowered confidence, subpar",
+          "people": "friends, classmates, people the student respects",
+          "life_area": "school"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            29,
+            54
+          ],
+          "text": "Charles Cooley was the first person to coin the term the looking glass self. The concept of the looking glass self, according to Cooley, is that the ideas and feelings people have about themselves are developed in response to their perception and internalization of how others perceive and judge them. For example, let us say there is a teenage boy trying out for the basketball team. He comes into the first day of tryouts nervous and unsure of his abilities. During tryouts, he notices the coaches paying more attention to him and he sees a few players pointing at him and talking amongst themselves. He interprets this as a sign that the coaches and other players are impressed with his skills and that he would add value to the team. Because of this, he is motivated to play as best as possible so he can join the team. He entered the tryout nervous and 3 unsure of his abilities, and then left the tryout more confident in his abilities and he now sees himself as a skilled basketball player.\n\nIn this example the teenage boy's perception of himself was altered based on how he thought others viewed him. The important distinction to take away from this is that people's assumptions about how other people perceive them can be accurate, but more importantly they can be incredibly inaccurate as well. For example, when a dancer is performing, she may look at the crowd's reaction and see that they are clapping and smiling. She interprets this as them thinking that she is a good dancer. However, in reality, everybody in the crowd thinks she is a bad dancer, they are only being respectful. The interpretation of somebody's assumptions to how other people think of them is highly unreliable and can skew their personal reality far from the objective truth.\n\nThe way I thought others perceived me in middle school and high school had no sound evidence or relevance to the objective truth of what they actually thought about me. I shouldn’t have based my self-worth off my assumption of how other people thought about me because those assumptions could have been completely inaccurate. When my friends made fun of me for taking easier classes than they were, I interpreted this as them thinking that I am actually less intelligent and cannot handle the workload of a higher-level class. Knowing what I know today, the assumption I made of my friends thinking I was less intelligent was completely false because they explained to me that it was false a few years ago. Even though my assumptions of my friend's beliefs towards my intelligence were wrong, it still had a dramatic impact on my self-esteem and overall ability to reach my full potential in school at that time. Understanding Cooley's concept allows people to realize the mechanism behind how their self-image and self-4 esteem is created. This can give power to individuals by gaining control over the way their sense of self is realized.\n\nThe negative effects that come with low self-esteem have a dramatic impact on people's mental health. Charles Cooley's concept of the looking glass mirror explains how people sometimes allow inaccurate interpretations of other people's views and feelings towards them decrease their self-esteem. In middle school and high school, my full potential was not reached because I allowed false assumptions about my intelligence and my popularity, diminish my confidence. This newfound lens can allow people to challenge these inaccurate assumptions and realize that what they assume other people think of them could be false. Along with this, practicing increased self-worth and self-appreciation can allow people to build their self-esteem and become confident with their abilities and actions to reach their full potential.",
+          "kind": "reflection",
+          "label": "Cooley's looking glass self applied to personal assumptions",
+          "what_happened": "The student explains Cooley's looking glass self using basketball and dancer examples, applies it to realize their past assumptions about friends and popularity were false, and concludes on building self-worth.",
+          "feelings": "not stated",
+          "people": "friends",
+          "life_area": "school"
+        }
+      ]
+    },
+    {
+      "id": "n7c2c0dae",
+      "title": "Confronting Lifelong Gender Discrimination and Expectations",
+      "words": 1809,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            14
+          ],
+          "text": "Before you are even born you are assigned a sex based off your characteristics seen through a sonogram. Your families have a reveal and parties to celebrate you and what sex you’re classified as before you have even entered the world, before you have taken your first breath outside of the womb. But why is the sex of your child so incredibly imporant? Is it so that you can buy pink clothing and Barbie Dolls for your little girl, or blue clothing and monster trucks for your little boy? Or is it even so that you can prepare yourself for how you are going to teach them about the world? By the time you are born your fate is decided for you until you can speak for yourself.\n\nIt is known that in society your gender is viewed as what decides who you are and who you become. Through the years, women have been known to be the ones who tend to home and the children while the man is the breadwinner. As time went on, women started going to work and having a family got put off until later on when they became financially stable and finished school and got a career. Regardless, from birth to death your sex has been characterized for you as well as your gender. If you are fortunate enough to be characterized as a female you are taught from a very young age how a “lady” should always act, behave, and dress. The same behaviors females are punished for at a young age are the same behaviors males get to indulge in for years 1 to come. Which is the reason females “mature faster than males”. This is also the very beginning of the gender inequalities displayed and practiced in society.",
+          "kind": "reflection",
+          "label": "Gender expectations and inequalities from birth",
+          "what_happened": "The student explains how gender roles and inequalities are assigned at birth and reinforced throughout life, with females expected to act like ladies while males are allowed more freedom.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            15,
+            25
+          ],
+          "text": "In my childhood I had a best friend who was also my next door neighbor. This friend just so happens to be a male. Growing up until the time he moved away we did absolutely everything together. We went to school together, played together at home, I helped him practice for all of the sports he played. To us we were equals. In second grade we decided to play church league basketball, we had no idea we wouldn’t be on the same team and would end up playing against each other, but in the end that turned out to be a blessing. I was the only girl on my team and there was only one other girl who played basketball at the church, she was on my friends team. At practices we would scrimmage and all of the boys wanted to scrimmage against me. Being young and ignorant I thought it was because they thought I was cute and they liked me, but then I asked one of them why they always wanted to scrimmage me and he told me it was because I am a girl so I’m not as good and easier to play against. I was absolutely crushed because I knew I was just as good as the boys. That was, what I remember, my first time coming across gender disrimination in my life.",
+          "kind": "experience",
+          "label": "Gender discrimination in church league basketball",
+          "what_happened": "In second grade, the student played church league basketball and learned that boys wanted to scrimmage against her because they thought she was an easier opponent as a girl.",
+          "feelings": "crushed",
+          "people": "best friend, church league boys",
+          "life_area": "sports"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            26,
+            34
+          ],
+          "text": "By the time I was in fifth grade I was an absolute tom-boy. I owned camouflage everything, I would shoot my BB guns in the backyard with my dad aiming at targets and squirrels. I was the little redneck child my dad always wanted considering he didn’t get a son. I also learned in class from my peers that camouflage and guns weren’t lady-like and that I should act more like a girl. Due to the fact that I was in the early stages of puberty, I cared very much about what other people, especially boys, thought of me. So I got rid of all of my camouflage and I put up my guns and started doing girlier things. But for some reason that wasn’t enough for society. I was then “too girly”, but how can an 11 year old be too much for one thing in the eyes 2 of society? Why would society have its eyes on who an 11 year old girl should be in the first place?",
+          "kind": "experience",
+          "label": "Pressure to conform to feminine expectations in fifth grade",
+          "what_happened": "In fifth grade, the student was a tomboy who shot BB guns with her dad, but after peers told her to act like a girl, she changed her behavior only to be told she was too girly.",
+          "feelings": "cared very much",
+          "people": "father, peers, boys",
+          "life_area": "school"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            35,
+            36
+          ],
+          "text": "The approval and disapproval of women in society is a never ending cycle. You just go round and round with no end in sight.",
+          "kind": "reflection",
+          "label": "The cycle of societal approval of women",
+          "what_happened": "The student explains that the cycle of society approving and disapproving of women is endless.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 5,
+          "sentences": [
+            37,
+            44
+          ],
+          "text": "By the time I had reached my sophomore year of high school I had stopped caring about what other people thought about me, the way I acted, and the way I dressed. When I started doing that was really when I came to peace about who I am as a person, and that also just so happens to be when people started to like me more and more because I didn’t need anyones approval to be me, and people loved that. But there are always the people who will try and bring you down for their own self benefit. Even though it may seem as though everything was starting to look up for me, it was not. I had a boyfriend at the time and he felt as though he needed to have a say in who I hung out with, who I talked to, what I wore, and where I went. Meanwhile, he could do whatever he wanted. The double standards in that relationship were just flabbergasting. The way I let myself degrade me, as a person, over a man's approval because I thought it was love is truly disgusting.",
+          "kind": "experience",
+          "label": "Controlling high school relationship and double standards",
+          "what_happened": "In her sophomore year of high school, the student came to peace with herself, but was in a relationship with a controlling boyfriend who imposed double standards on her.",
+          "feelings": "came to peace, flabbergasted, disgusted",
+          "people": "boyfriend",
+          "life_area": "dating"
+        },
+        {
+          "chunk": 6,
+          "sentences": [
+            45,
+            54
+          ],
+          "text": "But the thing is, that is not the only double standard I have had to live in my life nor have women all over had to live. Women all over the world are in mentally abusive relationships; being controlled by their significant other having to live with double standards. It’s not just in relationships that women are being oppressed by men and sometimes even other women. Women all over the world are being told what they can and cannot do with their bodies while men are actually the root of the main problem. The Government, which is mostly made up of white middle aged or older males, are telling women all over the continental U.S. what they are allowed to do with their bodies, but once women try to tell men what they can and can’t do with their bodies it’s like it’s the end of 3 the world for them. Why should women’s bodies be controlled by men who do not know what it’s like to be a woman, yet women can’t control the bodies of men?\n\nNot only are there issues with the main political issues now that are dividing men and women all over again, but there are other issues that used to be talked about all of the time, but now seem to no longer exist in conversation because it is considered an “inappropriate discussion”. The gender pay gap is still a huge issue in the U.S., but is never talked about because all of a sudden it has become “inappropriate” to discuss income. The average non-adjusted female annual salary is 79% of the average male salary when holding the same position. It is also proven that women ask for raises just as often as men do, but are more likely to be declined.",
+          "kind": "reflection",
+          "label": "Abusive relationships, bodily autonomy, and the wage gap",
+          "what_happened": "The student discusses how women face controlling relationships, government control over their bodies, and wage inequality in the workplace.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 7,
+          "sentences": [
+            55,
+            60
+          ],
+          "text": "I can prove this statistic myself because I have lived it. I had been working at a company for a little over a year, but have yet to get a raise. A male coworker of mine had been working there for a couple of months, started off making more than I did, and by the time I left he was still making more than me. I finally asked for a raise when I found this out. I was granted the raise, but later found out about the sexual things my boss had said about me to other male workers, and his thoughts on my body are the main reason I even got the raise. I quit a week later.",
+          "kind": "experience",
+          "label": "Pay inequality and sexualization at work",
+          "what_happened": "The student worked at a company where a newer male coworker was paid more, and after requesting a raise, she learned it was granted due to her boss's sexual comments about her body, causing her to quit.",
+          "feelings": "not stated",
+          "people": "boss, male coworker, male workers",
+          "life_area": "work"
+        },
+        {
+          "chunk": 8,
+          "sentences": [
+            61,
+            86
+          ],
+          "text": "Being sexualized by men is just the tip of the iceberg. Women can’t even walk to their cars without being followed, cat called, hollered at, kidnapped, or raped. It is so sad that females have to walk around with weapons because they are too fearful to go anywhere or go anywhere alone. I do believe that all women should carry around a minimum of a taser until males start being taught at a young age that women are not sexual objects, or property. I am glad to say that I have yet to use my taser, but that does not mean I haven’t come close.\n\n4 Women are discriminated against solely for what is in between their legs. Women get told that we shouldn’t hold positions of power because we are “too emotional”, and “is it that time of the month? Won’t you act irrationally?” When in reality the hormone that is being produced in the female body that makes us so “irrational” and “emotional” during the menstrual cycle is the exact same hormone being produced through a man's body all day every day. Testosterone is the reason men get so bent out of shape when they lose a videogame or when they get insulted by someone. So, shouldn’t it be men we should be concerned about holding positions of power? Women are taught to live life through the looking glass self, living by the standards put in place for them by society. Most women live their lives trying to accommodate to those standards. When they can’t, they become very depressed, feeling negative about their bodies, the way they look, and their personalities. There are very few things I wouldn’t change about myself. I hate my belly, my stretch marks, cellulite, my nose, my hips, and so many more things. But those things, no matter how much I hate them, I cannot change without changing who I am. As much as I’d love to change them, they are what make me beautiful. I refuse to live life through the looking glass self and the standards placed on me. I know I cannot live up to the standards placed upon me, and most other women have realized it as well. This also goes hand and hand with the “beauty myth” which labels the unachievable standards placed on women by society. It is the idea of a “perfection” that women cannot achieve.\n\nYes, men have their own struggles with the standards placed on them, but when it comes to the one thing they cannot change, their appearance, it is scientifically proven that women are less likely to fall in love with someone for the looks over their personality. Whether men choose to believe it or not, the pressure for mens “standards” to be met is less than that of women. This world is a man's world, created and led by men for men.\n\n5",
+          "kind": "reflection",
+          "label": "Societal safety fears, double standards, and beauty myth",
+          "what_happened": "The student discusses the sexualization and safety threats women face, challenges stereotypes about female emotionality, and rejects societal beauty standards and the looking glass self.",
+          "feelings": "glad, hate",
+          "people": "none",
+          "life_area": "other"
+        }
+      ]
+    },
+    {
+      "id": "n396491da",
+      "title": "Finding Purpose in Student Government Debates",
+      "words": 1799,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            25
+          ],
+          "text": "In Michael J. Sandel's book titled Justice: What’s the Right Thing to Do? Sandel invites the reader to consider a multitude of different philosophical approaches through different philosophers. Michael J. Sandel, a Harvard lecturer, is incredibly well sought after due to his lectures being in high demand because he is so well informed on the topics he discusses. His book, Justice, was on the New York Times Bestseller list for its thought provoking and hard-hitting topics. Those topics span from Immanuel Kant to Aristotle and focus on things such as moral standings, libertarianism, utilitarianism, and more. In Justice: What’s the Right Thing to Do, Sandel presents the reader with many different perspectives on human life and the value of it.\n\nImmanuel Kant is one of the first philosophers that Sandel mentions. Kant was born in 1724 and passed away in 1804. He was born in Prussia to a Protestant family that focused on doing good works for the church and religion. Kant was an academically inclined individual who tended to look for ways to continue his learning. Kant’s first job was as an unpaid lecturer whose salary came from the number of people he taught. After a few years of working for the university, he became a well-known lecturer and was a highly regarded individual. His lectures were focused on topics such as geography, anthropology, law, and logic. During his time teaching, Kant began writing philosophical works to explain his beliefs to the masses. One notable work is his book titled Groundwork.\n\nIn Groundwork, Kant begs the question of what is truly of moral worth. Kant states, in his categorical imperative, that humans should “act only on that maxim whereby you can at the same time will that it should become a universal law.” (pg. 120) When Kant mentions a “maxim” he is regarding the rule or principle of an action. In short, Kant believes that we should act only as we would wish for things to become a universal truth. In my personal life, I have told countless lies to my loved ones that have ranged from “I never said that” to “I don’t know who did that.” If I apply Kant’s philosophy to my personal life, I am not acting according to his maxim because I would hate for all my friends and family to lie to me all the time. A universal law of lies would create distrust between myself and the people I hold closest to me. That would not be considered justice.",
+          "kind": "reflection",
+          "label": "Kant's categorical imperative and moral worth",
+          "what_happened": "The student introduces Michael Sandel's book Justice, outlines Immanuel Kant's life and works, and explains the categorical imperative using the example of telling lies.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "school"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            26,
+            30
+          ],
+          "text": "Another example of this philosophical approach in my personal life would be watching people pick flowers from a public park. I went to New York City this summer and witnessed multiple people in Central Park pick flowers off a bush. If everyone in the world acted in that way, would it be morally right? No, because the slope of one person taking a flower off the bush to everyone taking flowers off the bush would leave all the flower bushes in New York City barren. Humans would not gain anything from having empty flower bushes, so the action of picking a flower is not morally right in Kant’s view.",
+          "kind": "experience",
+          "label": "Watching people pick flowers in Central Park",
+          "what_happened": "During a trip to New York City over the summer, the student saw multiple people in Central Park picking flowers from a bush and considered whether the action was morally right.",
+          "feelings": "not stated",
+          "people": "multiple people",
+          "life_area": "community"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            31,
+            67
+          ],
+          "text": "Immanuel Kant is also known for his views that tend to overlap with libertarianism. Specifically, the right to self-governance. He believes that we, as individuals, have the right to do whatever we want as long as we do not harm others. This thought process is juxtaposed by the utilitarian idea that the people should always do what is the best for the group rather than the individuals themselves. A modern example of these opposing ideas would be taxing. Libertarians would claim that we shouldn’t tax the rich because they earned that money and nobody has the right to redistribute what they earned. However, utilitarians would say we should tax the rich because the people with less money need the money more. Their stance would be that it would help with the overall happiness of the group if the majority, the poor, got paid more.\n\nI had learned about libertarians and utilitarians in my history courses at high school but never thought this deeply about them before. Sandel poses many good points of view on both sides, and I believe that I fall closer to the libertarian view. I think everyone has a right to self-governance and the right to live life as themselves. Thinking back on the thought experiment about the lonely kid under the city that Sandel talks about in his book, I find that to be wrong. No matter how happy the upper city is, that kid deserves the right to be happy as well. That is an idea that would oppose utilitarians because I would be voting against the happiness of the majority for the freedom of the little boy. Although I am more libertarian, I do believe in taxing the rich.\n\nFurther into the book, Sandel begins a chapter on John Rawls. Rawls was an American philosopher who was born in 1921 and died in 2002. During his time alive, he advocated for the idea that justice is not based on what is morally right, like Kant, but rather “what principals we would agree to in an initial situation of equality.” (pg. 140) Rawls created a thought experiment titled the “Veil of Ignorance” which means that people do not know their social status, their genders, or their education and from there, they create an unbiased foundation of justice. Sandel explains it as, “Since no one would have a superior bargaining position, the principles we would agree to would be just.”\n\nIn the thought experiment, Rawls creates the idea of an “original position of equality” where “Rawls invites us to ask what principals we- as rational, self-interested persons- would choose if we found ourselves in that position.” (pg.141) When I allowed myself to sit with this experiment for the first time, I was uncomfortable. I have empathy for everyone, but I realized I don’t spend much time thinking about those less fortunate than me on a daily basis. While I was thinking about if I was in an original position of equality I came up with some points that I would value for basic human justice. My list was filled with things like free healthcare (at the very least, affordable healthcare), access to education, access to healthy foods and clean water, and a safe place to live. Through Rawls thought experiment, anyone can put themselves in the shoes of another person and realize that some things are just inaccessible for the less fortunate.\n\nLooking at my life from the perspective of the veil of ignorance has made me feel a lot of privilege for my way of life. I have access to things such as insurance, safety, healthy foods, livable wage, a fun job, and good friends. A lot of thought experiments in Sandel’s book lead to feelings of being uncomfortable because they push the reader to think about people less fortunate than themselves. The examples of the kid under the city and the veil of ignorance are just two of the ones I wanted to explore in this reflection.\n\nSandel also mentions Aristotle near the end of the book and mentions Aristotle's idea of “Telos”, meaning purpose or end. Aristotle believes that everything in nature has a purpose or an end, for example: a watch has the purpose of telling time. Aristotle's view of justice is based around the idea of giving people what they deserve based on their actions. Digging deeper into the watch example, a person facing justice would be the one wearing the watch or the one reading the watch because the person wearing the watch has the purpose of telling time. Looking into Aristotle's idea and adding it to my own narrative, I immediately think about my purpose or “telos” in Student Government. The purpose of student government is to represent the student body of UNCW. If we represent the student body, then we oversee advocating for the students and making decisions for our peers based on what we know. From that perspective, the purpose of a student government member is to be the best representative of the student body they can be.",
+          "kind": "reflection",
+          "label": "Libertarianism, utilitarianism, Rawls, and Aristotle's telos",
+          "what_happened": "The student contrasts libertarian and utilitarian viewpoints, examines John Rawls's Veil of Ignorance while reflecting on personal privilege, and explores Aristotle's concept of telos in relation to Student Government.",
+          "feelings": "uncomfortable, privilege",
+          "people": "none",
+          "life_area": "school"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            68,
+            75
+          ],
+          "text": "Student Government meets every week on Tuesdays. Those meetings can span from thirty minutes to two hours and thirty minutes. Last year, during my freshman year, we had a meeting discussing the tuition increases for out-of-state students. This discussion went on for hours as senators debated on whether an increase was a viable option. On one hand, the increase would mean more money for the university to expand as well as keeping up with other UNC campuses. On the other hand, the out of state students may be less likely to apply to UNCW. When it came to voting, I felt it was my duty to vote for increasing tuition due to the fact it would better the campus as a whole, granted that money is allocated properly to all students. My telos, as a student government member, was to serve the student body to the best of my ability that night.",
+          "kind": "experience",
+          "label": "Voting on tuition increases in Student Government",
+          "what_happened": "During their freshman year, the student participated in a lengthy Student Government meeting debating out-of-state tuition increases and voted in favor of the increase.",
+          "feelings": "duty",
+          "people": "senators, student government members",
+          "life_area": "school"
+        },
+        {
+          "chunk": 5,
+          "sentences": [
+            76,
+            89
+          ],
+          "text": "After finishing the book, there were a lot of points I was left to reflect regarding what justice means to me. Reflecting on Kant, Rawls, and Aristotle has left me with a clearer picture of philosophy and of what I believe is right. There truly is no right way to think of justice but there are new ideas about being fair. All three philosophers have great philosophies about justice and Sandel leaves it up to the reader to decide on which one they agree with the most. I personally feel that Rawls has the fairest idea of justice with the veil of ignorance. His idea of being ignorant of a person's path in life has really stuck out to me.\n\nMoving forward I plan on being more empathetic to those who are less fortunate than myself. Rawls thought experiments have really changed the way I see things, especially situations overseas and out of the country. I was aware of the situations people were going through overseas, but I was ignorant of how truly terrible it can be as an everyday living situation. Even expanding past Rawls, before this class I was ignorant of how much effect a New York City flower or lying could have on a universe of truth. Sandel's book Justice: What’s the Right Thing to Do? Has challenged me to expand my horizons of thought and has encouraged me to think more outside the box than usual. This book and the ideas posed have been meaningful and transcendent and taken together, all three philosophers will impact the way I see justice. Justice is a personal and a communal effort that more people need to be aware of.",
+          "kind": "reflection",
+          "label": "Conclusions on justice and philosophical impact",
+          "what_happened": "The student reflects on how Kant, Rawls, and Aristotle shaped their understanding of justice and plans to be more empathetic toward less fortunate people moving forward.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "school"
+        }
+      ]
+    },
+    {
+      "id": "n2002aab5",
+      "title": "Transitioning to a Predominantly White University",
+      "words": 1538,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            6
+          ],
+          "text": "Racialization is the top-down political process where a dominant group decides the symbolic values of subordinate groups. In this day and age racialization is higher than ever, with immigrants coming in and the constantly changing society that we live in. This is a downward spiral, as racialization creates a social hierarchy based on skin color and essentially defines people by their race. The concept of systemic racism connects to racialization because with racialization you are defining people by their skin color and creating a hierarchy. Racism is not to be confused with ethnocentrism though, which is the tendency to trust or lean on people in your culture. Because of ethnocentrism, most people have a slight bias toward people of other races and ethnicities, but it is not inherently racialization.",
+          "kind": "reflection",
+          "label": "Defining racialization, systemic racism, and ethnocentrism",
+          "what_happened": "The student defines racialization and systemic racism, explaining how they create social hierarchies, and differentiates racism from ethnocentrism.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            7,
+            10
+          ],
+          "text": "I grew up near a military base, in a very diverse area, my high school had a minority rate of 62%. Due to the increased diversity of the area, no one really thought about race or classified people based on their race. Through my eyes, there was no dominant group it was all very inclusive. There were some neighborhoods growing up that were more black and some that were more white but it wasn’t to the point where it was dangerous to go there if you were the opposite race.",
+          "kind": "experience",
+          "label": "Growing up in a diverse community",
+          "what_happened": "The student grew up in an inclusive, racially diverse area near a military base where their high school had a high minority rate. People in the area did not classify others by race, and neighborhoods were not hostile across racial lines.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "community"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            11,
+            13
+          ],
+          "text": "Then I came to UNCW, which is a primarily white institution and it really surprised me how much they lack diversity and some of the stories I have heard from people of color about how they were mistreated and how they feel like an outcast here. It really opened my eyes to how much racialization there is before I never even thought about it because all my childhood everyone came together as one. This made me think, “why is systemic racism still so prevalent in our country”",
+          "kind": "experience",
+          "label": "Encountering racial disparities at UNCW",
+          "what_happened": "Upon coming to UNCW, the student was surprised by the lack of diversity and heard stories from people of color about mistreatment and feeling like outcasts. This opened the student's eyes to racialization and made them question why systemic racism remains prevalent.",
+          "feelings": "surprised",
+          "people": "people of color",
+          "life_area": "school"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            14,
+            67
+          ],
+          "text": "Systemic racism is caused by many things, first, some believe minorities don’t deserve the same rights because of discriminatory policies. There used to be policies put in place, such as black not being able to own a house any of these policies do exist today but they s o minorities and now they have the reputation of living in low-income areas . The media representation is another thing still expanding racism, whether it’s a book, movie, or news story, the media tends to represent people of color in a negative light. This causes people to be engrained with the fact that all of them act like that in real life. Even though slavery was abolished on December 18, 1865, there is still underground trafficking going on forcing minorities into labor because the stigma of slavery still exists, that People of color were made to do hard labor.\n\nThe hierarchy created by racialization causes white to make it out on top as the dominant group and other races to be looked down upon and go through all these challenges just to get where white people are. A lot of white people don’t realize their privilege and in turn, don’t realize how hard other races have it to live everyday life. This lack of acknowledgment only . If white people in power took a step back and realized what was truly going on, they could make some changes, the country does not have to be this way. Of course, you cannot do anything about specific internalized racism among individuals, but we can change policies and fire people who go against them. This is supposed to be a free country for all, yet some people are still fighting for their spot.\n\nThere are many ways to combat systemic racism in healthcare, the criminal justice system, housing, and politics. It starts within the education system, for medical school, law school, or even a management degree. If we learn how to identify our implicit biases and control them or learn from them, won’t make it into these systems. The best place to learn this is at the root of the problem when you begin learning the technical things. We can also make set-in-stone changes to public policy and industry the systemic racism flows all the way into the concrete practices that already exist. Some states opted out of using Medicaid which left 46% of black working adults without some kind of insurance. Hospitals and physicians could start excepting Medicaid, which is a health insurance that helps people with low-income. Within the criminal justice system, it is important to remain aware of police brutality, this way we can hold the system accountable. Addressing the inequality in the police system and in court settings would eventually lead to change as well. Some ways to stop inequality in the housing industry are investing in segregated communities, create affordable rental housing for low-income families, and increase the opportunities for black homeownership.\n\nOne of the major reasons a lot of the inequality that is very obvious is not being solved is due to white privilege. White privilege is the privilege white people have in everyday life that they don’t recognize as an advantage. The thing about white privilege is the fact that it causes some whites to be oblivious to the problems other races face. White people have the freedom to walk around in a grocery store without being followed, have a civilized run-in with the police, apply for jobs easily, and many other things. These are things that minorities have a hard time with, they could simply just be grocery shopping with their kids, and someone might suspect them of stealing, solely based on the color of their skin. Many white people aren’t just oblivious, they don’t believe it's real and get mad at those who think it is. The problem with this belief is that we can’t help stop one race from becoming superior to another, thus racialization will continue to grow even more. Of course, having privilege does not mean you don’t have struggles or get discriminated against in other aspects, it simply means you’re struggles are not due to your race. America could be a much better place if we used our white privilege to help others, such as standing up for a minority when it may be more dangerous for them.\n\nSo why does white privilege exist? The Civil Rights Act of 1964 was supposed to prohibit discrimination based on race, color, religion, sex, or nationality. As a country, the Act did help some discrimination, but discrimination of race still strongly persisted. This is when the term “white privilege” came about when people started to realize that it was psychological and less of a choice. Sme still believed white privilege was due only to conscious action, which is not inherently true because it is both conscious and unconscious. Some aspects of white privilege are surface deep, and others are embedded in the culture throughout the years. This is why Peggy Macintosh defined it as “an invisible knapsack,” it's hard to see and even harder to get rid of.\n\nIt is important to note that there is a big difference between racism and white privilege. History has caused white privilege to exist, biases exist all throughout time periods. Racism is something you choose to believe, that one race is better than another. It is not true that everyone with white privilege is racist, they interlock whenever one with white privilege does not recognize or rejects the fact that they have it and use it against those of other races. The concept of racialization is embedded in our culture and is also not just about racism, it is about whites being on top throughout history and our culture hasn’t changed. White people hold more wealth, have higher government positions, and gain better opportunities.\n\nRacialization depends on where you are how extreme it is but it exists everywhere. Even though where I grew up there was not a lot of racism, there was still white privilege so white people were still on top because of their race. This is due to systemic racism in our country, dating all the way back to before 1964 when the thirteenth amendment passed that outlawed slavery. America is known as a free country, everyone, in theory, has the same freedoms but when you combine those with the fear people of other races face of persecution, then everyone is not free. The roots of this country still lie under the fact that white men are on top and until that changes the systemic racism will still be more prevalent than ever. Some things like white privilege you can’t just get rid of after all this time, it will always exist to an extent, but we can recognize it and learn from it. That is the important thing about America’s history, it is not always the best but as a country, we can learn from our mistakes and increase the equality this country holds. So back to the question, why is systemic racism still so prevalent in our country? The answer is simpler than we think, it's because we lean on racialization to help us understand people and why people do things. Unconscious bias and ethnocentrism are rooted not only in our country but in everyone’s minds. That is holding back a change that could occur.",
+          "kind": "reflection",
+          "label": "Analyzing systemic racism and white privilege",
+          "what_happened": "The student explains the systemic causes of racial inequality, proposes reforms across major institutions, and discusses how white privilege and unconscious bias sustain racialization.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        }
+      ]
+    },
+    {
+      "id": "nb1b3b2d3",
+      "title": "Performing Identity in Sorority Recruitment",
+      "words": 654,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            11
+          ],
+          "text": "People are continuously faced with social interactions throughout our day-to-day lives. Thus, we subconsciously practice the front stage theory and the looking glass theory. The front stage theory is a facade, or a performance, that people put on when surrounded by new people. The looking glass theory is how we think others feel about ourselves. Although the front stage and looking glass theory are comparable in that they both focus on how people view us in social interactions they differ in the ways that we alter our personalities in given situations.\n\nThe front stage theory is a social space, created by Goffman, that provides a framework for understanding the many layers of identity presentation and social interaction. When participating in the front stage theory, representation of the public persona is created when faced with social situations. In doing so, they carefully choose their actions and appearances to leave the right impressions based on the audience. For example, when meeting someone for the first time you’re not as vulnerable due to the pressure of people watching your every move. The performance aspect of social interactions is emphasized heavily in Goffman's theory, which highlights how people intentionally control how they appear in different social contexts.\n\nThe Looking Glass theory compares to the front stage theory because of the idea that you are constantly putting on a performance to have a reaction from others.",
+          "kind": "reflection",
+          "label": "Explaining front stage and looking glass theories",
+          "what_happened": "The student explains Goffman's front stage theory and Cooley's looking glass theory, describing how individuals manage impressions and alter their personas during social interactions.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            12,
+            15
+          ],
+          "text": "I have experienced these theories during Fall Recruitment for a sorority. As I was going around to different houses, I was constantly using my front stage self to be liked by different girls in each chapter. I projected my own image onto other people, in hopes that they might reflect it back to me. In addition, I experienced the looking glass theory when conversation flowed naturally because I felt as if the different girls, I talked to enjoy my presence.",
+          "kind": "experience",
+          "label": "Participating in sorority recruitment",
+          "what_happened": "The student went to different sorority houses during Fall Recruitment, presenting a front stage persona to be liked and observing whether the members enjoyed their company.",
+          "feelings": "felt as if the girls enjoyed their presence, hopeful",
+          "people": "girls in each sorority chapter",
+          "life_area": "school"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            16,
+            28
+          ],
+          "text": "The dynamic interaction between an individual's internal self-concept and outside social cues is made clear by Cooley's theory. Cooley clarifies how people negotiate the challenging terrain of identity development among a network of social influences by highlighting the significance of social interactions and interpersonal perceptions. This viewpoint emphasizes the significant influence of social dynamics on a person's self-concept, underscoring the significance of empathy and understanding the formation of identity.\n\nIn contrast, these two theories go against each other because the front stage theory deals with how you individually alter your personality towards a certain group of people, whereas the looking glass self is focused on how you alter your personality based upon how others perceive you. For example, I enjoy eating capers on my pasta. When practicing the front stage theory, I would choose to eat something else when I am around new people. However, if I practiced the looking glass theory, I would choose to eat the capers on my pasta around new people, but I would be constantly second guessing myself and assuming the people I am with are judging me.\n\nAs a result, during interpersonal interactions, the constant conversation between one's internal self-perception and outside social feedback produces an awareness and understanding of identity. Essentially, Cooley's theory stresses the passive reception and acceptance of social feedback in creating individual self-concept, whereas Goffman's theory emphasizes the active performance of self in social circumstances. Moreover, people actively build their social image to negotiate a variety of social circumstances, whether it is through the planned performances in Goffman's framework or the imagined reflections in Cooley's theory. When combined, these divergent viewpoints provide complicated insights on the intricate relationship between social impact and human agency in social environments and the complicated and diverse nature of identity formation. In contrast, Cooley's theory highlights the passive reception and internalization of social input in shaping individual self-concept, but Goffman’s theory highlights an individual change for approval of others. This view emphasizes the reciprocal nature of social interaction and the importance of social dynamics in forming identity formation.",
+          "kind": "reflection",
+          "label": "Comparing sociological theories of identity",
+          "what_happened": "The student compares Cooley's and Goffman's theories of identity formation, using a hypothetical example about eating capers on pasta to illustrate the differences between them.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        }
+      ]
+    },
+    {
+      "id": "n0b084b3f",
+      "title": "College Admissions and Demanding Extracurriculars",
+      "words": 1597,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            8
+          ],
+          "text": "Michael J. Sandel is a Professor at Harvard University. He has taught political philosophy since 1980 and lives in Brookline, Massachusetts. In his book, ‘Justice: What’s The Right Thing To Do?,’ he speaks on the developments of morality and justice through different philosophers throughout history, as well as how it applies to situations in society today. Throughout the book, he provides us with many pressing issues in society and the development of the issues over history. He provides debates about college acceptances, surrogate mothers, abortion, same sex marriage, and many more. The book was intended to draw up questions about what is considered “right” versus what is considered “good”. It was written to progress one’s understanding of morality and justice.",
+          "kind": "reflection",
+          "label": "Introduction to Michael Sandel and his book",
+          "what_happened": "The student introduces Harvard professor Michael J. Sandel and summarizes the themes of morality and justice in his book.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            9,
+            19
+          ],
+          "text": "When reflecting on this book, one of the main debates that I felt I could connect with the most throughout real life was the debate on college acceptances. When I was applying to colleges, I didn't have many extracurriculars to put on my application. I did gymnastics growing up, meaning I trained 17 hours a week for ten years of my life. I was also the head coach of one of the gymnastics teams and would coach 8 hours a week. I was able to fit in a few clubs, such as the Food Ark and Nation Organization for Women, but not nearly as much as most people were. I kept up good grades and finished high school with above a 4.0 GPA. While all seven of my weekdays were slammed, it still looked like I did very little in my free time on my applications. Most people had more clubs and were able to take Wake Tech classes, I was barely getting through all the responsibilities I already had. So, while applying to colleges, I looked much less impressive than many others applying. This reduced the amount of colleges that I was accepted into. Friends of mine that had lower GPAs and more quantity of extracurriculars were accepted into colleges that I was not.",
+          "kind": "experience",
+          "label": "College applications and gymnastics commitments",
+          "what_happened": "The student balanced intense gymnastics training and coaching with schoolwork, which left little time for other extracurriculars. As a result, the student was accepted into fewer colleges than friends with lower GPAs and more club involvement.",
+          "feelings": "not stated",
+          "people": "friends",
+          "life_area": "school"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            20,
+            69
+          ],
+          "text": "In Chapter 7, “Arguing Affirmative Action,” it speaks on this debate, what should be considered when accepting people into colleges. On page 169 it says, “A 700 SAT score from a student who attended poor public schools in the South Bronx means more than the same score for a graduate of an elite private school on the Upper East Side of Manhattan. But assessing test scores in light of students’ racial, ethnic, and economic backgrounds does not challenge the notion that colleges and universities should admit those students with the greatest academic promise; it is simply an attempt to find the most accurate measure of each individual's academic promise.” An SAT score is not the measure of one’s academic success, but rather one’s academic potential. The idea is that someone from an elite private school would have more time and resources to study for the SAT to in turn get a greater score. Someone in a poorer neighborhood and school would likely have less time to study due to family and money struggles. They would also likely have less resources due to budget within the school and lack of ability to pay for personal classes. These are all issues that happen in real life and create an education gap between students. It is important to weigh these things when it comes to acceptances into colleges. This is discussed on pages 178 and 179 where it says, “The belief that jobs and opportunities are rewards for those who deserve them runs deep, perhaps more so in the United States than in other societies. Politicians constantly proclaim that those who “work hard and play by the rules” deserve to get ahead, and encourage people who realize the American dream to view their success as a reflection of their virtue.” It is assumed that if one does what they are told and do the right thing, they will get ahead of others. However, since not everyone comes from the same background, it is difficult to determine that everyone has a fair starting position. Maybe someone who comes from a wealthy family has connections for internships and are able to put themselves out there easier while someone who comes from a poorer family has to work to afford college and doesn’t have time for an unpaid internship that could put them in the position to work in the field they want to be in.\n\nWhile my situation with less time for other clubs and activities is much less of an issue, it can still tie into this debate. Is it fair for one who does not understand the amount of time and work that comes with being a gymnast to review my application? Is it fair for one to make a judgement on my time management levels when they do not understand that I would leave school to go to a five hour practice before even starting the homework I had for the night? While there is not a direct answer to these questions, we can look into the morality and justice behind why people are accepted into colleges that they are. Earlier in the book, on page 154, it states, “One way of remedying this unfairness is to correct for social and economic disadvantage. A fair meritocracy attempts to do so by going beyond merely formal equality of opportunity.” While this is not directly about the college acceptance debate, it ties into it quite nicely. When looking at this through the lens of college acceptances, we can see that while college admissions may not know the differences between sports or how much time they take up, we can see that they try to go beyond looking at economic and schooling opportunities. They want to see what you did with your time, how well you were able to keep up with your academics with the extracurriculars you were participating in, and how involved you were with said extracurriculars. They want to see that you took initiative and did these things all out of your free will and motivation. So, morally it may be seen as wrong since there will be some colleges that find it more important for you to be participating in sports while some may believe clubs are more important. Morality will be different between different colleges, but justice will stay very similar or the same. Justice is the equality that the book was talking about. It is important to look into the way each student lived, maybe they had more time for extracurriculars and maybe they didn't have any time. This doesn't mean that one student is better than another, it just means that each person comes from a different background and it is important to understand that when accepting people into colleges. Another very important debate that I found very interesting to read about was the same sex marriage debate. Religion was brought up many times and how one’s morality should not cross into the justice of others. In the book, on page 253, it states, “Can you decide whether the state should recognize same-sex marriage without entering into moral and religious controversies about the purpose of marriage and the moral status of homosexuality?” This is asking us to think about whether we can say if same-sex marriage is fair without bringing up our own personal beliefs and moral standards. The book then says, “Some say yes, and argue for same-sex marriage on liberal, nonjudgmental, grounds: whether one personally approves or disapproves of gay and lesbian relationships, individuals should be free to choose their marital partners. To allow heterosexual but not homosexual couples to get married wrongly discriminates against gay men and lesbians, and denies them equality before the law.\" This is claiming that despite the differentiations on morality between people in society, same-sex marriage is still something that is justified because everyone should be allowed to marry who they want to marry. Getting married to someone should not be prohibited by law according to justice. Later in the book, on page 255, it says, “If marriage were an entirely private affair, … all the disputes over gay marriage would become irrelevant. Gay marriage would not have the official sanction of governement, but neither would straight marraige.” If marriage is private and between two people, then it would not be of issue to anyone else. The argument that I hear often is, “if it has no effect on you, why should you be worried about it.” This argument is very important and ties into the quote pulled from the book above. Why would one worry about what others choose to do with their lives if it has nothing to do with them? The only argument that I have heard in response is that it is against what God would want. In this case, we can go back to the morality argument and say that religion has zero place in deciding whether people should be allowed to get married or not.\n\nThrough reading this book, it changed my perspective on how I look at certain issues. It raised questions that I would have never thought of and provided me with greater insight on morality versus justice. Morality and justice are both very big issues in society today and people tend to have a very difficult time differentiating between the two of them. In conclusion with what I have read, morality is the public’s ideologies and thoughts on certain issues, while justice is the balance of virtue, freedom, and welfare. Justice is the most important thing to look into when understanding different societal issues.",
+          "kind": "reflection",
+          "label": "Reflections on affirmative action, justice, and morality",
+          "what_happened": "The student explores Sandel's arguments on affirmative action, meritocracy, and same-sex marriage. The student concludes that justice, rather than varying moral or religious beliefs, should guide decisions on societal issues.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "other"
+        }
+      ]
+    },
+    {
+      "id": "n89acaec5",
+      "title": "Confronting the Stigma of Mental Illness",
+      "words": 1910,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            99
+          ],
+          "text": "“A Boy Broken”, written by Douglas J. Engelman in June of 2023, is a story about a father’s experience after his eldest son, Douglas Jr., is diagnosed with schizophrenia. The story takes the reader through firsthand events leading up to the diagnosis, the diagnosis itself, and how the Engelman family moved forward after not only Douglas Jr.’s (Doug’s) diagnosis, but also his death that occurred eight years later.\n\nIn his work, Engelman (2023) shares his personal firsthand experiences with schizophrenia in order to help readers better understand the mental disorder. His goal, as I interpreted it, was to assist others who have been affected by a mental disorder diagnosis, whether it be personally, as a caregiver, or simply affecting someone close to you. He rawly describes his emotions, which allows others to relate to and not feel so ashamed or just upset with themselves when they feel those same emotions. He discusses the stigma surrounding mental disorders and why this stigma has to be broken in order for society to move forward. And, in order for individuals and their families to confidently be able to reach out for help and support during one of the hardest times of their lives. Engelman (2023) describes this stigma as “inhibiting recovery and a favorable life outcome for the person with mental illness” (p. 29).\n\nTheories and Stigma:\n\nTheories like the symbolic interactionist and labeling contribute to the overall stigma and perception of mental illness or disorder. Once born, individuals are expected to conform to the societal ideals of “normal” behavior. If a person goes against these societal norms, values, and beliefs, they face the consequence of being labeled “deviant”. Edwin Lemert, an American sociologist, divided this “deviant” label into two separate terms, primary deviance and secondary deviance. Primary deviance “is associated with non-normative behavior” (Engelman 2023:26). Engelman provides schizophrenia as an example. So, Doug being diagnosed with the mental disorder already put him in a box, labeling him deviant, though it was not his choice to not be “normal” according to society, just an unfortunate circumstance. Secondary deviance is when an individual assumes their deviant identity and acts out because of society’s prejudice towards them. In the book, we did not see secondary deviance in Doug; in fact, he worked diligently to be one of the ten percent with schizophrenia who go on to live a normal life.\n\nAnother American sociologist, Bruce Link, connected stigma to labeling theory. He claimed that “stigma of the label ‘mentally ill’ is internalized and imposes social stresses on the individual, to which the person adapts by implementing coping strategies such as concealing the condition…or the outright withdrawal of the individual from social interaction” (Engelman 2023:27-28). The stigma surrounding those who are deemed mentally ill makes an already difficult situation even more difficult for both the individual and their family. A Canadian sociologist, Erving Goffman, explained how stigma applied to the mentally disordered leads them to restricted social opportunities, and changes in self-identity” (Engelman 2023: 28). It is also brought up in the text that stigma impedes one’s ability to recover from a mental disorder.\n\nLater on in this paper, it will be discussed how Doug overcomes this stigma associated with his schizophrenia diagnosis and goes on to receive treatment, respond very well to that treatment, land himself a job, and be able to live on his own (like many others with the disorder cannot).\n\nWe see the author and his family also react to the stigma caused by his son’s diagnosis. Originally, Engelman (2023) tried to hide Doug’s diagnosis due to fear of what others would think of him as a parent, even though the diagnosis had nothing to do with his parenting. Engelman then dove into how he questioned if the diagnosis was his fault. If he had not divorced Doug’s mother, if he had not moved away, if he had been more present. But all of these what-ifs are not an explanation for how or why Doug ended up being diagnosed with the disorder. The only fact that truly mattered was how the author helped his son deal with the disorder.\n\nIf it had not been for his unwavering support and love for his son, I do not think Doug would have been a part of that small ten percent that comes out on top, and is able to live normally (for the most part). It is truly admirable to be able to, what I felt was, experience just how much a father loves his son, how far he is willing to go, how much he is willing to do. And, in the end, it worked out beautifully; all of both Engelman and Doug’s hard work paid off.\n\nDoug’s Story:\n\nAt age twenty, Doug was diagnosed with drug-induced schizophrenia. Doug’s first psychotic break was witnessed by his sister Melissa. He was outside on the back porch, repeatedly yelling the phrase “Why do they have to die?” for ten minutes (Engelman 2023:6). Melissa was worried, so she called the police. Officer Thomas arrived on the scene and talked it out with Doug. The author reached out to Officer Thomas in hopes of finding answers to his questions. The officer relayed his belief that Doug may be schizophrenic and that he should be checked out by medical professionals.\n\nThe author’s first experience of realizing his son may be schizophrenic occurred when he picked Doug up the morning after the incident to go to breakfast. While in the car, Doug mentioned that two people, Wendy and Dave, were always with him. Doug said that Wendy was in the car with them when it was only the author in the driver’s seat and his son in the passenger seat. While in the car, Doug experienced severe pain in his abdomen. He claimed that Dave and Wendy could put their hands inside of him, and that was what was causing it.\n\nDoug’s Uncle Harry, on his father’s side, was also diagnosed with schizophrenia in his early twenties. The family history, and as the author mentioned later on, Doug’s frequent smoking of marijuana could be attributed to the development of his disorder, but this question was not specifically answered.\n\nDoug’s first experience in the medical field was at Loyola Medical Center’s Mental Health unit. His father dropped him off for intake there, and he was taken right into a thirty-day program. This is where Doug was first medicated for his disorder, and he was responding well, saying it was “helping him think straight” (Engelman 2023:63). His first days at the facility were spent in solitary where he was heavily medicated. He then underwent individual and group therapy sessions, and eventually exposure to the rest of the patients in the facility.\n\nAfter the month at Loyola, Doug was moved to John J. Madden Mental Health Center. Madden allowed Doug more professional care, more exposure to experimental anti-psychotics, and more therapy (Engelman 2023:65). Once in the care of Madden, Doug had his first experience with a group home, where he ended up staying for nine months. During his stay at the group home, Doug experienced ups and downs. His money was taken from him, and later on, he was threatened. This threat caused Doug to return home to the author’s house one day, claiming he needed to leave Madden.\n\nThree weeks after coming back to Madden from his father’s, that one night, Doug disappeared. It was not until three weeks after his disappearance that Doug reached out to his father. For three weeks, Doug was out on the streets, staying at Franciscan Outreach during the nights. After the phone call, Engelman (2023) went directly to pick up his son and brought him home. They had dinner, talked, and decided it would be best for Doug to move out of the group home.\n\nDoug ended up moving into an apartment with an older man. At this apartment, Doug landed himself a job. After over half a year at this place, Doug decided he wanted to go back to Pittsburgh, where he was surrounded by family that he was missing.\n\nWhen back in Pittsburgh, Doug had moved back in with his mother and was serviced by Chartiers Mental Health/Mental Rehabilitation Center. He stayed with his mother for two years before moving out and moving in with his sister Melissa, which lasted only for a year.\n\nEventually, the author came to Pittsburgh to help with Doug’s situation along with his sister and mother. They found Doug an apartment where he faced some challenges. He was continuing to abuse weed and alcohol even though he knew it was bad for him to partake in them with his diagnosis. And he was not staying consistent with his medication. While at this apartment, and hanging out with old friends Chuck and Bob, Doug found himself frequently in trouble with the police. It was in his best interest that he move, so he did.\n\nWhen Doug moved apartments, he ended up moving to a new mental health facility, Mercy Behavioral Health. It was at Mercy where Doug began to flourish more than ever before. His new therapist, Julie Gatti, helped him in ways he had not been helped before. Engelman (2023) noted that “It was clear she had reached him in a way that no one else had previously” (p. 123). Doug was getting a handle on his substance abuse during this time, and his progress with his overall diagnosis became even more prominent.\n\nDoug stayed in the area but moved into his own home, where he was approved for Section 8 housing. He had made such a nice life for himself, even regaining employment at his old high school job where he installed carpeting. With all of these amazing opportunities happening to Doug, he gained “a sense of purpose and optimism” that his father, the author, had not seen in years.\n\nThe last time the author saw Doug in life was at Doug’s Uncle’s wedding. Doug was doing great.\n\nThe last time Doug and his father talked over the phone on December 16, 1988, things were really looking up for him. He called just “to say how great I’m doing. How happy I am” (Engelman 2023:135). Doug had plans to go back to school, but sadly, three days after their last call, Doug was killed in a tragic car accident.\n\nSummary:\n\nDuring the eight years of living with schizophrenia, Doug became one of the ten percent to live a somewhat normal life. Tragically, that life was cut short.\n\nThis book delivers a sense of hope to its readers, whether they have experience with mental disorder or not, hope for families made up of mentally disordered individuals. With hard work and determination, people can overcome and be more than their disorder.\n\nWhile reading the book, I felt certain aspects on a personal level.",
+          "kind": "reflection",
+          "label": "Analysis of Engelman's book on schizophrenia and stigma",
+          "what_happened": "The student analyzes Douglas J. Engelman's book about his son's schizophrenia, discussing sociological theories of deviance and stigma as well as Doug's life and death.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "health"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            100,
+            102
+          ],
+          "text": "When I had my first depressive episode, I was too scared to admit it to my mother. I did not want her to blame herself that I no longer wanted to live. Eventually, I had to admit it to her.",
+          "kind": "experience",
+          "label": "Admitting first depressive episode to mother",
+          "what_happened": "During their first depressive episode, the student felt scared to tell their mother that they no longer wanted to live, but eventually admitted it to her.",
+          "feelings": "too scared",
+          "people": "mother",
+          "life_area": "health"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            103,
+            109
+          ],
+          "text": "So, I think this book and how the author dealt with and supported his son through his entire diagnosis and life can help others struggling to get over the “shameful stigma” and reach out for support. If I had not already had my conversation with my mother, I most definitely would have after reading this book.\n\nSource:\n\nEngelman, Douglas J. 2023. A Boy Broken. Kindle Direct Publishing.",
+          "kind": "reflection",
+          "label": "Reflections on overcoming stigma and reaching out for support",
+          "what_happened": "The student explains how the book helps people overcome stigma and seek support, reflecting on their conversation with their mother, and provides the citation.",
+          "feelings": "not stated",
+          "people": "mother",
+          "life_area": "health"
+        }
+      ]
+    },
+    {
+      "id": "ne3ac8c62",
+      "title": "Living with ADHD and Anxiety",
+      "words": 1505,
+      "chunks": [
+        {
+          "chunk": 1,
+          "sentences": [
+            1,
+            17
+          ],
+          "text": "“A Boy Broken” is more than a story about one family's trauma. It’s a story that reflects the raw depiction of pain, neglect, and resilience, that challenges us to reconsider what it means to truly be broken. Before reading the book, I came into this not expecting to gain an understanding of what trauma means, but after reading this book, it opened my eyes and gave me a new perspective, not just for trauma in general, but my trauma specifically. I am hoping that through reading my reflection, it will inspire you not just to read the book, but to learn and broaden your perspective of what a mental illness is and what trauma comes with it. So that we can learn and grow together as a society. A Boy Broken is a story about a family's struggle with trauma as their son, Douglas Engleman Jr is diagnosed with schizophrenia, and how they deal with the grief of losing him after trying to help him get his life back on track after his diagnosis. I think this book was written into three parts as the story of how he and his family dealt with the diagnosis. What does it mean to have a mental illness, the story of a family’s challenges through a mental illness and how do you deal with the grief of losing someone to a mental illness? I know this sounds broad, but for me this was more than a book, it was a man's strength through the challenging time of finding out his son has a mental illness and how he and his family makes the best of it even after he dies.\n\nWhen reading the book, I took it as an emotional guide as a story that we can read and learn from. I started with what is a mental illness, because I felt like this book truly started when Douglas Engleman was diagnosed with schizophrenia. That diagnosis did not change his life, but also the people he loved. After being diagnosed it led to a gate being open of what did it mean to have the mental illness? How can we help someone that is diagnosed with it? And how is it going to affect us? I know this last question is like how can we think about us during a time like this but it is human nature to be selfish when it comes to finding out something like this. As a friend or family it can be hard for them to help when they are going through their own issues.",
+          "kind": "reflection",
+          "label": "Reflecting on A Boy Broken and mental illness",
+          "what_happened": "The student introduces the book 'A Boy Broken' and reflects on how a diagnosis of schizophrenia and mental illness impacts both the individual and their family.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "health"
+        },
+        {
+          "chunk": 2,
+          "sentences": [
+            18,
+            24
+          ],
+          "text": "As I am coming to terms with my diagnosis of my illness. I have seen how these come into play, when I was around the age 7, my parents were concerned with my focus and lack of attention to anything. I know you're thinking that’s normal for a kid, It was with everything I did and that was when they took me to the doctor out of concern for it. At the doctor I was diagnosed with Attention Deficit Hyperactivity Disorder (ADHD). I would say that that definitely was the start of my journey, because I was put on my first medicine as a result of that but it was the first time that I truly felt valid as it proved that I was not trying to be disruptive and that I had a reason for being so hyperactive.\n\nThe medicine was a game changer. It did help with me focusing but there were challenges that did arise.",
+          "kind": "experience",
+          "label": "Childhood ADHD diagnosis and medication",
+          "what_happened": "When the student was around seven years old, their parents took them to the doctor out of concern for their lack of focus, leading to an ADHD diagnosis and medication.",
+          "feelings": "valid",
+          "people": "parents, doctor",
+          "life_area": "health"
+        },
+        {
+          "chunk": 3,
+          "sentences": [
+            25,
+            30
+          ],
+          "text": "In the book we learned that when Douglas Engleman Jr was diagnosed with his disorder, it was not just a change but brought changes for the family with it. As his mom couldn’t help with taking care of him as she was going through her own challenges. And his dad and wife took on the duty of helping to care for him, but it was hard, as they were starting their family and had one young child and another on the way. I remember that part that hit really hard was when I was reading, when the author asked if it was wrong to be worried, as the son was living with them, and the violent interaction that happened at Melissa's house would happen at his house, and would the interaction happen to his wife? It was because of the lack of knowledge at the time of the illness, but also due to the fear of the unknown and unpredictability of someone that he loved. I think it was one of the biggest challenges that were faced in the book.",
+          "kind": "reflection",
+          "label": "Family challenges in A Boy Broken",
+          "what_happened": "The student reflects on the book's depiction of Douglas Engleman Jr.'s family facing fear and difficulties while attempting to care for him.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "family"
+        },
+        {
+          "chunk": 4,
+          "sentences": [
+            31,
+            33
+          ],
+          "text": "When looking back at this part, I started to think of some of the challenges that I faced. I think my biggest challenge was that the ADHD medicine started really well, but it only lasted for a few months before my body became immune to it, and we started a new medicine. But I had to find the right doses as I needed something strong enough to last for a school day, but not too long, as I had really bad insomnia and had to take melatonin for it.",
+          "kind": "experience",
+          "label": "ADHD medication challenges and insomnia",
+          "what_happened": "The student faced difficulties when their ADHD medication stopped working after a few months, requiring a new medication and melatonin to manage insomnia.",
+          "feelings": "not stated",
+          "people": "none",
+          "life_area": "health"
+        },
+        {
+          "chunk": 5,
+          "sentences": [
+            34,
+            41
+          ],
+          "text": "I would say that, honestly, that was the end of my mental health story, but as I entered college and attempted to do new things. I started to get bad anxiety at the thought of going and trying new things, but at that time, I thought it was normal, as we all get anxious. It wasn’t until early 2025, I started to get anxious about everything, from what I was wearing, to what I ate, to even going to a place with friends. It didn’t just affect the way I lived, but the way I interacted as a student, as I was unable to function and had a hard time going to class, interacting with teachers, and even turning stuff in. That's when I went to the doctor, and I was diagnosed with Generalized Anxiety Disorder (GAD). I would say that is pretty life-changing, as I had never thought that I could have another mental illness. As I am starting to come to terms with it, I would say that having the amazing support system of friends and family has helped with it. I would also say that therapy and talking about how it’s okay to make a decision and that I should not feel bad or feel like I made the wrong decision helped.",
+          "kind": "experience",
+          "label": "College anxiety and GAD diagnosis",
+          "what_happened": "After developing severe anxiety in college that interfered with classes and daily life, the student went to the doctor, was diagnosed with Generalized Anxiety Disorder, and found help through support and therapy.",
+          "feelings": "anxious, bad anxiety",
+          "people": "friends, teachers, doctor, family",
+          "life_area": "health"
+        },
+        {
+          "chunk": 6,
+          "sentences": [
+            42,
+            60
+          ],
+          "text": "I would say that before I conclude this amazing paper, I would say that the biggest part and this sums up the book entirely. How do you grieve when losing someone you love, especially one you have helped and worked hard with their mental illness? I think this was the case for the book, as his family had worked hard and helped him get to a point where he could have achieved a normal. As I remember that in the book, they mentioned how he was starting to turn his life back around. He was going to go back to college, he was starting his treatment and he even started talking to someone. He was making amazing progress, when he was injured in a car accident. At this moment changed not just his life, but his family as by the time he made it to the hospital he was declared dead. I think it was important as even though it put a hole in his heart, it allowed him the opportunity to mend the relationship with his daughter, Melissa. It was also the turning point that led to the book that we read but it left me the question what do you do when you lose someone that you love. How do you go on knowing that someone that you cared for will not be there. I one cannot say that I had to deal with it, but one of my favorite influences has lost someone they loved through suicide to mental illness, and everyday she post something that she loves about him and how they were supposed to grow old together. I can’t imagine the pain. I think this book also did a really good job of showing it. I am going to give a spoiler but when I was reading the intro, something really hit me. It was the second edition because some people asked how Melissa felt and how she handled it. This really stuck out to me that I think this was the chapter I was most excited for. This was a really well written memoir of a family's journey of grief after losing their son. I didn’t just think of it as a book, but something that I can take back into the real world and apply. I think this helped me learn how we can work to educate us on mental illness as a whole so that we can not just use them to help as family members and friends but stand up for injustice and help with making decisions that are good for the community as a whole.",
+          "kind": "reflection",
+          "label": "Reflecting on grief and mental illness",
+          "what_happened": "The student reflects on the book's portrayal of grief following the loss of a loved one to mental illness and discusses the importance of mental health education and community advocacy.",
+          "feelings": "excited",
+          "people": "none",
+          "life_area": "community"
+        }
+      ]
+    }
+  ]
+}

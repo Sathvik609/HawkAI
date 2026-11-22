@@ -1,3 +1,5 @@
+import csv
+import io
 import json
 import time
 from collections import Counter
@@ -6,6 +8,7 @@ from flask import Flask, Response, abort, jsonify, render_template, request, str
 
 import generation
 from config import DATA_DIR, MAX_HISTORY_TURNS, MAX_MESSAGE_CHARS, NUM_OPTIONS
+import review_store
 from event_log import log_event
 from retrieval import NarrativeIndex, Searcher
 
@@ -196,6 +199,66 @@ def legacy_one_shot():
     body, _ = generation.split_suggestions("".join(generation.stream_explain(result["concept"], best)))
     body, _ = generation.split_keys(body)
     return jsonify({"result": body, "score": float(result["options"][0]["relevance"] or 0) / 10})
+
+
+REVIEW_FILE = DATA_DIR / "experience_chunks_sample.json"
+REVIEW_MARKS = {"correct", "partly", "wrong"}
+
+
+def _review_sample() -> list[dict]:
+    return json.loads(REVIEW_FILE.read_text())["narratives"] if REVIEW_FILE.exists() else []
+
+
+def _reviewer(value) -> str:
+    name = " ".join(str(value or "").split())[:60]
+    if not name:
+        abort(400, description="Please enter your name first.")
+    return name
+
+
+@app.get("/review")
+def review():
+    return render_template("review.html")
+
+
+@app.get("/api/review")
+def review_data():
+    reviewer = _reviewer(request.args.get("reviewer"))
+    return jsonify({"narratives": _review_sample(), "marks": review_store.load(reviewer)})
+
+
+@app.post("/api/review/mark")
+def review_mark():
+    data = _payload()
+    reviewer = _reviewer(data.get("reviewer"))
+    sample = {n["id"]: n for n in _review_sample()}
+    nid = str(data.get("narrative_id") or "")
+    if nid not in sample:
+        abort(400, description="Unknown narrative.")
+    try:
+        chunk = int(data.get("chunk"))
+    except (TypeError, ValueError):
+        abort(400, description="Unknown chunk.")
+    if not 0 <= chunk <= len(sample[nid]["chunks"]):
+        abort(400, description="Unknown chunk.")
+    mark = data.get("mark") if data.get("mark") in REVIEW_MARKS else None
+    review_store.save(reviewer, nid, chunk, mark, _text(data.get("note"), 4000))
+    return jsonify({"ok": True})
+
+
+@app.get("/review/export.csv")
+def review_export():
+    sample = {n["id"]: n for n in _review_sample()}
+    out = io.StringIO()
+    writer = csv.writer(out)
+    writer.writerow(["reviewer", "narrative_id", "narrative_title", "chunk", "type", "label", "mark", "note", "updated_at"])
+    for r in sorted(review_store.load(), key=lambda r: (r["reviewer"], r["narrative_id"], r["chunk"])):
+        n = sample.get(r["narrative_id"], {})
+        c = n.get("chunks", [])[r["chunk"] - 1] if r["chunk"] else {}
+        writer.writerow([r["reviewer"], r["narrative_id"], n.get("title", ""), r["chunk"] or "whole narrative",
+                         c.get("kind", ""), c.get("label", ""), r["mark"] or "", r["note"] or "", r["updated_at"]])
+    return Response(out.getvalue(), mimetype="text/csv",
+                    headers={"Content-Disposition": "attachment; filename=chunk_reviews.csv"})
 
 
 if __name__ == "__main__":
