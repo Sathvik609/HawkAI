@@ -215,7 +215,9 @@ class Searcher:
 
         result = {"concept": understood.concept, "definition": understood.definition, "options": options,
                   "message": None if options else
-                  f"No past student narratives clearly illustrate {understood.concept}. Try a related concept."}
+                  f"No student narratives clearly illustrate {understood.concept}. Try a related concept."}
+        if not options:
+            return result
         with self.lock:
             self.concepts[ckey] = result
             self.queries[qkey] = ckey

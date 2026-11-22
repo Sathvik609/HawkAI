@@ -1,236 +1,72 @@
 {
  "built_at": "2026-11-19T22:13:40+00:00",
  "queries": {
-  "anomie": "anomie",
-  "beauty myth": "beauty myth",
-  "presentation of self": "presentation of self",
   "looking glass self": "looking glass self",
+  "presentation of self": "presentation of self",
+  "beauty myth": "beauty myth",
   "collective consciousness": "collective consciousness",
   "alienation": "alienation",
+  "white privilege": "white privilege",
   "social class": "social class",
   "gender roles": "gender roles",
-  "racial formation": "racial formation",
-  "white privilege": "white privilege",
   "socialization": "socialization",
+  "racial formation": "racial formation",
   "dramaturgy": "dramaturgy",
-  "social construction of race": "social construction of race",
   "stigma": "stigma",
+  "social construction of race": "social construction of race",
+  "power elite": "power elite",
   "intersectionality": "intersectionality",
   "social stratification": "social stratification",
-  "power elite": "power elite",
-  "patriarchy": "patriarchy",
   "sociology of religion": "sociology of religion",
-  "hegemonic masculinity": "hegemonic masculinity",
+  "patriarchy": "patriarchy",
   "gender socialization": "gender socialization",
+  "hegemonic masculinity": "hegemonic masculinity",
   "doing gender": "doing gender",
   "matrix of domination": "matrix of domination",
-  "capitalism": "capitalism",
   "collective representations": "collective representations",
-  "gender inequality": "gender inequality",
-  "conformity": "conformity",
-  "front stage": "front stage",
-  "social norms": "social norms",
-  "othering": "othering",
   "social self": "social self",
+  "capitalism": "capitalism",
+  "gender inequality": "gender inequality",
+  "front stage": "front stage",
+  "conformity": "conformity",
+  "othering": "othering",
+  "impression management": "impression management",
+  "social norms": "social norms",
   "mcdonaldization": "mcdonaldization",
   "oppression": "oppression",
   "social inequality": "social inequality",
-  "rationalization": "rationalization",
-  "utilitarianism": "utilitarianism",
+  "utilitarianism": "rational choice theory",
   "commodity fetishism": "commodity fetishism",
-  "impression management": "impression management",
-  "systemic racism": "systemic racism",
   "cohabitation": "cohabitation",
   "social solidarity": "social solidarity",
+  "systemic racism": "systemic racism",
+  "rationalization": "rationalization",
   "backstage": "backstage",
-  "other": "other"
+  "other": "other",
+  "anomie": "anomie"
  },
  "concepts": {
-  "anomie": {
-   "concept": "Anomie",
-   "definition": "Anomie is a condition of moral instability and normlessness resulting from a breakdown in social standards, as defined by Emile Durkheim.",
-   "options": [
-    {
-     "id": "nf8878a48",
-     "title": "Changing norms and dating rules",
-     "preview": "Shifting legal definitions and changing expectations around dating roles leave people unsure about how to act in everyday social situations.",
-     "concepts": [
-      "Anomie",
-      "Nuclear Family",
-      "Social Norms",
-      "Counterculture"
-     ],
-     "relevance": 6,
-     "words": 1412
-    },
-    {
-     "id": "n6eecf408",
-     "title": "Modern society and lost meaning",
-     "preview": "Technological advancements and declining religious authority cause communities to lose traditional guidelines for making social and moral decisions.",
-     "concepts": [
-      "Collective Consciousness",
-      "Anomie",
-      "Strategic Action Fields",
-      "Social Integration"
-     ],
-     "relevance": 5,
-     "words": 1670
-    }
-   ],
-   "message": null
-  },
-  "beauty myth": {
-   "concept": "The Beauty Myth",
-   "definition": "Naomi Wolf argues that society promotes unattainable physical ideals to control women and maintain gender inequality.",
-   "options": [
-    {
-     "id": "nc7c3e743",
-     "title": "Beauty standards in restaurant work",
-     "preview": "Working as a restaurant hostess revealed that wearing makeup and big earrings directly increased tips and customer approval.",
-     "concepts": [
-      "Beauty Myth",
-      "Patriarchy",
-      "Sexual Objectification",
-      "Gender Roles"
-     ],
-     "relevance": 9,
-     "words": 1649
-    },
-    {
-     "id": "nd1727a52",
-     "title": "Swim team and body image",
-     "preview": "Comparing her athletic body to petite peers and edited media images led to bulimia while competing on a swim team.",
-     "concepts": [
-      "Beauty Myth",
-      "Diet Culture",
-      "Gender Socialization",
-      "Male Gaze"
-     ],
-     "relevance": 9,
-     "words": 1222
-    },
-    {
-     "id": "ncbba66b6",
-     "title": "Watching a twin sister battle anorexia",
-     "preview": "Observing a twin sister develop severe anorexia in competitive dance prompted reflection on how men treat women as decorative objects.",
-     "concepts": [
-      "The Beauty Myth",
-      "Gender Socialization",
-      "Social Institutions",
-      "Objectification"
-     ],
-     "relevance": 8,
-     "words": 1826
-    },
-    {
-     "id": "ne97d4b48",
-     "title": "Working in a dive bar",
-     "preview": "Getting hired at seventeen based on physical appearance led to being restricted from certain job tasks because of gender stereotypes.",
-     "concepts": [
-      "Beauty Myth",
-      "Gender Roles",
-      "Objectification",
-      "Commodification"
-     ],
-     "relevance": 8,
-     "words": 1250
-    },
-    {
-     "id": "nea95a30b",
-     "title": "Peer pressure in high school",
-     "preview": "Facing harsh body policing and ridicule from female classmates in high school triggered disordered eating and severe body dysmorphia.",
-     "concepts": [
-      "Beauty Myth",
-      "Socialization",
-      "Peer Pressure",
-      "Conformity"
-     ],
-     "relevance": 7,
-     "words": 2103
-    }
-   ],
-   "message": null
-  },
-  "presentation of self": {
-   "concept": "Presentation of Self",
-   "definition": "Erving Goffman defined the presentation of self as the ways individuals try to shape how others perceive them during social interactions.",
-   "options": [
-    {
-     "id": "nc0265b0e",
-     "title": "Hiding grief during family illness",
-     "preview": "Family members hid their exhaustion and put on calm expressions for each other and the public after a cancer diagnosis.",
-     "concepts": [
-      "Presentation of Self",
-      "Front Stage",
-      "Backstage",
-      "Impression Management"
-     ],
-     "relevance": 9,
-     "words": 1696
-    },
-    {
-     "id": "n0534c3f5",
-     "title": "Changing voices as a cashier",
-     "preview": "Working at a grocery store checkout required shifting speaking styles and personalities to match different shoppers, surprising a visiting partner.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Social Self",
-      "Presentation of Self",
-      "Impression Management"
-     ],
-     "relevance": 9,
-     "words": 1344
-    },
-    {
-     "id": "n3f1cc7ca",
-     "title": "Balancing family and friend expectations",
-     "preview": "Acting silly with friends contrasted with maintaining high grades, managing personal finances, and appearing completely responsible around parents.",
-     "concepts": [
-      "Dramaturgy",
-      "Presentation of Self",
-      "Role Conflict",
-      "Collective Consciousness"
-     ],
-     "relevance": 8,
-     "words": 1264
-    },
-    {
-     "id": "n1ad48a7d",
-     "title": "Shifting behavior across different groups",
-     "preview": "Switching between talkative, diligent, quiet, and sarcastic demeanors depended entirely on being around parents, roommates, professors, or new acquaintances.",
-     "concepts": [
-      "Presentation of Self",
-      "Dramaturgy",
-      "Ascribed Status",
-      "Achieved Status"
-     ],
-     "relevance": 7,
-     "words": 1844
-    },
-    {
-     "id": "n030c1874",
-     "title": "Curating public images and classroom roles",
-     "preview": "A college lecture stalled unexpectedly when a professor arrived without class notes and disrupted the usual classroom routine.",
-     "concepts": [
-      "Presentation of Self",
-      "Looking-Glass Self",
-      "Front Stage",
-      "Backstage"
-     ],
-     "relevance": 6,
-     "words": 1259
-    }
-   ],
-   "message": null
-  },
   "looking glass self": {
    "concept": "Looking-Glass Self",
-   "definition": "Charles Horton Cooley proposed that the looking-glass self is the process where a person's self-concept develops through interpersonal interactions and perceptions of others.",
+   "definition": "Charles Horton Cooley proposed that a person's self grows out of society's interpersonal interactions and the perception of others.",
    "options": [
     {
+     "id": "na876ade3",
+     "title": "Awkward club meeting and self-doubt",
+     "preview": "Attending a new club meeting resulted in awkward silences and poor eye contact from members, undermining personal confidence in social skills.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Self-Image",
+      "Socialization",
+      "Social Interaction"
+     ],
+     "relevance": 9,
+     "words": 1850
+    },
+    {
      "id": "na90fe41e",
-     "title": "Acting good and bad for different adults",
-     "preview": "Praise from teachers made the student behave like a model pupil, while conflict at home reinforced a rebellious attitude with parents.",
+     "title": "Acting good or bad for adults",
+     "preview": "Contrasting reactions from teachers and parents led to behaving as a model student at school but acting out at home.",
      "concepts": [
       "Looking-Glass Self",
       "Presentation of Self",
@@ -241,35 +77,22 @@
      "words": 768
     },
     {
-     "id": "n58602927",
-     "title": "Changing posture and style over height",
-     "preview": "Teasing from peers about being tall led the student to slouch, alter makeup habits, and internalize negative comments about appearance.",
-     "concepts": [
-      "Doing Gender",
-      "Beauty Myth",
-      "Looking-Glass Self",
-      "Gender Roles"
-     ],
-     "relevance": 9,
-     "words": 1611
-    },
-    {
-     "id": "na876ade3",
-     "title": "Meeting a club and cold reactions",
-     "preview": "Unresponsive club members who avoided eye contact caused the student to suddenly doubt previously confident conversational skills.",
+     "id": "n83bf8aaf",
+     "title": "Academic doubts and peer judgments",
+     "preview": "Assuming friends thought less of academic ability during middle and high school hurt self-confidence, until those assumptions proved entirely wrong.",
      "concepts": [
       "Looking-Glass Self",
-      "Self-Image",
-      "Socialization",
-      "Social Interaction"
+      "Self-Identity",
+      "Peer Groups",
+      "Social Hierarchy"
      ],
      "relevance": 8,
-     "words": 1850
+     "words": 1231
     },
     {
      "id": "n0534c3f5",
-     "title": "Shifting customer interactions while cashiering",
-     "preview": "Work shifts at a grocery store involved altering voices and personalities depending on whether customers reacted with warmth or coldness.",
+     "title": "Cashier interactions and customer moods",
+     "preview": "Interactions with customers at a grocery register directly determined daily self-worth and altered speaking styles to fit each person.",
      "concepts": [
       "Looking-Glass Self",
       "Social Self",
@@ -280,17 +103,161 @@
      "words": 1344
     },
     {
-     "id": "n83bf8aaf",
-     "title": "Believing peers doubted intelligence in school",
-     "preview": "Assuming friends thought less of their intelligence led the student to lose academic confidence until discovering the assumption was wrong.",
+     "id": "nb1b3b2d3",
+     "title": "Sorority recruitment and social cues",
+     "preview": "Going through sorority recruitment involved reading cues from current members to judge whether conversations went well and adjust behavior accordingly.",
      "concepts": [
       "Looking-Glass Self",
-      "Self-Identity",
-      "Peer Groups",
-      "Social Hierarchy"
+      "Front Stage",
+      "Dramaturgy",
+      "Impression Management"
      ],
      "relevance": 6,
-     "words": 1231
+     "words": 654
+    }
+   ],
+   "message": null
+  },
+  "presentation of self": {
+   "concept": "Presentation of Self",
+   "definition": "Erving Goffman defined presentation of self as the ways individuals orchestrate their appearance and behavior to manage the impressions others form of them.",
+   "options": [
+    {
+     "id": "nc0265b0e",
+     "title": "Masking emotions during family illness",
+     "preview": "Family members hid their exhaustion and grief behind cheerful smiles after a parent received a serious cancer diagnosis.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "Impression Management"
+     ],
+     "relevance": 9,
+     "words": 1696
+    },
+    {
+     "id": "n9f192bcd",
+     "title": "Pretending in private high school",
+     "preview": "Attending weekly chapel services at a private religious school meant singing along and acting devout just to appease peers and teachers.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "The I and the Me"
+     ],
+     "relevance": 8,
+     "words": 1329
+    },
+    {
+     "id": "nb1b3b2d3",
+     "title": "Rushing a college sorority",
+     "preview": "Visiting different sorority houses during recruitment required putting on an outgoing facade and closely reading reactions to fit in.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Front Stage",
+      "Dramaturgy",
+      "Impression Management"
+     ],
+     "relevance": 7,
+     "words": 654
+    },
+    {
+     "id": "n3f1cc7ca",
+     "title": "Switching roles between friends and family",
+     "preview": "Acting like a silly lightweight around close friends conflicted with the polished, independent demeanor required at home by parents.",
+     "concepts": [
+      "Dramaturgy",
+      "Presentation of Self",
+      "Role Conflict",
+      "Collective Consciousness"
+     ],
+     "relevance": 6,
+     "words": 1264
+    },
+    {
+     "id": "n1ad48a7d",
+     "title": "Balancing roles in everyday life",
+     "preview": "Shifting personas across classrooms, friendships, and home caused confusion over which behaviors represented an authentic personality.",
+     "concepts": [
+      "Presentation of Self",
+      "Dramaturgy",
+      "Ascribed Status",
+      "Achieved Status"
+     ],
+     "relevance": 5,
+     "words": 1844
+    }
+   ],
+   "message": null
+  },
+  "beauty myth": {
+   "concept": "The Beauty Myth",
+   "definition": "The Beauty Myth, coined by Naomi Wolf, is the social pressure for women to adhere to unrealistic physical standards that reinforce patriarchal power.",
+   "options": [
+    {
+     "id": "n56d184a0",
+     "title": "Severe dieting and compulsive exercise",
+     "preview": "Starving herself and running five miles daily led to fainting spells while trying to attain impossible physical standards for male validation.",
+     "concepts": [
+      "Beauty Myth",
+      "Gender Socialization",
+      "Hookup Culture",
+      "Social Media and Body Image"
+     ],
+     "relevance": 9,
+     "words": 1509
+    },
+    {
+     "id": "nd1727a52",
+     "title": "Competitive swimming and bulimia diagnosis",
+     "preview": "Comparing herself against swimsuit models and petite peers while swimming competitively led to an eating disorder and persistent body image problems.",
+     "concepts": [
+      "Beauty Myth",
+      "Diet Culture",
+      "Gender Socialization",
+      "Male Gaze"
+     ],
+     "relevance": 9,
+     "words": 1222
+    },
+    {
+     "id": "nea95a30b",
+     "title": "High school body image policing",
+     "preview": "Facing peer ridicule and unrealistic beauty standards in high school provoked drastic dieting habits and intense body dysmorphia.",
+     "concepts": [
+      "Beauty Myth",
+      "Socialization",
+      "Peer Pressure",
+      "Conformity"
+     ],
+     "relevance": 8,
+     "words": 2103
+    },
+    {
+     "id": "ncbba66b6",
+     "title": "Observing sister in competitive dance",
+     "preview": "Watching a twin sister develop severe anorexia through competitive dance prompted reflection on male locker room talk and objectifying attitudes toward women.",
+     "concepts": [
+      "The Beauty Myth",
+      "Gender Socialization",
+      "Social Institutions",
+      "Objectification"
+     ],
+     "relevance": 7,
+     "words": 1826
+    },
+    {
+     "id": "ne97d4b48",
+     "title": "Appearance standards at dive bar",
+     "preview": "Working at a first job in a dive bar revealed how hiring decisions and daily workplace expectations prioritized female physical attractiveness.",
+     "concepts": [
+      "Beauty Myth",
+      "Gender Roles",
+      "Objectification",
+      "Commodification"
+     ],
+     "relevance": 7,
+     "words": 1250
     }
    ],
    "message": null
@@ -300,22 +267,9 @@
    "definition": "Collective consciousness refers to the shared beliefs, ideas, and moral attitudes which operate as a unifying force within society, as theorized by Émile Durkheim.",
    "options": [
     {
-     "id": "n2057940e",
-     "title": "Marine Corps infantry training",
-     "preview": "Entering boot camp stripped away individuality to build a shared combat mindset, making the transition back to civilian life difficult.",
-     "concepts": [
-      "Collective Consciousness",
-      "Resocialization",
-      "Total Institutions",
-      "Subculture"
-     ],
-     "relevance": 9,
-     "words": 1679
-    },
-    {
      "id": "n2f4eeb6f",
-     "title": "Preparing for a Bar Mitzvah",
-     "preview": "Studying prayers, working with a tutor, and playing piano at retirement homes revealed how religious traditions unite a community.",
+     "title": "Bar Mitzvah preparation and community",
+     "preview": "Preparing for a Bar Mitzvah through tutoring and volunteer piano performances helped clarify how shared religious rituals unify a community.",
      "concepts": [
       "Collective Consciousness",
       "Collective Representations",
@@ -327,8 +281,8 @@
     },
     {
      "id": "n3f43a6df",
-     "title": "Symbols in military veteran culture",
-     "preview": "Returning to college as an infantry veteran highlighted how military symbols, rituals, and values create a shared mindset.",
+     "title": "Veteran culture in college classrooms",
+     "preview": "Cheering when a classmate vomited during a graphic war film revealed how deeply military training shapes a veteran's instincts.",
      "concepts": [
       "Subculture",
       "Collective Consciousness",
@@ -339,68 +293,81 @@
      "words": 1208
     },
     {
-     "id": "n1b139179",
-     "title": "Workplace wage disparities",
-     "preview": "Discovering male coworkers earned higher pay prompted a confrontation with a female boss who defended the unfair workplace norms.",
-     "concepts": [
-      "Collective Consciousness",
-      "Othering",
-      "Gender Inequality",
-      "Patriarchy"
-     ],
-     "relevance": 6,
-     "words": 1864
-    },
-    {
      "id": "nda6b7575",
-     "title": "Conforming to peer groups",
-     "preview": "Playing high school sports and going to college revealed the social pressure to adopt the beliefs of surrounding peers.",
+     "title": "High school athletics and college expectations",
+     "preview": "Hanging out strictly with fellow athletes in high school and feeling pressured to attend college exposed the weight of shared social expectations.",
      "concepts": [
       "Dramaturgy",
       "Role Performance",
       "Presentation of Self",
       "Collective Consciousness"
      ],
-     "relevance": 5,
+     "relevance": 6,
      "words": 1852
+    },
+    {
+     "id": "n4f968b6b",
+     "title": "Painting nails as a man",
+     "preview": "Painting fingernails black prompted negative judgments from others about masculinity and gender expectations.",
+     "concepts": [
+      "Hegemonic Masculinity",
+      "Toxic Masculinity",
+      "Collective Consciousness",
+      "Collective Representation"
+     ],
+     "relevance": 6,
+     "words": 1762
+    },
+    {
+     "id": "n65674bb4",
+     "title": "Growing up in religious groups",
+     "preview": "Attending church and youth group events showed how shared religious routines shape social circles and local community ties.",
+     "concepts": [
+      "Collective Consciousness",
+      "Sociology of Religion",
+      "Social Solidarity",
+      "Community"
+     ],
+     "relevance": 5,
+     "words": 1249
     }
    ],
    "message": null
   },
   "alienation": {
    "concept": "Alienation",
-   "definition": "Alienation is the isolation of individuals from their humanity and community due to capitalist labor, according to Karl Marx.",
+   "definition": "Alienation is the isolation of individuals from society, work, and their own human nature, as theorized by Karl Marx.",
    "options": [
     {
+     "id": "n8787df04",
+     "title": "Minimum wage at a custard chain",
+     "preview": "Working at a custard shop brought lower tips and no pay raise after menu prices increased, while the company kept all the extra profits.",
+     "concepts": [
+      "Marxist Theory",
+      "Labor Exploitation",
+      "Alienation",
+      "Social Class"
+     ],
+     "relevance": 8,
+     "words": 251
+    },
+    {
      "id": "nadbc746d",
-     "title": "Mother switching careers for money",
-     "preview": "Observing a mother give up early childhood education for corporate employment shows the shift toward working solely for wages.",
+     "title": "Leaving childcare for corporate work",
+     "preview": "Watching a parent leave a beloved childcare career for a corporate job revealed how wage needs can replace personal fulfillment.",
      "concepts": [
       "Estranged Labor",
       "Alienation",
       "Collective Consciousness",
       "Wage Labor"
      ],
-     "relevance": 8,
+     "relevance": 7,
      "words": 291
     },
     {
-     "id": "nf3955cc8",
-     "title": "Construction repairs after a hurricane",
-     "preview": "Watching a construction worker rebuild a damaged house reveals how long hours of labor separate workers from their own families.",
-     "concepts": [
-      "Alienation",
-      "Spirit of Capitalism",
-      "Commodity Fetishism",
-      "Labor"
-     ],
-     "relevance": 8,
-     "words": 427
-    },
-    {
      "id": "n606f323c",
-     "title": "Brother choosing a high-paying job",
-     "preview": "Watching a brother choose an uninteresting corporate job over a genuine passion highlights the pressure to prioritize money over fulfillment.",
+     "title": "Choosing high pay over passion",
+     "preview": "Watching a sibling turn down an exciting job to take a boring, high-paying corporate role showed the pressure to prioritize money over passion.",
      "concepts": [
       "Iron Cage",
       "Alienation",
@@ -411,258 +378,42 @@
      "words": 426
     },
     {
-     "id": "n8787df04",
-     "title": "Price hikes at custard shop",
-     "preview": "Working minimum wage at a dessert chain became frustrating after menu price increases lowered tips while corporate revenue increased.",
+     "id": "nf3955cc8",
+     "title": "Observing home repair after a hurricane",
+     "preview": "Talking with a construction worker repairing storm damage showed how grueling hours and endless labor served survival rather than personal fulfillment.",
+     "concepts": [
+      "Alienation",
+      "Spirit of Capitalism",
+      "Commodity Fetishism",
+      "Labor"
+     ],
+     "relevance": 6,
+     "words": 427
+    },
+    {
+     "id": "n86bc9fd3",
+     "title": "Counselor wages and teacher protests",
+     "preview": "Working for low wages at a favorite summer camp and watching family members protest low teacher salaries raised questions about labor value.",
      "concepts": [
       "Marxist Theory",
-      "Labor Exploitation",
       "Alienation",
-      "Social Class"
-     ],
-     "relevance": 7,
-     "words": 251
-    },
-    {
-     "id": "n2f003623",
-     "title": "Effort and grades in college",
-     "preview": "Failing a heavily researched history paper caused feelings of detachment from coursework despite putting in long hours of studying.",
-     "concepts": [
-      "Alienation",
-      "Estranged Labor",
-      "Protestant Ethic",
-      "Spirit of Capitalism"
+      "Iron Cage",
+      "Commodity Fetishism"
      ],
      "relevance": 6,
-     "words": 904
-    }
-   ],
-   "message": null
-  },
-  "social class": {
-   "concept": "Social Class",
-   "definition": "Social class refers to hierarchical groupings of individuals in society based on wealth, income, education, and occupation, as analyzed extensively by Karl Marx and Max Weber.",
-   "options": [
-    {
-     "id": "n5adba178",
-     "title": "Hiding family money trouble in school",
-     "preview": "Growing up among wealthy peers in middle school became complicated when a mother lost her job and benefits overnight.",
-     "concepts": [
-      "Social Class",
-      "Social Inequality",
-      "Class Reproduction",
-      "Materialism"
-     ],
-     "relevance": 9,
-     "words": 1521
-    },
-    {
-     "id": "nb4eea9f1",
-     "title": "Watching parents work long physical shifts",
-     "preview": "Watching an exhausted mechanic father and nurse mother work long hours contrasted sharply with wealthy classmates taking lavish family vacations.",
-     "concepts": [
-      "Social Class",
-      "Power Elite",
-      "Class-Domination Theory",
-      "Income Inequality"
-     ],
-     "relevance": 8,
-     "words": 1240
-    },
-    {
-     "id": "nafbb3613",
-     "title": "Working long shifts as a server",
-     "preview": "Working for four dollars an hour in a restaurant highlighted the financial gap between physical service work and desk management jobs.",
-     "concepts": [
-      "Social Stratification",
-      "Wealth Inequality",
-      "Social Class",
-      "Emotional Labor"
-     ],
-     "relevance": 8,
-     "words": 1413
-    },
-    {
-     "id": "nd9db057e",
-     "title": "Comparing college paths with a friend",
-     "preview": "Pursuing an engineering degree while observing an immigrant friend start heavy labor revealed how family resources shape different career tracks.",
-     "concepts": [
-      "Social Class",
-      "Social Stratification",
-      "Social Reproduction",
-      "Racial Discrimination"
-     ],
-     "relevance": 7,
-     "words": 938
-    },
-    {
-     "id": "n3a26f09d",
-     "title": "Shifting households after family remarriage",
-     "preview": "Moving from food assistance into an upper-middle-class household after a mother remarried revealed the daily material advantages of higher income.",
-     "concepts": [
-      "Social Mobility",
-      "Social Stratification",
-      "Intersectionality",
-      "White Privilege"
-     ],
-     "relevance": 6,
-     "words": 1235
-    }
-   ],
-   "message": null
-  },
-  "gender roles": {
-   "concept": "Gender Roles",
-   "definition": "Gender roles are socially constructed expectations and behaviors associated with being male or female in a given society.",
-   "options": [
-    {
-     "id": "nbaa9b155",
-     "title": "Quitting basketball for conventional femininity",
-     "preview": "Growing up playing sports on a farm shifted into changing hairstyles and quitting basketball to fit feminine expectations in high school.",
-     "concepts": [
-      "Doing Gender",
-      "Beauty Myth",
-      "Gender Roles",
-      "Gender Socialization"
-     ],
-     "relevance": 9,
-     "words": 1206
-    },
-    {
-     "id": "n7e7dd2af",
-     "title": "Masculine stoicism in dating and friendships",
-     "preview": "Opening up emotionally led to ridicule from friends and distance from a girlfriend who wanted a stoic, protective boyfriend.",
-     "concepts": [
-      "Doing Gender",
-      "Gender Roles",
-      "Beauty Myth",
-      "Collective Consciousness"
-     ],
-     "relevance": 9,
-     "words": 1216
-    },
-    {
-     "id": "nd914b611",
-     "title": "Gender rules at Catholic school",
-     "preview": "Attending a Catholic high school involved watching staff enforce grooming rules on boys and restrict girls from gym basketball.",
-     "concepts": [
-      "Doing Gender",
-      "Gender Norms",
-      "Sex Category",
-      "Gender Roles"
-     ],
-     "relevance": 8,
-     "words": 1405
-    },
-    {
-     "id": "n54dedd2d",
-     "title": "Childhood games and playground boundaries",
-     "preview": "Playing rough games with neighborhood boys contrasted with the social and physical rules enforced in school bathrooms and social spaces.",
-     "concepts": [
-      "Doing Gender",
-      "Sex versus Gender",
-      "Sex Category",
-      "Gender Socialization"
-     ],
-     "relevance": 8,
-     "words": 1382
-    },
-    {
-     "id": "n1e59c28f",
-     "title": "Weight training and cheerleading norms",
-     "preview": "Joining a male-dominated weightlifting class highlighted peer reactions to students crossing traditional athletic boundaries in high school.",
-     "concepts": [
-      "Doing Gender",
-      "Gender Roles",
-      "Social Construction of Gender",
-      "Hegemonic Masculinity"
-     ],
-     "relevance": 7,
-     "words": 1803
-    }
-   ],
-   "message": null
-  },
-  "racial formation": {
-   "concept": "Racial Formation",
-   "definition": "Michael Omi and Howard Winant defined racial formation as the sociohistorical process by which racial categories are created, inhabited, transformed, and destroyed.",
-   "options": [
-    {
-     "id": "nfb62c2e9",
-     "title": "Immigrating from Lebanon to America",
-     "preview": "Moving from Lebanon to the United States changed how a student thought about skin color and racial hierarchy in daily life and friendships toward others.",
-     "concepts": [
-      "Reracialization",
-      "Racial Hierarchy",
-      "Assimilation",
-      "Othering"
-     ],
-     "relevance": 9,
-     "words": 1320
-    },
-    {
-     "id": "n295b1d00",
-     "title": "Unequal treatment at store checkout",
-     "preview": "Watching a store worker stop a Black shopper while waving a white family through prompted reflections on racial categories and changing social definitions over time.",
-     "concepts": [
-      "White Privilege",
-      "Institutional Racism",
-      "Racialization",
-      "Collective Consciousness"
-     ],
-     "relevance": 8,
-     "words": 2139
-    },
-    {
-     "id": "na876ade3",
-     "title": "Airport encounters while traveling abroad",
-     "preview": "Traveling through European airports as a biracial woman brought unexpected questions about ethnicity and accent from strangers, altering how others perceived her appearance.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Self-Image",
-      "Socialization",
-      "Social Interaction"
-     ],
-     "relevance": 7,
-     "words": 1850
-    },
-    {
-     "id": "na0c62369",
-     "title": "High school cafeteria seating patterns",
-     "preview": "Stepping into a high school cafeteria revealed distinct racial seating groups among classmates while leaving mixed-race students questioning where they belonged.",
-     "concepts": [
-      "Ethnocentrism",
-      "Racial Segregation",
-      "Socialization",
-      "In-Group and Out-Group"
-     ],
-     "relevance": 6,
-     "words": 1786
-    },
-    {
-     "id": "nad96604b",
-     "title": "Racial slurs on soccer team",
-     "preview": "Hearing racial slurs exchanged among Hispanic teammates directed toward other minority athletes prompted questions about how racial hierarchies operate within minority groups.",
-     "concepts": [
-      "Matrix of Domination",
-      "Racialization",
-      "Prejudice",
-      "Oppression"
-     ],
-     "relevance": 6,
-     "words": 1469
+     "words": 444
     }
    ],
    "message": null
   },
   "white privilege": {
    "concept": "White Privilege",
-   "definition": "Peggy McIntosh defined white privilege as an unearned set of advantages and benefits conferred to white individuals based on systemic racial hierarchy.",
+   "definition": "Peggy McIntosh defined white privilege as an unearned set of advantages and benefits conferred to white individuals in systemic institutions.",
    "options": [
     {
      "id": "nab61ca04",
      "title": "Adoption and interracial family life",
-     "preview": "Growing up with adopted Black siblings from Ethiopia revealed how white family members received unearned praise and social comfort that their siblings did not.",
+     "preview": "Praise from strangers about family adoption opened up contrasts between personal comfort in school and the isolation felt by Black siblings.",
      "concepts": [
       "White Privilege",
       "Systemic Racism",
@@ -673,22 +424,9 @@
      "words": 1973
     },
     {
-     "id": "n295b1d00",
-     "title": "Store checkout and bag check",
-     "preview": "Watching a Black customer get stopped and searched while leaving a store highlighted how white shoppers carrying more bags walked out questioned.",
-     "concepts": [
-      "White Privilege",
-      "Institutional Racism",
-      "Racialization",
-      "Collective Consciousness"
-     ],
-     "relevance": 8,
-     "words": 2139
-    },
-    {
      "id": "n0b1f7abf",
-     "title": "High school biology class dynamics",
-     "preview": "Facing condescension from male classmates in advanced biology led to recognizing the unspoken racial advantage of sharing a race with the teachers.",
+     "title": "High school biology class bias",
+     "preview": "Facing condescension from male classmates during group science work highlighted personal racial comfort alongside male bias in the classroom.",
      "concepts": [
       "White Privilege",
       "Beauty Myth",
@@ -700,8 +438,8 @@
     },
     {
      "id": "nb7a36037",
-     "title": "Job hunting after high school",
-     "preview": "Seeing a qualified Black friend get turned away from a retail job while white applicants were hired prompted a reevaluation of personal advantages.",
+     "title": "Donut shop hiring discrimination",
+     "preview": "Growing up in an affluent neighborhood led to noticing racial discrepancies when a qualified Black friend failed to get an interview.",
      "concepts": [
       "White Privilege",
       "Systemic Racism",
@@ -712,29 +450,186 @@
      "words": 1209
     },
     {
-     "id": "naf290ba0",
-     "title": "Ballet school and racial isolation",
-     "preview": "Training as one of only two Black dancers in an elite studio showed the persistent social barriers present in predominantly white spaces.",
+     "id": "n4cd39275",
+     "title": "Learning about police warnings",
+     "preview": "Hearing a close family friend describe receiving instructions from parents about surviving police stops revealed unexamined personal safety.",
      "concepts": [
+      "Intersectionality",
+      "Matrix of Domination",
       "White Privilege",
-      "Institutional Racism",
-      "Color-Blind Racism",
-      "Stereotyping"
+      "Oppression"
      ],
      "relevance": 6,
-     "words": 1516
+     "words": 1485
+    },
+    {
+     "id": "n365d0025",
+     "title": "Perceptions of traffic stops",
+     "preview": "Experiencing calm routine police stops prompted reflection on the contrasting fear and danger faced by people of color during encounters.",
+     "concepts": [
+      "White Privilege",
+      "Collective Consciousness",
+      "Implicit Bias",
+      "Institutional Racism"
+     ],
+     "relevance": 5,
+     "words": 1249
+    }
+   ],
+   "message": null
+  },
+  "social class": {
+   "concept": "Social Class",
+   "definition": "Social class is a system of stratification based on economic position and wealth, famously analyzed by Karl Marx and Max Weber.",
+   "options": [
+    {
+     "id": "n5adba178",
+     "title": "Hiding financial stress in school",
+     "preview": "Living in an affluent neighborhood, middle school social life shifted toward designer goods just as family job loss created severe financial pressure.",
+     "concepts": [
+      "Social Class",
+      "Social Inequality",
+      "Class Reproduction",
+      "Materialism"
+     ],
+     "relevance": 9,
+     "words": 1521
+    },
+    {
+     "id": "nb4eea9f1",
+     "title": "Working long hours for necessities",
+     "preview": "Growing up with parents working demanding shifts as a mechanic and a nurse revealed the disparity between physical labor and financial reward.",
+     "concepts": [
+      "Social Class",
+      "Power Elite",
+      "Class-Domination Theory",
+      "Income Inequality"
+     ],
+     "relevance": 8,
+     "words": 1240
+    },
+    {
+     "id": "nd9db057e",
+     "title": "Contrasting two paths after school",
+     "preview": "Comparing personal opportunities for an engineering degree with an immigrant friend's expectations highlighted the role of family wealth in future success.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Social Reproduction",
+      "Racial Discrimination"
+     ],
+     "relevance": 7,
+     "words": 938
+    },
+    {
+     "id": "nd9b5ae9f",
+     "title": "High school parking lot divisions",
+     "preview": "Receiving cars upon getting a driver's license divided high school classmates into those who looked down on used cars and those driving them.",
+     "concepts": [
+      "Social Class",
+      "Conspicuous Consumption",
+      "Socialization",
+      "Class Privilege"
+     ],
+     "relevance": 6,
+     "words": 507
+    },
+    {
+     "id": "nd065f80a",
+     "title": "Learning adult views on poverty",
+     "preview": "Hearing relatives dismiss people asking for money from cars conflicted later with learning about systemic class barriers and power structures.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Power Elite",
+      "Collective Consciousness"
+     ],
+     "relevance": 5,
+     "words": 493
+    }
+   ],
+   "message": null
+  },
+  "gender roles": {
+   "concept": "Gender Roles",
+   "definition": "Gender roles are societal expectations and behaviors associated with being male or female, as theorized by scholars like Talcott Parsons.",
+   "options": [
+    {
+     "id": "nbaa9b155",
+     "title": "Leaving basketball to fit in",
+     "preview": "Growing up playing sports with male relatives shifted into changing appearances and quitting high school basketball after facing pressure to look feminine.",
+     "concepts": [
+      "Doing Gender",
+      "Beauty Myth",
+      "Gender Roles",
+      "Gender Socialization"
+     ],
+     "relevance": 9,
+     "words": 1206
+    },
+    {
+     "id": "nd914b611",
+     "title": "Uniform rules in Catholic school",
+     "preview": "Attending a Catholic high school involved watching administrators discipline boys for painted nails and stop girls from playing pick-up basketball in gym.",
+     "concepts": [
+      "Doing Gender",
+      "Gender Norms",
+      "Sex Category",
+      "Gender Roles"
+     ],
+     "relevance": 8,
+     "words": 1405
+    },
+    {
+     "id": "n7d6e7816",
+     "title": "Challenging chores in a relationship",
+     "preview": "Learning about domestic divisions of labor led to confronting a boyfriend who avoided routine household chores and expected them to be done.",
+     "concepts": [
+      "Gender Division of Labor",
+      "Feminist Theory",
+      "Egalitarian Relationship",
+      "Gender Roles"
+     ],
+     "relevance": 8,
+     "words": 1815
+    },
+    {
+     "id": "nfb5504d0",
+     "title": "Male teammates in competitive cheerleading",
+     "preview": "Cheerleading coaches made assumptions about strength and sidelined female athletes when male cheerleaders joined the squad.",
+     "concepts": [
+      "Beauty Myth",
+      "Hegemonic Masculinity",
+      "Gender Roles",
+      "Gender Stereotypes"
+     ],
+     "relevance": 7,
+     "words": 1209
+    },
+    {
+     "id": "n6929320d",
+     "title": "Contrasting marriages across two generations",
+     "preview": "Watching a mother take on all caretaking duties created a contrast with an older sister's more balanced marriage.",
+     "concepts": [
+      "Doing Gender",
+      "Gender Roles",
+      "Gender Socialization",
+      "Nuclear Family"
+     ],
+     "relevance": 6,
+     "words": 1342
     }
    ],
    "message": null
   },
   "socialization": {
    "concept": "Socialization",
-   "definition": "Socialization is the lifelong process through which individuals learn and internalize the culture, norms, and values of their society.",
+   "definition": "Socialization is the lifelong process through which individuals learn and internalize the culture, values, and norms of their society.",
    "options": [
     {
      "id": "nbaa9b155",
-     "title": "Changing appearances to fit gender expectations",
-     "preview": "Growing up as a tomboy on a farm shifted when high school peer pressure led to changing clothes, hair, and sports habits.",
+     "title": "Conforming to high school gender norms",
+     "preview": "Growing up playing sports with boys on a farm, she changed her appearance and quit basketball in high school to fit feminine expectations.",
      "concepts": [
       "Doing Gender",
       "Beauty Myth",
@@ -746,8 +641,8 @@
     },
     {
      "id": "n881d7034",
-     "title": "Leaving small town social expectations",
-     "preview": "Conforming to strict manners and clothing trends in a small farming community changed after moving away to attend college.",
+     "title": "Moving from rural conformity to college",
+     "preview": "Leaving a small rural hometown where everyone enforced strict social manners and clothing fads revealed how restrictive her upbringing had been.",
      "concepts": [
       "The Self, the I, and the Me",
       "Social Self",
@@ -758,22 +653,9 @@
      "words": 1310
     },
     {
-     "id": "n2f4eeb6f",
-     "title": "Preparing for a Bar Mitzvah",
-     "preview": "Completing community piano recitals and Hebrew tutoring lessons led to realizing the deeper communal role of religious milestones.",
-     "concepts": [
-      "Collective Consciousness",
-      "Collective Representations",
-      "Ritual",
-      "Socialization"
-     ],
-     "relevance": 8,
-     "words": 1081
-    },
-    {
      "id": "n2057940e",
-     "title": "Marine Corps boot camp training",
-     "preview": "Entering military boot camp stripped away individuality to replace it with institutional discipline before returning home to civilian life.",
+     "title": "Boot camp and infantry resocialization",
+     "preview": "Entering Marine Corps boot camp stripped away personal individuality and instilled a warrior mindset that proved difficult to shed in civilian life.",
      "concepts": [
       "Collective Consciousness",
       "Resocialization",
@@ -784,9 +666,22 @@
      "words": 1679
     },
     {
+     "id": "n2f4eeb6f",
+     "title": "Preparing for a Bar Mitzvah",
+     "preview": "Practicing Hebrew prayers and performing volunteer piano recitals helped him understand the broader religious community he was joining.",
+     "concepts": [
+      "Collective Consciousness",
+      "Collective Representations",
+      "Ritual",
+      "Socialization"
+     ],
+     "relevance": 8,
+     "words": 1081
+    },
+    {
      "id": "na0c62369",
-     "title": "High school cafeteria seating divisions",
-     "preview": "Stepping into a high school cafeteria revealed distinct self-segregated lunch tables based on race and background.",
+     "title": "Observing high school cafeteria seating",
+     "preview": "Walking into the cafeteria, a student noticed how peers naturally separated along racial lines and wondered how children learn these social patterns.",
      "concepts": [
       "Ethnocentrism",
       "Racial Segregation",
@@ -799,14 +694,73 @@
    ],
    "message": null
   },
+  "racial formation": {
+   "concept": "Racial Formation",
+   "definition": "Michael Omi and Howard Winant defined racial formation as the sociohistorical process by which racial categories are created, inhabited, transformed, and destroyed.",
+   "options": [
+    {
+     "id": "nfb62c2e9",
+     "title": "Immigrating from Lebanon to America",
+     "preview": "Moving from Lebanon to the United States changed how people categorized the student by skin tone and physical appearance.",
+     "concepts": [
+      "Reracialization",
+      "Racial Hierarchy",
+      "Assimilation",
+      "Othering"
+     ],
+     "relevance": 9,
+     "words": 1320
+    },
+    {
+     "id": "nad96604b",
+     "title": "Prejudice among soccer teammates",
+     "preview": "Playing soccer exposed racial slurs and social hierarchies created between Mexican and Colombian players on and off the field.",
+     "concepts": [
+      "Matrix of Domination",
+      "Racialization",
+      "Prejudice",
+      "Oppression"
+     ],
+     "relevance": 8,
+     "words": 1469
+    },
+    {
+     "id": "n2002aab5",
+     "title": "Transitioning to a Predominantly White University",
+     "preview": "Leaving a diverse high school near a military base revealed how racial hierarchies operated at a predominantly white college.",
+     "concepts": [
+      "Racialization",
+      "Systemic Racism",
+      "White Privilege",
+      "Ethnocentrism"
+     ],
+     "relevance": 6,
+     "words": 1538
+    },
+    {
+     "id": "nab61ca04",
+     "title": "Growing up with adopted siblings",
+     "preview": "Watching community reactions to adopted siblings from Ethiopia exposed how people attach different social meanings to skin color.",
+     "concepts": [
+      "White Privilege",
+      "Systemic Racism",
+      "Conferred Dominance",
+      "Racial Socialization"
+     ],
+     "relevance": 5,
+     "words": 1973
+    }
+   ],
+   "message": null
+  },
   "dramaturgy": {
    "concept": "Dramaturgy",
-   "definition": "Dramaturgy, theorized by Erving Goffman, is the sociological perspective that views social interaction as a theatrical performance on a stage.",
+   "definition": "Proposed by Erving Goffman, dramaturgy is the sociological perspective that views social interaction as a theatrical performance on a stage.",
    "options": [
     {
      "id": "nc0265b0e",
-     "title": "Hiding grief during parental cancer",
-     "preview": "Family members put on cheerful fronts for each other and classmates after learning of a father cancer diagnosis in high school.",
+     "title": "Family illness and emotional performance",
+     "preview": "Family members masked their fear and exhaustion with smiles after a father received a serious medical diagnosis.",
      "concepts": [
       "Presentation of Self",
       "Front Stage",
@@ -818,139 +772,67 @@
     },
     {
      "id": "n152cd49f",
-     "title": "Hiding depression during bowling night",
-     "preview": "Going out bowling with friends required putting on an energetic act to hide severe depression until returning home alone.",
+     "title": "Hiding depression while bowling",
+     "preview": "Going out bowling with friends required putting on a cheerful public face while hiding severe personal depression.",
      "concepts": [
       "Dramaturgy",
       "Front Stage",
       "Backstage",
       "Impression Management"
      ],
-     "relevance": 9,
+     "relevance": 8,
      "words": 1199
     },
     {
+     "id": "nb1b3b2d3",
+     "title": "Sorority recruitment and impression management",
+     "preview": "Attending rush events involved presenting carefully tailored versions of oneself to match expectations at different sorority houses.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Front Stage",
+      "Dramaturgy",
+      "Impression Management"
+     ],
+     "relevance": 7,
+     "words": 654
+    },
+    {
      "id": "n3f1cc7ca",
-     "title": "Balancing expectations of family and friends",
-     "preview": "Switching between being an impeccably responsible daughter for family and a silly comedic friend proved exhausting to maintain without slipping.",
+     "title": "Switching roles between friends and family",
+     "preview": "Living up to parental expectations required acting highly responsible, contrasting sharply with the goofy role played around close friends.",
      "concepts": [
       "Dramaturgy",
       "Presentation of Self",
       "Role Conflict",
       "Collective Consciousness"
      ],
-     "relevance": 8,
+     "relevance": 7,
      "words": 1264
     },
     {
-     "id": "nda6b7575",
-     "title": "Juggling high school social expectations",
-     "preview": "Shifting between being an athlete, a rebellious teen, and an obedient child led to severe mental and physical exhaustion.",
+     "id": "n59b46638",
+     "title": "Awkward encounter after a concert",
+     "preview": "Separation from a boyfriend after a concert caused panic and confusion when dealing with an intoxicated stranger.",
      "concepts": [
       "Dramaturgy",
-      "Role Performance",
       "Presentation of Self",
-      "Collective Consciousness"
-     ],
-     "relevance": 7,
-     "words": 1852
-    },
-    {
-     "id": "nae1c9f51",
-     "title": "Switching roles across everyday settings",
-     "preview": "Changing behavior across college classes, softball teams, and family gatherings highlighted how different audiences demand distinct performances.",
-     "concepts": [
-      "Dramaturgy",
       "Front Stage",
-      "Backstage",
-      "Presentation of Self"
+      "Backstage"
      ],
      "relevance": 6,
-     "words": 1831
-    }
-   ],
-   "message": null
-  },
-  "social construction of race": {
-   "concept": "Social Construction of Race",
-   "definition": "Race is a social mechanism created by society to categorize people, lacking biological basis, as theorized by various sociologists.",
-   "options": [
-    {
-     "id": "na876ade3",
-     "title": "Mistaken identity in an airport",
-     "preview": "Traveling through a London airport as a biracial American, a stranger approached to ask if she was Norwegian.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Self-Image",
-      "Socialization",
-      "Social Interaction"
-     ],
-     "relevance": 8,
-     "words": 1850
-    },
-    {
-     "id": "na0c62369",
-     "title": "Seating patterns in school lunchrooms",
-     "preview": "Entering a high school cafeteria, lunch tables were visibly divided along racial lines while mixed-race peers moved between groups.",
-     "concepts": [
-      "Ethnocentrism",
-      "Racial Segregation",
-      "Socialization",
-      "In-Group and Out-Group"
-     ],
-     "relevance": 7,
-     "words": 1786
-    },
-    {
-     "id": "n83e4bd7a",
-     "title": "Childhood warnings about race",
-     "preview": "Growing up in a Black household, a father gave regular talks about why society would treat his child differently from white peers.",
-     "concepts": [
-      "Social Construction of Race",
-      "Racial Stratification",
-      "Institutional Discrimination",
-      "Mass Incarceration"
-     ],
-     "relevance": 7,
-     "words": 1458
-    },
-    {
-     "id": "nab61ca04",
-     "title": "Growing up with adopted siblings",
-     "preview": "Receiving praise from strangers after their family adopted two Black siblings from Ethiopia exposed contrasting treatment based on skin color.",
-     "concepts": [
-      "White Privilege",
-      "Systemic Racism",
-      "Conferred Dominance",
-      "Racial Socialization"
-     ],
-     "relevance": 6,
-     "words": 1973
-    },
-    {
-     "id": "n0398274d",
-     "title": "Reflecting on racial legal categories",
-     "preview": "Reviewing historical court cases and current political boundaries showed how racial definitions were created to maintain social advantages.",
-     "concepts": [
-      "White Privilege",
-      "Institutional Racism",
-      "Racial Formation",
-      "Collective Consciousness"
-     ],
-     "relevance": 5,
-     "words": 1723
+     "words": 1607
     }
    ],
    "message": null
   },
   "stigma": {
    "concept": "Stigma",
-   "definition": "Stigma is a deeply discrediting attribute that spoils social identity, as conceptualized by Erving Goffman.",
+   "definition": "Stigma is a deeply discrediting attribute that spoils social identity, as defined by Erving Goffman.",
    "options": [
     {
      "id": "na466c963",
-     "title": "Growing up with an autistic brother",
-     "preview": "Going out to restaurants and high school cafeterias with a nonverbal brother exposed the public stares and social judgment directed at their family.",
+     "title": "Public judgment of an autistic brother",
+     "preview": "Growing up alongside an autistic brother involved witnessing stares in restaurants and teasing in the high school cafeteria.",
      "concepts": [
       "Stigma",
       "Presentation of Self",
@@ -962,8 +844,8 @@
     },
     {
      "id": "n0191cd33",
-     "title": "Hiding an obsessive compulsive disorder",
-     "preview": "Performing repetitive physical compulsions at school and work led to deep embarrassment and hiding the formal diagnosis from peers and parents.",
+     "title": "Hiding obsessive compulsive disorder compulsions",
+     "preview": "Concealing physical compulsions at school and work delayed asking parents for help due to fear of being seen as crazy.",
      "concepts": [
       "Stigma",
       "Labeling Theory",
@@ -976,7 +858,7 @@
     {
      "id": "n3643f28e",
      "title": "Stays in juvenile mental hospitals",
-     "preview": "Admittance to an inpatient psychiatric facility revealed how staff warnings and peer defensiveness reflected fears of people with mental illness being dangerous.",
+     "preview": "Hospital staff warned incoming psychiatric patients not to socialize or share contact details because patients were viewed as dangerous.",
      "concepts": [
       "Stigma",
       "Internalized Stigma",
@@ -988,8 +870,8 @@
     },
     {
      "id": "n7af26960",
-     "title": "Caring for a mother with bipolar",
-     "preview": "Managing a mother's manic episodes and involuntary commitments meant facing police interactions and keeping the condition hidden from neighbors.",
+     "title": "Caregiving during maternal bipolar episodes",
+     "preview": "Managing a mother's manic episodes and involuntary commitments caused intense isolation and fear of community judgment.",
      "concepts": [
       "Stigma",
       "Labeling Theory",
@@ -1000,161 +882,89 @@
      "words": 2880
     },
     {
-     "id": "n0507cc4f",
-     "title": "Facing rumors at a college party",
-     "preview": "Experiencing immediate social isolation and insults after an acquaintance made advances in front of peers highlighted a harsh sexual double standard.",
+     "id": "n91a98d40",
+     "title": "Family secrecy around severe mental illness",
+     "preview": "Learning late about a grandmother's psychotic breaks revealed how families conceal mental illness to avoid neighborhood gossip.",
      "concepts": [
-      "Doing Gender",
-      "Collective Consciousness",
-      "Hegemonic Masculinity",
-      "Sexual Double Standard"
+      "Stigma",
+      "Labeling Theory",
+      "Deviance",
+      "Norms"
      ],
      "relevance": 6,
-     "words": 1265
+     "words": 1519
     }
    ],
    "message": null
   },
-  "intersectionality": {
-   "concept": "Intersectionality",
-   "definition": "Intersectionality is the interconnected nature of social categorizations like race, class, and gender, coined by Kimberle Crenshaw.",
+  "social construction of race": {
+   "concept": "Social Construction of Race",
+   "definition": "Race is a social mechanism created by society to categorize people, lacking biological basis, as theorized by scholars like W.E.B. Du Bois.",
    "options": [
     {
-     "id": "n3a26f09d",
-     "title": "Upward mobility through remarriage",
-     "preview": "Entering an upper-middle-class household after a mother remarried showed how racial and gender discrimination persisted despite new economic advantages.",
+     "id": "na876ade3",
+     "title": "Perceptions of race while traveling abroad",
+     "preview": "Traveling through European airports as a biracial woman led to confusing encounters where strangers made unexpected assumptions about her background.",
      "concepts": [
-      "Social Mobility",
-      "Social Stratification",
-      "Intersectionality",
-      "White Privilege"
+      "Looking-Glass Self",
+      "Self-Image",
+      "Socialization",
+      "Social Interaction"
      ],
      "relevance": 8,
-     "words": 1235
+     "words": 1850
+    },
+    {
+     "id": "n83e4bd7a",
+     "title": "Childhood warnings about racial inequality",
+     "preview": "Growing up in a Black household involved childhood talks from a father about why life and rules were different for people of color.",
+     "concepts": [
+      "Social Construction of Race",
+      "Racial Stratification",
+      "Institutional Discrimination",
+      "Mass Incarceration"
+     ],
+     "relevance": 7,
+     "words": 1458
+    },
+    {
+     "id": "nab61ca04",
+     "title": "Growing up with adopted siblings",
+     "preview": "Living with adopted younger siblings from Ethiopia made differences in societal treatment and reactions from other adults noticeable from an early age.",
+     "concepts": [
+      "White Privilege",
+      "Systemic Racism",
+      "Conferred Dominance",
+      "Racial Socialization"
+     ],
+     "relevance": 7,
+     "words": 1973
+    },
+    {
+     "id": "n2002aab5",
+     "title": "Moving from military town to college",
+     "preview": "Moving from a diverse military community to a predominantly white university revealed how racial hierarchies shaped daily campus life.",
+     "concepts": [
+      "Racialization",
+      "Systemic Racism",
+      "White Privilege",
+      "Ethnocentrism"
+     ],
+     "relevance": 6,
+     "words": 1538
     },
     {
      "id": "nad96604b",
-     "title": "Racial prejudice on soccer team",
-     "preview": "Listening to Hispanic teammates use slurs against Black opponents revealed how groups can experience marginalization while directing bias toward others.",
+     "title": "Racial slurs among soccer teammates",
+     "preview": "Playing on a Hispanic soccer team revealed prejudice and racial remarks directed across different minority groups and nationalities.",
      "concepts": [
       "Matrix of Domination",
       "Racialization",
       "Prejudice",
       "Oppression"
      ],
-     "relevance": 7,
+     "relevance": 6,
      "words": 1469
-    },
-    {
-     "id": "n815fe4ff",
-     "title": "Isolation in advanced high school classes",
-     "preview": "Enrolling in advanced high school courses revealed resource disparities and isolation when facing peers from wealthier backgrounds.",
-     "concepts": [
-      "Matrix of Domination",
-      "Intersectionality",
-      "Educational Inequality",
-      "Racialization"
-     ],
-     "relevance": 7,
-     "words": 1214
-    },
-    {
-     "id": "n4cd39275",
-     "title": "Family reflections on police encounters",
-     "preview": "Hearing about an uncle's encounters with police prompted reflection on how race, gender, height, and education intersect during law enforcement stops.",
-     "concepts": [
-      "Intersectionality",
-      "Matrix of Domination",
-      "White Privilege",
-      "Oppression"
-     ],
-     "relevance": 6,
-     "words": 1485
-    },
-    {
-     "id": "n0b1f7abf",
-     "title": "Gender bias in advanced science",
-     "preview": "Taking high school advanced science courses revealed peer dismissal along gender lines alongside racial disparities in enrollment.",
-     "concepts": [
-      "White Privilege",
-      "Beauty Myth",
-      "Sexism",
-      "Intersectionality"
-     ],
-     "relevance": 5,
-     "words": 1489
-    }
-   ],
-   "message": null
-  },
-  "social stratification": {
-   "concept": "Social Stratification",
-   "definition": "Social stratification is a system by which a society ranks categories of people in a hierarchy, as described by Max Weber and Karl Marx.",
-   "options": [
-    {
-     "id": "n3a26f09d",
-     "title": "Remarriage and moving between classes",
-     "preview": "Growing up on food stamps with immigrant parents, a child experienced sudden upward mobility when their mother remarried into an upper middle class family.",
-     "concepts": [
-      "Social Mobility",
-      "Social Stratification",
-      "Intersectionality",
-      "White Privilege"
-     ],
-     "relevance": 9,
-     "words": 1235
-    },
-    {
-     "id": "nafbb3613",
-     "title": "Working as a restaurant server",
-     "preview": "Working long restaurant shifts for four dollars an hour showed a student the stark divide between physical labor and corporate compensation.",
-     "concepts": [
-      "Social Stratification",
-      "Wealth Inequality",
-      "Social Class",
-      "Emotional Labor"
-     ],
-     "relevance": 8,
-     "words": 1413
-    },
-    {
-     "id": "nd9db057e",
-     "title": "Contrasting two family backgrounds",
-     "preview": "Preparing for graduate engineering school prompted a student to compare their privileged upbringing with the limited opportunities faced by an immigrant friend.",
-     "concepts": [
-      "Social Class",
-      "Social Stratification",
-      "Social Reproduction",
-      "Racial Discrimination"
-     ],
-     "relevance": 8,
-     "words": 938
-    },
-    {
-     "id": "n5adba178",
-     "title": "Parent job loss in middle school",
-     "preview": "Attending school in a wealthy district became stressful after a mother lost her job, leaving the family without health insurance or extra money.",
-     "concepts": [
-      "Social Class",
-      "Social Inequality",
-      "Class Reproduction",
-      "Materialism"
-     ],
-     "relevance": 7,
-     "words": 1521
-    },
-    {
-     "id": "nb4eea9f1",
-     "title": "Parents working demanding jobs",
-     "preview": "Watching parents work grueling shifts as a mechanic and a night nurse revealed how hard labor often yields minimal financial security.",
-     "concepts": [
-      "Social Class",
-      "Power Elite",
-      "Class-Domination Theory",
-      "Income Inequality"
-     ],
-     "relevance": 6,
-     "words": 1240
     }
    ],
    "message": null
@@ -1165,8 +975,8 @@
    "options": [
     {
      "id": "nb4eea9f1",
-     "title": "Working class family and corporate power",
-     "preview": "Watching parents perform demanding physical labor led to questioning promises of the American Dream versus corporate influence over government policy.",
+     "title": "Working class family and extreme wealth",
+     "preview": "Growing up hearing about the American Dream, a student contrasted their parents' demanding physical labor with the power held by corporate elites.",
      "concepts": [
       "Social Class",
       "Power Elite",
@@ -1177,101 +987,212 @@
      "words": 1240
     },
     {
-     "id": "n272e0dcc",
-     "title": "Middle class upbringing and wealth inequality",
-     "preview": "Growing up in a comfortable household obscured the reality of poverty and the political influence exerted by corporate leaders.",
+     "id": "nd065f80a",
+     "title": "Childhood beliefs about wealth mobility",
+     "preview": "Reflecting on childhood lessons about meritocracy, a student reevaluated how elite networks control top positions and prevent upward mobility.",
      "concepts": [
       "Social Class",
-      "Collective Consciousness",
+      "Social Stratification",
       "Power Elite",
+      "Collective Consciousness"
+     ],
+     "relevance": 5,
+     "words": 493
+    },
+    {
+     "id": "nb602d967",
+     "title": "Corporate boardrooms and systemic privilege",
+     "preview": "Analyzing how corporate leaders control policy decisions, a student examined the overlap between high-ranking office positions and racial advantage.",
+     "concepts": [
+      "Power Elite",
+      "White Privilege",
+      "In-Group and Out-Group",
       "Social Stratification"
      ],
      "relevance": 5,
-     "words": 512
+     "words": 809
+    },
+    {
+     "id": "n35bb0ff3",
+     "title": "Healthcare lobbying and elite control",
+     "preview": "Examining disparities in medical access, a student evaluated how pharmaceutical executives and political lobbyists determine health policy.",
+     "concepts": [
+      "Power Elite",
+      "Social Stratification",
+      "Social Class",
+      "Inequality"
+     ],
+     "relevance": 5,
+     "words": 812
     }
    ],
    "message": null
   },
-  "patriarchy": {
-   "concept": "Patriarchy",
-   "definition": "Patriarchy is a social system in which men hold primary power and dominate roles in political leadership, moral authority, and social privilege.",
+  "intersectionality": {
+   "concept": "Intersectionality",
+   "definition": "Intersectionality, coined by Kimberle Crenshaw, is the interconnected nature of social categorizations like race, class, and gender as they apply to a given individual or group.",
    "options": [
     {
-     "id": "n1b139179",
-     "title": "Wage gap at after-school job",
-     "preview": "Discovering that male coworkers were paid more money prompted an inquiry with a female supervisor, who shut the conversation down immediately.",
+     "id": "n0b1f7abf",
+     "title": "Sexism in an advanced biology class",
+     "preview": "Being talked over by male classmates in an advanced high school science class showed how gender bias operated alongside unearned racial privilege.",
      "concepts": [
-      "Collective Consciousness",
-      "Othering",
-      "Gender Inequality",
-      "Patriarchy"
-     ],
-     "relevance": 8,
-     "words": 1864
-    },
-    {
-     "id": "n8e378be3",
-     "title": "Masculinity dynamics in the family",
-     "preview": "Growing up around male relatives revealed how traditional expectations of male dominance and toughness harmed both men and women in the family.",
-     "concepts": [
-      "Hegemonic Masculinity",
-      "Gender Socialization",
-      "Toxic Masculinity",
+      "White Privilege",
+      "Beauty Myth",
+      "Sexism",
       "Intersectionality"
      ],
+     "relevance": 8,
+     "words": 1489
+    },
+    {
+     "id": "n3a26f09d",
+     "title": "Joining a wealthier household through marriage",
+     "preview": "Moving into an upper middle class family revealed how new economic advantages still collided with discrimination as a woman of color.",
+     "concepts": [
+      "Social Mobility",
+      "Social Stratification",
+      "Intersectionality",
+      "White Privilege"
+     ],
+     "relevance": 8,
+     "words": 1235
+    },
+    {
+     "id": "n4cd39275",
+     "title": "Police encounters and family privilege",
+     "preview": "Hearing about a family friend's encounters with law enforcement highlighted how race, gender, physical stature, and higher education interact in everyday safety.",
+     "concepts": [
+      "Intersectionality",
+      "Matrix of Domination",
+      "White Privilege",
+      "Oppression"
+     ],
      "relevance": 7,
-     "words": 1089
+     "words": 1485
     },
     {
-     "id": "nc8983163",
-     "title": "Inequality within a male friend group",
-     "preview": "Being the only straight woman in a close circle of male friends exposed patterns of objectification and casual exclusion.",
+     "id": "n815fe4ff",
+     "title": "Taking advanced high school classes",
+     "preview": "Sitting in advanced placement courses as one of few minority students brought up feelings of isolation and showed systemic educational differences.",
      "concepts": [
-      "Othering",
-      "Beauty Myth",
-      "Objectification",
-      "Gender Inequality"
+      "Matrix of Domination",
+      "Intersectionality",
+      "Educational Inequality",
+      "Racialization"
      ],
      "relevance": 6,
-     "words": 1939
+     "words": 1214
     },
     {
-     "id": "nf5aed9dd",
-     "title": "Exclusion at a fraternity party",
-     "preview": "Attending a campus fraternity party revealed how male hosts controlled social access and subordinated both women and gay peers.",
+     "id": "nad96604b",
+     "title": "Prejudice on a soccer team",
+     "preview": "Listening to Hispanic teammates use slurs against Black players revealed how individuals simultaneously experience marginalization and hold bias against other minority groups.",
      "concepts": [
-      "Hegemonic Masculinity",
-      "Doing Gender",
-      "Othering",
-      "Subordination"
+      "Matrix of Domination",
+      "Racialization",
+      "Prejudice",
+      "Oppression"
      ],
      "relevance": 6,
-     "words": 1411
+     "words": 1469
+    }
+   ],
+   "message": null
+  },
+  "social stratification": {
+   "concept": "Social Stratification",
+   "definition": "Social stratification is a system by which a society ranks categories of people in a hierarchy, as described by Max Weber and Karl Marx.",
+   "options": [
+    {
+     "id": "nafbb3613",
+     "title": "Serving food and wage disparities",
+     "preview": "Working as a restaurant server earning four dollars an hour led to comparisons between manual floor work and managerial pay.",
+     "concepts": [
+      "Social Stratification",
+      "Wealth Inequality",
+      "Social Class",
+      "Emotional Labor"
+     ],
+     "relevance": 9,
+     "words": 1413
     },
     {
-     "id": "ncbfb72c0",
-     "title": "Dismissive treatment in campus spaces",
-     "preview": "Encountering condescending behavior from male peers at the recreation center highlighted everyday expectations of male authority and female deference.",
+     "id": "n5adba178",
+     "title": "Middle class in wealthy school",
+     "preview": "Living in an affluent neighborhood while depending on secondhand items caused hidden stress after a parent lost a job.",
      "concepts": [
-      "Gender Roles",
-      "Male Gaze",
-      "Beauty Myth",
+      "Social Class",
+      "Social Inequality",
+      "Class Reproduction",
+      "Materialism"
+     ],
+     "relevance": 8,
+     "words": 1521
+    },
+    {
+     "id": "nd9db057e",
+     "title": "Comparing class and immigrant backgrounds",
+     "preview": "Preparing for graduate engineering school prompted a comparison with a working-class friend whose immigrant parents faced limited opportunities.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Social Reproduction",
+      "Racial Discrimination"
+     ],
+     "relevance": 8,
+     "words": 938
+    },
+    {
+     "id": "nbdbac777",
+     "title": "Assumptions about college and wealth",
+     "preview": "Hearing a coworker assume someone attending college came from wealth led to thinking about class perceptions and life chances.",
+     "concepts": [
+      "Social Class",
+      "Power Elite",
+      "Collective Consciousness",
+      "Social Stratification"
+     ],
+     "relevance": 6,
+     "words": 414
+    },
+    {
+     "id": "nd065f80a",
+     "title": "Childhood beliefs about homelessness",
+     "preview": "Rethinking car rides past unhoused people challenged childhood assumptions about equal opportunity and the American middle class.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Power Elite",
       "Collective Consciousness"
      ],
      "relevance": 5,
-     "words": 1995
+     "words": 493
     }
    ],
    "message": null
   },
   "sociology of religion": {
    "concept": "Sociology of Religion",
-   "definition": "The sociology of religion is the study of the beliefs, practices, and organizational forms of religion using sociological frameworks, as pioneered by Émile Durkheim.",
+   "definition": "Sociology of religion is the study of the practices, historical backgrounds, developments, and universal themes of religion within society, established by classical theorists like Emile Durkheim.",
    "options": [
     {
+     "id": "n65674bb4",
+     "title": "Religion and social life in college",
+     "preview": "Growing up in a religious household and private school, a sociology class question made them realize their daily habits were deeply tied to faith.",
+     "concepts": [
+      "Collective Consciousness",
+      "Sociology of Religion",
+      "Social Solidarity",
+      "Community"
+     ],
+     "relevance": 9,
+     "words": 1249
+    },
+    {
      "id": "n2f4eeb6f",
-     "title": "Preparing for a Bar Mitzvah",
-     "preview": "Studying Hebrew prayers and rituals for a Bar Mitzvah revealed how shared religious customs connect individuals to a broader community.",
+     "title": "Preparing for a bar mitzvah",
+     "preview": "Studying prayers and attending Hebrew school felt like tedious work until they realized the ceremonies connected them to a broader community.",
      "concepts": [
       "Collective Consciousness",
       "Collective Representations",
@@ -1282,22 +1203,9 @@
      "words": 1081
     },
     {
-     "id": "n65674bb4",
-     "title": "Catholic upbringing and college sociology",
-     "preview": "Growing up praying to Saint Anthony and attending private school seemed separate from everyday social life until a sociology class connected them.",
-     "concepts": [
-      "Collective Consciousness",
-      "Sociology of Religion",
-      "Social Solidarity",
-      "Community"
-     ],
-     "relevance": 8,
-     "words": 1249
-    },
-    {
      "id": "nc7b980e0",
-     "title": "Questioning faith in Christian circles",
-     "preview": "Facing doubt about childhood Christian beliefs led to friction with devout friends and relatives who expected strict adherence.",
+     "title": "Questioning childhood religious beliefs",
+     "preview": "Raised by devout Christian family and friends, they began to doubt their faith and worried about being judged by their community.",
      "concepts": [
       "Social Solidarity",
       "Social Cohesion",
@@ -1309,8 +1217,8 @@
     },
     {
      "id": "n8f5608a8",
-     "title": "Minister child studying religion scientifically",
-     "preview": "Growing up in a church community prompted a double major to examine scientific research on religious beliefs despite warnings from peers.",
+     "title": "Studying the effects of faith",
+     "preview": "Growing up as a minister's child, they chose to study the scientific and neurological aspects of religion despite warnings from their community.",
      "concepts": [
       "Sociology of Religion",
       "Social Integration",
@@ -1321,29 +1229,173 @@
      "words": 1777
     },
     {
-     "id": "n9f192bcd",
-     "title": "Chapel attendance at private school",
-     "preview": "Singing along during mandatory weekly chapel services at a Christian school helped maintain an appearance of faith to fit in with peers.",
+     "id": "nce58b481",
+     "title": "Rethinking truths learned while growing up",
+     "preview": "Taking a college sociology course caused them to reexamine the religious teachings and absolute truths they were taught during childhood.",
      "concepts": [
-      "Presentation of Self",
-      "Front Stage",
-      "Backstage",
-      "The I and the Me"
+      "Collective Consciousness",
+      "Social Control",
+      "Social Solidarity",
+      "Matrix of Domination"
      ],
      "relevance": 5,
-     "words": 1329
+     "words": 1070
+    }
+   ],
+   "message": null
+  },
+  "patriarchy": {
+   "concept": "Patriarchy",
+   "definition": "Patriarchy is a social system in which men hold primary power and dominate roles in political leadership, moral authority, and social privilege.",
+   "options": [
+    {
+     "id": "n6774fb6e",
+     "title": "Family roles and athletic expectations",
+     "preview": "Growing up with traditional parents who favored her brother, she felt pressured to abandon competitive soccer to fit feminine expectations.",
+     "concepts": [
+      "Beauty Myth",
+      "Hegemonic Masculinity",
+      "Gender Socialization",
+      "Patriarchy"
+     ],
+     "relevance": 9,
+     "words": 1601
+    },
+    {
+     "id": "n28fd28ad",
+     "title": "Workplace harassment at early jobs",
+     "preview": "Working as a teenage swim instructor, she faced sexual harassment and belittling comments from male supervisors that went unpunished.",
+     "concepts": [
+      "The Beauty Myth",
+      "Gender Discrimination",
+      "Gender Roles",
+      "Patriarchy"
+     ],
+     "relevance": 9,
+     "words": 2013
+    },
+    {
+     "id": "n1b139179",
+     "title": "Unequal pay at afterschool job",
+     "preview": "Discovering that male coworkers were paid more for the same job, she confronted her boss and faced immediate retaliation.",
+     "concepts": [
+      "Collective Consciousness",
+      "Othering",
+      "Gender Inequality",
+      "Patriarchy"
+     ],
+     "relevance": 8,
+     "words": 1864
+    },
+    {
+     "id": "ncbfb72c0",
+     "title": "Parental rules and campus spaces",
+     "preview": "Facing dismissive attitudes at the gym, she noticed how her parents enforced different rules on safety and independence for boys and girls.",
+     "concepts": [
+      "Gender Roles",
+      "Male Gaze",
+      "Beauty Myth",
+      "Collective Consciousness"
+     ],
+     "relevance": 7,
+     "words": 1995
+    },
+    {
+     "id": "nf5aed9dd",
+     "title": "Fraternity party door dynamics",
+     "preview": "Arriving at a college fraternity house, she watched male hosts objectify women and turn away her gay friend at the door.",
+     "concepts": [
+      "Hegemonic Masculinity",
+      "Doing Gender",
+      "Othering",
+      "Subordination"
+     ],
+     "relevance": 6,
+     "words": 1411
+    }
+   ],
+   "message": null
+  },
+  "gender socialization": {
+   "concept": "Gender Socialization",
+   "definition": "Gender socialization is the lifelong process of learning society's expectations and attitudes associated with one's sex.",
+   "options": [
+    {
+     "id": "n6774fb6e",
+     "title": "Childhood sports and family roles",
+     "preview": "Growing up with traditional domestic expectations at home led to losing a childhood friend who thought playing soccer was too boyish for girls.",
+     "concepts": [
+      "Beauty Myth",
+      "Hegemonic Masculinity",
+      "Gender Socialization",
+      "Patriarchy"
+     ],
+     "relevance": 9,
+     "words": 1601
+    },
+    {
+     "id": "nbaa9b155",
+     "title": "Shifting away from tomboy habits",
+     "preview": "Growing up on a farm playing sports with male cousins gave way to changing appearance and quitting basketball in high school.",
+     "concepts": [
+      "Doing Gender",
+      "Beauty Myth",
+      "Gender Roles",
+      "Gender Socialization"
+     ],
+     "relevance": 9,
+     "words": 1206
+    },
+    {
+     "id": "n54dedd2d",
+     "title": "Switching behaviors on the playground",
+     "preview": "Switching between roughhousing with boys and playing dress up with girls highlighted the conflicting social rules of childhood play.",
+     "concepts": [
+      "Doing Gender",
+      "Sex versus Gender",
+      "Sex Category",
+      "Gender Socialization"
+     ],
+     "relevance": 8,
+     "words": 1382
+    },
+    {
+     "id": "n7c2c0dae",
+     "title": "Playing church league basketball",
+     "preview": "Joining a church basketball league as the only girl on the team exposed double standards about how boys and girls should act.",
+     "concepts": [
+      "Gender Socialization",
+      "Gender Discrimination",
+      "Looking-Glass Self",
+      "Beauty Myth"
+     ],
+     "relevance": 8,
+     "words": 1809
+    },
+    {
+     "id": "n092069dc",
+     "title": "Competitive dance and youth sports",
+     "preview": "Training as a competitive dancer led to hearing sports dismissed as just for girls by a traditional father.",
+     "concepts": [
+      "Gender Socialization",
+      "Gender Roles",
+      "Patriarchy",
+      "Collective Consciousness"
+     ],
+     "relevance": 7,
+     "words": 1144
     }
    ],
    "message": null
   },
   "hegemonic masculinity": {
    "concept": "Hegemonic Masculinity",
-   "definition": "Hegemonic masculinity is a concept by R.W. Connell describing the culturally dominant form of masculinity that legitimizes the global subordination of women and marginalized men.",
+   "definition": "R.W. Connell defined hegemonic masculinity as the culturally idealized form of manhood that legitimizes the global subordination of women and marginalized men.",
    "options": [
     {
      "id": "nf0ac7ea4",
-     "title": "Wilderness camp tests of dominance",
-     "preview": "Physical dominance games and dangerous night hikes without flashlights established an aggressive hierarchy among campers at an all-male summer camp across four years successfully completed by the student.",
+     "title": "Wilderness camp dominance hierarchy",
+     "preview": "Counselors and older campers at a summer wilderness camp enforced toughness and physical domination through night hikes and log-wrestling matches.",
      "concepts": [
       "Hegemonic Masculinity",
       "Social Hierarchy",
@@ -1355,8 +1407,8 @@
     },
     {
      "id": "nf5aed9dd",
-     "title": "Fraternity party exclusions and expectations",
-     "preview": "Attending college fraternity parties revealed how men enforced dominance by objectifying women and physically barring a gay male friend from entering.",
+     "title": "Fraternity parties and social exclusion",
+     "preview": "Fraternity members at campus parties subordinated women and aggressively turned away a student's gay male friend at the door.",
      "concepts": [
       "Hegemonic Masculinity",
       "Doing Gender",
@@ -1368,8 +1420,8 @@
     },
     {
      "id": "n330f58c8",
-     "title": "High school wrestling team captaincy",
-     "preview": "Joining a high school wrestling team meant facing exclusion, but becoming captain led to repeating those same harsh behaviors toward newer teammates.",
+     "title": "High school wrestling team captain",
+     "preview": "Joining a high school wrestling team led to mistreatment as an outsider, but becoming team captain encouraged mistreating younger teammates.",
      "concepts": [
       "Hegemonic Masculinity",
       "Conformity",
@@ -1381,8 +1433,8 @@
     },
     {
      "id": "ndb64c678",
-     "title": "Painting fingernails in college",
-     "preview": "Deciding to wear nail polish on campus brought demeaning remarks, feminine labels, and disbelief from friends regarding his high school athletic past.",
+     "title": "Painting fingernails on campus",
+     "preview": "Painting fingernails as a college man brought questions about sexuality, athletic ability, and social status from peers.",
      "concepts": [
       "Doing Gender",
       "Hegemonic Masculinity",
@@ -1393,101 +1445,29 @@
      "words": 1210
     },
     {
-     "id": "n8e378be3",
-     "title": "Family pressure and masculine ideals",
-     "preview": "Growing up around competitive cousins and an uncle showed how aggressive behavior and mocking vulnerability were rewarded within an extended family.",
+     "id": "n1fe6fe5b",
+     "title": "Varsity soccer team hazing",
+     "preview": "Older players on a high school varsity soccer team subjected younger athletes to humiliating punishment rituals to enforce dominance.",
      "concepts": [
       "Hegemonic Masculinity",
       "Gender Socialization",
-      "Toxic Masculinity",
-      "Intersectionality"
+      "Conformity",
+      "In-Group Out-Group Dynamics"
      ],
      "relevance": 7,
-     "words": 1089
-    }
-   ],
-   "message": null
-  },
-  "gender socialization": {
-   "concept": "Gender Socialization",
-   "definition": "Gender socialization is the lifelong process of learning society's expectations and attitudes associated with one's sex, as theorized by scholars like West and Zimmerman.",
-   "options": [
-    {
-     "id": "n54dedd2d",
-     "title": "Childhood tomboy on the playground",
-     "preview": "Growing up playing with neighborhood boys and girls led to switching behaviors between roughhousing and dress-up to fit social expectations.",
-     "concepts": [
-      "Doing Gender",
-      "Sex versus Gender",
-      "Sex Category",
-      "Gender Socialization"
-     ],
-     "relevance": 9,
-     "words": 1382
-    },
-    {
-     "id": "nbaa9b155",
-     "title": "Quitting high school basketball",
-     "preview": "Growing up doing outdoor farm chores with male cousins changed in high school after comments about appearance pushed her to quit basketball.",
-     "concepts": [
-      "Doing Gender",
-      "Beauty Myth",
-      "Gender Roles",
-      "Gender Socialization"
-     ],
-     "relevance": 8,
-     "words": 1206
-    },
-    {
-     "id": "n3152969d",
-     "title": "Moving states and feminine expectations",
-     "preview": "Moving from an outdoorsy childhood in Colorado to Massachusetts brought sudden social demands to wear makeup and dress for male approval.",
-     "concepts": [
-      "Beauty Myth",
-      "Gender Socialization",
-      "Male Gaze",
-      "Toxic Masculinity"
-     ],
-     "relevance": 8,
-     "words": 1397
-    },
-    {
-     "id": "n7c2c0dae",
-     "title": "Playing church league basketball",
-     "preview": "Playing youth church league basketball with a male neighbor revealed different childhood rules and behavioral expectations for boys and girls.",
-     "concepts": [
-      "Gender Socialization",
-      "Gender Discrimination",
-      "Looking-Glass Self",
-      "Beauty Myth"
-     ],
-     "relevance": 7,
-     "words": 1809
-    },
-    {
-     "id": "n092069dc",
-     "title": "Competitive dance and father expectations",
-     "preview": "Competing in dance throughout childhood brought constant criticism from family members who dismissed it as just a girls sport.",
-     "concepts": [
-      "Gender Socialization",
-      "Gender Roles",
-      "Patriarchy",
-      "Collective Consciousness"
-     ],
-     "relevance": 6,
-     "words": 1144
+     "words": 1655
     }
    ],
    "message": null
   },
   "doing gender": {
    "concept": "Doing Gender",
-   "definition": "Candace West and Don Zimmerman defined doing gender as a routine, ongoing social activity in which individuals act in ways consistent with societal expectations of their sex.",
+   "definition": "Doing gender is the constant social production of gendered behavior, introduced by Candace West and Don Zimmerman.",
    "options": [
     {
      "id": "ndb64c678",
      "title": "Painting fingernails as a college man",
-     "preview": "Painting his fingernails led friends to make assumptions about his sexuality, strength, and athletic ability on campus.",
+     "preview": "Facing confusion and assumptions about athletic ability and sexuality from friends followed the choice to wear nail polish on campus.",
      "concepts": [
       "Doing Gender",
       "Hegemonic Masculinity",
@@ -1499,8 +1479,8 @@
     },
     {
      "id": "ne85a5d90",
-     "title": "Displaying an androgynous identity",
-     "preview": "Attempting to signal an androgynous appearance resulted in constant mislabeling by people who viewed gender through a strict binary.",
+     "title": "Signaling an androgynous gender identity",
+     "preview": "Repeated misgendering occurred despite deliberate efforts to display an androgynous appearance through clothing, hair, and makeup.",
      "concepts": [
       "Doing Gender",
       "Gender Binary",
@@ -1513,7 +1493,7 @@
     {
      "id": "nbaa9b155",
      "title": "Quitting high school basketball",
-     "preview": "Receiving comments about being too pretty for basketball prompted changing hair color and quitting the team to look feminine.",
+     "preview": "Teasing from boys about being too pretty for basketball led to quitting the team and altering daily appearance.",
      "concepts": [
       "Doing Gender",
       "Beauty Myth",
@@ -1524,22 +1504,9 @@
      "words": 1206
     },
     {
-     "id": "n54dedd2d",
-     "title": "Childhood tomboy play and bathrooms",
-     "preview": "Shifting behavior to play sports with neighborhood boys contrasted with the strict rules of sex segregated public restrooms.",
-     "concepts": [
-      "Doing Gender",
-      "Sex versus Gender",
-      "Sex Category",
-      "Gender Socialization"
-     ],
-     "relevance": 8,
-     "words": 1382
-    },
-    {
      "id": "nd914b611",
-     "title": "Dress codes at Catholic school",
-     "preview": "Attending a private high school required following strict handbook rules that penalized boys for long hair or painted nails.",
+     "title": "Uniform rules in Catholic school",
+     "preview": "Rigid grooming handbooks and punishments for painted nails enforced traditional expectations on students in a private Catholic high school.",
      "concepts": [
       "Doing Gender",
       "Gender Norms",
@@ -1548,57 +1515,57 @@
      ],
      "relevance": 7,
      "words": 1405
+    },
+    {
+     "id": "n58602927",
+     "title": "Growing up tall as a girl",
+     "preview": "Teasing over being taller than peers caused slouching and conscious changes in style to appear smaller and more feminine.",
+     "concepts": [
+      "Doing Gender",
+      "Beauty Myth",
+      "Looking-Glass Self",
+      "Gender Roles"
+     ],
+     "relevance": 7,
+     "words": 1611
     }
    ],
    "message": null
   },
   "matrix of domination": {
    "concept": "Matrix of Domination",
-   "definition": "Patricia Hill Collins theorized that intersecting systems of race, class, and gender create overlapping structures of oppression and privilege.",
+   "definition": "Patricia Hill Collins defined the matrix of domination as the overall organization of intersecting systems of oppression in society.",
    "options": [
     {
-     "id": "n815fe4ff",
-     "title": "Advanced classes in high school",
-     "preview": "Taking advanced placement classes as a Black student in a wealthy white district led to feelings of isolation and repeated microaggressions.",
-     "concepts": [
-      "Matrix of Domination",
-      "Intersectionality",
-      "Educational Inequality",
-      "Racialization"
-     ],
-     "relevance": 9,
-     "words": 1214
-    },
-    {
-     "id": "n3a26f09d",
-     "title": "Moving into upper middle class",
-     "preview": "Entering a wealthy household through a parent marriage revealed how race and gender still limited opportunities despite new financial status.",
-     "concepts": [
-      "Social Mobility",
-      "Social Stratification",
-      "Intersectionality",
-      "White Privilege"
-     ],
-     "relevance": 8,
-     "words": 1235
-    },
-    {
      "id": "nad96604b",
-     "title": "Racial slurs between soccer teammates",
-     "preview": "Playing on a diverse soccer team exposed how Hispanic teammates used slurs and prejudice against Black players and other Latino nationalities.",
+     "title": "Racism among minority soccer teammates",
+     "preview": "Hearing Hispanic teammates use racial slurs against Black opponents led to noticing how minority groups recreate hierarchies to avoid the bottom.",
      "concepts": [
       "Matrix of Domination",
       "Racialization",
       "Prejudice",
       "Oppression"
      ],
-     "relevance": 7,
+     "relevance": 9,
      "words": 1469
     },
     {
+     "id": "n815fe4ff",
+     "title": "Isolation in advanced high school classes",
+     "preview": "Taking advanced placement courses as a Black student in an affluent school revealed how race and social class compound educational isolation.",
+     "concepts": [
+      "Matrix of Domination",
+      "Intersectionality",
+      "Educational Inequality",
+      "Racialization"
+     ],
+     "relevance": 8,
+     "words": 1214
+    },
+    {
      "id": "n4cd39275",
-     "title": "Family conversations about police encounters",
-     "preview": "Listening to a family friend explain having the talk with her children made a white student recognize unexamined racial privilege.",
+     "title": "Police encounters and family friend talks",
+     "preview": "Listening to a family friend discuss preparing their child for police stops caused a student to evaluate their own racial privilege.",
      "concepts": [
       "Intersectionality",
       "Matrix of Domination",
@@ -1611,14 +1578,132 @@
    ],
    "message": null
   },
+  "collective representations": {
+   "concept": "Collective Representations",
+   "definition": "Collective representations are shared beliefs, symbols, and values that unite a society, conceptualized by Émile Durkheim.",
+   "options": [
+    {
+     "id": "n3f43a6df",
+     "title": "Military symbols and veteran identity",
+     "preview": "Physical military emblems and unit insignia became symbols that maintained shared bonds and cultural values among veterans returning to civilian life.",
+     "concepts": [
+      "Subculture",
+      "Collective Consciousness",
+      "Collective Representations",
+      "Enculturation"
+     ],
+     "relevance": 9,
+     "words": 1208
+    },
+    {
+     "id": "n2f4eeb6f",
+     "title": "Bar Mitzvah preparation and community",
+     "preview": "Learning Hebrew prayers and doing volunteer service revealed how shared religious rituals connect individuals to a broader community identity.",
+     "concepts": [
+      "Collective Consciousness",
+      "Collective Representations",
+      "Ritual",
+      "Socialization"
+     ],
+     "relevance": 8,
+     "words": 1081
+    },
+    {
+     "id": "n4f968b6b",
+     "title": "Painting nails and masculine norms",
+     "preview": "Wearing black nail polish provoked negative reactions from peers because it challenged conventional symbols of masculine identity.",
+     "concepts": [
+      "Hegemonic Masculinity",
+      "Toxic Masculinity",
+      "Collective Consciousness",
+      "Collective Representation"
+     ],
+     "relevance": 7,
+     "words": 1762
+    }
+   ],
+   "message": null
+  },
+  "social self": {
+   "concept": "Social Self",
+   "definition": "Proposed by George Herbert Mead, the social self is the part of identity developed through social interaction and perspective-taking.",
+   "options": [
+    {
+     "id": "n0534c3f5",
+     "title": "Switching voices at grocery register",
+     "preview": "Working as a cashier, switching tones and behaviors for different customers surprised a boyfriend who overheard the changes in persona.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Social Self",
+      "Presentation of Self",
+      "Impression Management"
+     ],
+     "relevance": 8,
+     "words": 1344
+    },
+    {
+     "id": "n881d7034",
+     "title": "Leaving small town for college",
+     "preview": "Living under constant scrutiny in a small high school led to changing behaviors for each peer group before moving to college.",
+     "concepts": [
+      "The Self, the I, and the Me",
+      "Social Self",
+      "Socialization",
+      "Conformity"
+     ],
+     "relevance": 7,
+     "words": 1310
+    },
+    {
+     "id": "n9f192bcd",
+     "title": "Private religious school expectations",
+     "preview": "Conforming to strict behavioral standards at a private prep school shaped how identity was displayed until arriving at university.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "The I and the Me"
+     ],
+     "relevance": 7,
+     "words": 1329
+    },
+    {
+     "id": "n060f51fc",
+     "title": "Impulses during a colleague dinner",
+     "preview": "Feeling an urge to laugh loudly at a dinner party with work peers demonstrated the contrast between spontaneous impulses and social expectations.",
+     "concepts": [
+      "The 'I' and the 'Me'",
+      "Social Self",
+      "Material Self",
+      "Spiritual Self"
+     ],
+     "relevance": 6,
+     "words": 744
+    },
+    {
+     "id": "nf375b739",
+     "title": "Curating images on social media",
+     "preview": "Posting selected photos online showed how peer feedback and desired group approval drive the creation of public versions of the self.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Social Self",
+      "Presentation of Self",
+      "Self-Perception"
+     ],
+     "relevance": 5,
+     "words": 824
+    }
+   ],
+   "message": null
+  },
   "capitalism": {
    "concept": "Capitalism",
    "definition": "Capitalism is an economic system based on private ownership of the means of production, analyzed extensively by Karl Marx.",
    "options": [
     {
      "id": "n8787df04",
-     "title": "Wage labor at custard shop",
-     "preview": "Working at a custard shop revealed how company price hikes increased corporate profits while lowering tips for minimum-wage staff.",
+     "title": "Wage stagnation at custard shop",
+     "preview": "Working at a custard shop revealed how company price hikes increased corporate profits while cutting into employee tips without wage increases.",
      "concepts": [
       "Marxist Theory",
       "Labor Exploitation",
@@ -1631,7 +1716,7 @@
     {
      "id": "n606f323c",
      "title": "Choosing high pay over passion",
-     "preview": "A student watched their brother pick an unfulfilling corporate job over an interesting career due to financial pressures.",
+     "preview": "A family member gave up a preferred career path to accept an unfulfilling corporate job that offered higher compensation.",
      "concepts": [
       "Iron Cage",
       "Alienation",
@@ -1642,35 +1727,22 @@
      "words": 426
     },
     {
-     "id": "n86bc9fd3",
-     "title": "Camp counseling and teacher protests",
-     "preview": "Working low-wage shifts at summer camp and watching aunts protest teacher pay exposed how market systems value labor.",
-     "concepts": [
-      "Marxist Theory",
-      "Alienation",
-      "Iron Cage",
-      "Commodity Fetishism"
-     ],
-     "relevance": 7,
-     "words": 444
-    },
-    {
      "id": "nf3955cc8",
-     "title": "Post hurricane home repairs",
-     "preview": "Observing a construction worker repair hurricane damage highlighted the long hours laborers work just to earn wages without owning the product.",
+     "title": "Post hurricane home reconstruction",
+     "preview": "Watching a construction worker spend long hours repairing hurricane damage showed the personal sacrifice required to earn basic wages.",
      "concepts": [
       "Alienation",
       "Spirit of Capitalism",
       "Commodity Fetishism",
       "Labor"
      ],
-     "relevance": 6,
+     "relevance": 7,
      "words": 427
     },
     {
      "id": "n3963da3d",
-     "title": "Donut shop labor value",
-     "preview": "Working for minimum wage at Duck Donuts demonstrated how market demands cause the perceived worth of employee labor to fluctuate.",
+     "title": "Making donuts for minimum wage",
+     "preview": "Working at a donut shop showed how market demand fluctuates throughout the year and affects the perceived value of labor.",
      "concepts": [
       "Alienation",
       "Commodification",
@@ -1679,77 +1751,31 @@
      ],
      "relevance": 6,
      "words": 404
-    }
-   ],
-   "message": null
-  },
-  "collective representations": {
-   "concept": "Collective Representations",
-   "definition": "Collective representations are shared symbols, beliefs, and values developed by a society, as defined by Émile Durkheim.",
-   "options": [
-    {
-     "id": "n3f43a6df",
-     "title": "Military symbols and veteran culture",
-     "preview": "Reflecting on military service, a student examines how unit patches, skull insignia, and tattoos preserve a shared warrior identity among veterans.",
-     "concepts": [
-      "Subculture",
-      "Collective Consciousness",
-      "Collective Representations",
-      "Enculturation"
-     ],
-     "relevance": 9,
-     "words": 1208
     },
     {
-     "id": "n2f4eeb6f",
-     "title": "Preparing for a Bar Mitzvah",
-     "preview": "Studying prayers with a Hebrew tutor and playing piano at retirement homes helped a student connect with a wider community.",
+     "id": "nadbc746d",
+     "title": "Switching to a corporate career",
+     "preview": "A parent left an early childhood education career to work in corporate business because childcare wages were too low.",
      "concepts": [
+      "Estranged Labor",
+      "Alienation",
       "Collective Consciousness",
-      "Collective Representations",
-      "Ritual",
-      "Socialization"
-     ],
-     "relevance": 8,
-     "words": 1081
-    },
-    {
-     "id": "n6a1170ae",
-     "title": "Keeping kosher in Jewish family",
-     "preview": "Growing up following strict kosher dietary laws connected a student to shared family traditions and religious expectations.",
-     "concepts": [
-      "Collective Consciousness",
-      "Collective Representations",
-      "Social Constructionism",
-      "Social Norms"
-     ],
-     "relevance": 7,
-     "words": 1503
-    },
-    {
-     "id": "n295b1d00",
-     "title": "Unequal treatment at store checkout",
-     "preview": "A student watched a store employee search a Black shopper while waving the student and her mother through without inspection.",
-     "concepts": [
-      "White Privilege",
-      "Institutional Racism",
-      "Racialization",
-      "Collective Consciousness"
+      "Wage Labor"
      ],
      "relevance": 6,
-     "words": 2139
+     "words": 291
     }
    ],
    "message": null
   },
   "gender inequality": {
    "concept": "Gender Inequality",
-   "definition": "Gender inequality refers to unequal power, status, and opportunities between men and women within society, often analyzed by feminist theorists.",
+   "definition": "Gender inequality refers to unequal power, status, and opportunities between men and women within society, as theorized by feminist sociologists.",
    "options": [
     {
      "id": "n1b139179",
      "title": "Wage gap at afterschool job",
-     "preview": "Discovering that male coworkers were paid more for the same afterschool program job led to confronting a supervisor before eventually resigning.",
+     "preview": "Discovered male coworkers were paid more at an afterschool program, but faced denial from management after asking for equal wages.",
      "concepts": [
       "Collective Consciousness",
       "Othering",
@@ -1760,22 +1786,9 @@
      "words": 1864
     },
     {
-     "id": "nc498ac33",
-     "title": "Gender rules on surf team",
-     "preview": "Surfing in a beach community revealed institutional roster limits that restricted female participation on a high school competitive surf team.",
-     "concepts": [
-      "Doing Gender",
-      "Gender Inequality",
-      "Gender Roles",
-      "Stereotyping"
-     ],
-     "relevance": 8,
-     "words": 2604
-    },
-    {
      "id": "nf79bfb45",
      "title": "Restaurant wage disparities and roles",
-     "preview": "Working at a bakery cafe meant training male peers who earned higher wages and received better advancement opportunities to kitchen positions.",
+     "preview": "Trained male coworkers who earned higher hourly wages while management steered female employees into lower paid front of house roles.",
      "concepts": [
       "Gender Wage Gap",
       "Beauty Myth",
@@ -1786,9 +1799,22 @@
      "words": 1201
     },
     {
+     "id": "nc498ac33",
+     "title": "Gender rules on surf team",
+     "preview": "Joined a high school surf team and noticed association rules restricted the number of female roster spots regardless of skill.",
+     "concepts": [
+      "Doing Gender",
+      "Gender Inequality",
+      "Gender Roles",
+      "Stereotyping"
+     ],
+     "relevance": 7,
+     "words": 2604
+    },
+    {
      "id": "n7d6e7816",
-     "title": "Household labor in dating relationship",
-     "preview": "Learning about domestic roles caused reassessment of unequal everyday chores and emotional labor expected by a boyfriend.",
+     "title": "Unequal domestic tasks in relationship",
+     "preview": "Noticed an imbalance of domestic chores with a boyfriend after learning about gendered labor divisions in a sociology class.",
      "concepts": [
       "Gender Division of Labor",
       "Feminist Theory",
@@ -1799,9 +1825,225 @@
      "words": 1815
     },
     {
+     "id": "n7c2c0dae",
+     "title": "Childhood sports and double standards",
+     "preview": "Played on an all-boys youth basketball league team and experienced different behavioral standards compared to male peers growing up.",
+     "concepts": [
+      "Gender Socialization",
+      "Gender Discrimination",
+      "Looking-Glass Self",
+      "Beauty Myth"
+     ],
+     "relevance": 6,
+     "words": 1809
+    }
+   ],
+   "message": null
+  },
+  "front stage": {
+   "concept": "Front Stage",
+   "definition": "The front stage is where individuals perform expected social roles for an audience, according to Erving Goffman.",
+   "options": [
+    {
+     "id": "nc0265b0e",
+     "title": "Hiding family illness at school",
+     "preview": "Masking personal distress and putting on a stoic public face for high school classmates happened while coping with a parent's serious medical diagnosis.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "Impression Management"
+     ],
+     "relevance": 9,
+     "words": 1696
+    },
+    {
+     "id": "n9f192bcd",
+     "title": "Conforming at a religious school",
+     "preview": "Faking religious devotion during weekly school chapel services helped maintain social acceptance among strict peers and teachers.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "The I and the Me"
+     ],
+     "relevance": 9,
+     "words": 1329
+    },
+    {
+     "id": "nb1b3b2d3",
+     "title": "Rushing a college sorority",
+     "preview": "Attending Greek recruitment events meant carefully tailoring personal presentations and behaviors to win approval from current members.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Front Stage",
+      "Dramaturgy",
+      "Impression Management"
+     ],
+     "relevance": 8,
+     "words": 654
+    },
+    {
+     "id": "n3f1cc7ca",
+     "title": "Switching roles between friends and family",
+     "preview": "Acting as a dependable older daughter at home contrasted with playing an easygoing, silly character around friends.",
+     "concepts": [
+      "Dramaturgy",
+      "Presentation of Self",
+      "Role Conflict",
+      "Collective Consciousness"
+     ],
+     "relevance": 7,
+     "words": 1264
+    },
+    {
+     "id": "n152cd49f",
+     "title": "Masking depression while socializing",
+     "preview": "Forcing enthusiasm during social outings and on social media masked inner feelings of unhappiness from friends.",
+     "concepts": [
+      "Dramaturgy",
+      "Front Stage",
+      "Backstage",
+      "Impression Management"
+     ],
+     "relevance": 6,
+     "words": 1199
+    }
+   ],
+   "message": null
+  },
+  "conformity": {
+   "concept": "Conformity",
+   "definition": "Conformity is the act of matching attitudes, beliefs, and behaviors to group norms, as studied by Solomon Asch.",
+   "options": [
+    {
+     "id": "n330f58c8",
+     "title": "High school wrestling team culture",
+     "preview": "Joining a high school wrestling team pushed an athlete to adopt aggressive behaviors and toxic masculine norms to fit into the group.",
+     "concepts": [
+      "Hegemonic Masculinity",
+      "Conformity",
+      "Social Hierarchy",
+      "Passing"
+     ],
+     "relevance": 9,
+     "words": 1269
+    },
+    {
+     "id": "n9f192bcd",
+     "title": "Chapel services at Christian school",
+     "preview": "Attending a private Christian high school required pretending to be devout during mandatory weekly chapel services to satisfy peers and teachers.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "The I and the Me"
+     ],
+     "relevance": 8,
+     "words": 1329
+    },
+    {
+     "id": "nea95a30b",
+     "title": "Body image standards after middle school",
+     "preview": "Receiving a smartphone before high school exposed a teenager to peer criticism about clothes and weight, altering how she viewed her body.",
+     "concepts": [
+      "Beauty Myth",
+      "Socialization",
+      "Peer Pressure",
+      "Conformity"
+     ],
+     "relevance": 8,
+     "words": 2103
+    },
+    {
+     "id": "n881d7034",
+     "title": "Small town social expectations",
+     "preview": "Growing up in a tiny rural town meant dressing and acting in specific ways to stay in the high school social circle.",
+     "concepts": [
+      "The Self, the I, and the Me",
+      "Social Self",
+      "Socialization",
+      "Conformity"
+     ],
+     "relevance": 7,
+     "words": 1310
+    },
+    {
+     "id": "n534e49b7",
+     "title": "Observing college fraternity rush",
+     "preview": "Attending rush events during freshman year revealed the extreme behavioral expectations pledges had to meet to be accepted into fraternities.",
+     "concepts": [
+      "Doing Gender",
+      "Hegemonic Masculinity",
+      "Conformity",
+      "Gender Roles"
+     ],
+     "relevance": 6,
+     "words": 1756
+    }
+   ],
+   "message": null
+  },
+  "othering": {
+   "concept": "Othering",
+   "definition": "Othering is the process by which a dominant group defines an out-group as inferior, a concept associated with Edward Said.",
+   "options": [
+    {
+     "id": "ne9049688",
+     "title": "Taking a high school weightlifting class",
+     "preview": "Facing hostile male peers and a substitute teacher in a weight training class made one female student feel isolated and unwanted.",
+     "concepts": [
+      "The Other",
+      "Hegemonic Masculinity",
+      "Gender Socialization",
+      "Sexism"
+     ],
+     "relevance": 9,
+     "words": 1222
+    },
+    {
+     "id": "nf5aed9dd",
+     "title": "Turned away from fraternity parties",
+     "preview": "Arriving at college party doors led to uncomfortable encounters where fraternity members judged women on appearance and excluded friends.",
+     "concepts": [
+      "Hegemonic Masculinity",
+      "Doing Gender",
+      "Othering",
+      "Subordination"
+     ],
+     "relevance": 8,
+     "words": 1411
+    },
+    {
+     "id": "nfb62c2e9",
+     "title": "Moving from Lebanon to America",
+     "preview": "Immigrating at age four brought pressure to look white and fit into school social groups before finding multicultural friends.",
+     "concepts": [
+      "Reracialization",
+      "Racial Hierarchy",
+      "Assimilation",
+      "Othering"
+     ],
+     "relevance": 8,
+     "words": 1320
+    },
+    {
+     "id": "n354c6e48",
+     "title": "Working as a ferry deckhand",
+     "preview": "Working on a ferry and studying engineering pushed a woman to separate herself from other female peers to survive male-dominated environments.",
+     "concepts": [
+      "Defensive Othering",
+      "Gender Discrimination",
+      "Subordinate Groups",
+      "Gender Roles"
+     ],
+     "relevance": 7,
+     "words": 1235
+    },
+    {
      "id": "nc8983163",
-     "title": "Male friend group dynamics",
-     "preview": "Hanging out as the only straight woman in a close circle of male friends exposed routine social exclusion and objectifying comments.",
+     "title": "Hanging out in male friend groups",
+     "preview": "Spending time as the only woman in a male friend group led to feeling treated as an outsider and valued only for appearance.",
      "concepts": [
       "Othering",
       "Beauty Myth",
@@ -1814,86 +2056,702 @@
    ],
    "message": null
   },
-  "conformity": {
-   "concept": "Conformity",
-   "definition": "Conformity is matching attitudes, beliefs, and behaviors to group norms, politics, or being like-minded, as explored by Robert Merton.",
+  "impression management": {
+   "concept": "Impression Management",
+   "definition": "Impression management is the process by which individuals attempt to control the impressions others form of them, theorized by Erving Goffman.",
    "options": [
     {
-     "id": "n330f58c8",
-     "title": "High school wrestling team culture",
-     "preview": "Joining a high school wrestling team pushed an insecure athlete to adopt aggressive behaviors and enforce harsh standards just to fit in.",
+     "id": "nb1b3b2d3",
+     "title": "Sorority recruitment and personal presentation",
+     "preview": "Attending fall sorority recruitment required putting on an intentional public persona to win approval from members at different chapter houses.",
      "concepts": [
-      "Hegemonic Masculinity",
-      "Conformity",
-      "Social Hierarchy",
-      "Passing"
+      "Looking-Glass Self",
+      "Front Stage",
+      "Dramaturgy",
+      "Impression Management"
+     ],
+     "relevance": 8,
+     "words": 654
+    },
+    {
+     "id": "nc0265b0e",
+     "title": "Hiding grief after cancer diagnosis",
+     "preview": "Receiving news of a father's cancer diagnosis led to putting on a brave face to protect family members and school peers.",
+     "concepts": [
+      "Presentation of Self",
+      "Front Stage",
+      "Backstage",
+      "Impression Management"
+     ],
+     "relevance": 8,
+     "words": 1696
+    },
+    {
+     "id": "n0534c3f5",
+     "title": "Changing voices as a grocery cashier",
+     "preview": "Working as a grocery store cashier involved altering speech patterns and demeanor to match customer expectations and secure positive feedback.",
+     "concepts": [
+      "Looking-Glass Self",
+      "Social Self",
+      "Presentation of Self",
+      "Impression Management"
+     ],
+     "relevance": 7,
+     "words": 1344
+    },
+    {
+     "id": "n152cd49f",
+     "title": "Social outings during severe depression",
+     "preview": "Going out bowling with friends meant hiding serious depression behind an upbeat front stage mask to avoid negative judgment.",
+     "concepts": [
+      "Dramaturgy",
+      "Front Stage",
+      "Backstage",
+      "Impression Management"
+     ],
+     "relevance": 6,
+     "words": 1199
+    },
+    {
+     "id": "n2946ac59",
+     "title": "Shifting roles across friend groups",
+     "preview": "Hanging out across different friend circles prompted shifts in energy and personality to fit the social role each group demanded.",
+     "concepts": [
+      "Dramaturgy",
+      "Presentation of Self",
+      "Front Stage and Backstage",
+      "Role Performance"
+     ],
+     "relevance": 6,
+     "words": 1682
+    }
+   ],
+   "message": null
+  },
+  "social norms": {
+   "concept": "Social Norms",
+   "definition": "Social norms are the unwritten rules and expectations that guide behavior within a specific group or society.",
+   "options": [
+    {
+     "id": "nd914b611",
+     "title": "Punished for painted nails in high school",
+     "preview": "A male classmate was sent to the dean and forced to remove his nail polish despite no written rule prohibiting it.",
+     "concepts": [
+      "Doing Gender",
+      "Gender Norms",
+      "Sex Category",
+      "Gender Roles"
      ],
      "relevance": 9,
-     "words": 1269
+     "words": 1405
     },
     {
      "id": "n881d7034",
-     "title": "Small town expectations and college",
-     "preview": "Growing up in a tight-knit rural community forced continuous adherence to local social rules and manners until moving away for college.",
+     "title": "Conforming to a small rural town",
+     "preview": "Growing up in a tight-knit farming community required strict adherence to expected manners, clothing, and activities before moving away to college.",
      "concepts": [
       "The Self, the I, and the Me",
       "Social Self",
       "Socialization",
       "Conformity"
      ],
-     "relevance": 9,
+     "relevance": 8,
      "words": 1310
     },
     {
-     "id": "n9f192bcd",
-     "title": "Christian prep school chapel worship",
-     "preview": "Attending a private religious high school led a student to pretend to be devout during mandatory weekly chapel services to please peers.",
+     "id": "n330f58c8",
+     "title": "Fitting in on the wrestling team",
+     "preview": "Facing exclusion as a newcomer led to adopting aggressive athletic behaviors to gain acceptance, eventually perpetuating them as team captain.",
      "concepts": [
-      "Presentation of Self",
-      "Front Stage",
-      "Backstage",
-      "The I and the Me"
-     ],
-     "relevance": 8,
-     "words": 1329
-    },
-    {
-     "id": "nea95a30b",
-     "title": "Peer comments and beauty standards",
-     "preview": "Receiving a phone and entering high school exposed a teenager to peer criticism about clothing and body size, sparking severe eating issues.",
-     "concepts": [
-      "Beauty Myth",
-      "Socialization",
-      "Peer Pressure",
-      "Conformity"
-     ],
-     "relevance": 8,
-     "words": 2103
-    },
-    {
-     "id": "n534e49b7",
-     "title": "College fraternity rush week",
-     "preview": "Participating in fraternity rush events revealed the heavy peer pressures and exhausting rituals that pledges accepted to join the group.",
-     "concepts": [
-      "Doing Gender",
       "Hegemonic Masculinity",
       "Conformity",
-      "Gender Roles"
+      "Social Hierarchy",
+      "Passing"
+     ],
+     "relevance": 8,
+     "words": 1269
+    },
+    {
+     "id": "n6a1170ae",
+     "title": "Following kosher dietary traditions",
+     "preview": "Adhering to kosher food guidelines within a family provided a shared sense of community and moral expectation distinct from peers.",
+     "concepts": [
+      "Collective Consciousness",
+      "Collective Representations",
+      "Social Constructionism",
+      "Social Norms"
      ],
      "relevance": 7,
-     "words": 1756
+     "words": 1503
+    },
+    {
+     "id": "nd8228f9f",
+     "title": "High school dress codes and femininity",
+     "preview": "Strict high school clothing enforcement singled out girls to prevent distractions, reinforcing unwritten expectations about appearance and modesty.",
+     "concepts": [
+      "Defensive Othering",
+      "Normative Identification",
+      "Collective Consciousness",
+      "Internalized Oppression"
+     ],
+     "relevance": 6,
+     "words": 1233
     }
    ],
    "message": null
   },
-  "front stage": {
-   "concept": "Front Stage",
-   "definition": "Erving Goffman defined the front stage as the social space where individuals perform expected roles and behaviors for an audience.",
+  "mcdonaldization": {
+   "concept": "McDonaldization",
+   "definition": "McDonaldization is George Ritzer's concept describing the spread of fast-food industry principles like efficiency and calculability across society.",
+   "options": [
+    {
+     "id": "n8e8f5fb4",
+     "title": "Childhood fast food and aging out",
+     "preview": "Growing up on road trip Happy Meals gave way to seeing the standardizing formulas behind modern restaurants and conveniences.",
+     "concepts": [
+      "McDonaldization",
+      "Rationalization",
+      "Efficiency",
+      "Calculability"
+     ],
+     "relevance": 7,
+     "words": 1355
+    },
+    {
+     "id": "n4f31db0a",
+     "title": "Standardized medical visits and check-in kiosks",
+     "preview": "Visiting medical clinics showed how appointments, check-in kiosks, and healthcare treatments mimic fast food assembly lines.",
+     "concepts": [
+      "McDonaldization",
+      "Rationalization",
+      "Bureaucracy",
+      "Calculability"
+     ],
+     "relevance": 6,
+     "words": 789
+    },
+    {
+     "id": "nd3872120",
+     "title": "Ordering ahead and loss of interaction",
+     "preview": "Replacing face to face interactions with mobile app ordering and curbside pickup showed how convenience removes personal connection.",
+     "concepts": [
+      "McDonaldization",
+      "Rationalization",
+      "Alienation",
+      "Iron Cage"
+     ],
+     "relevance": 5,
+     "words": 936
+    },
+    {
+     "id": "n5b0eb2b7",
+     "title": "Convenience culture and modern routines",
+     "preview": "Relying on drive-throughs and corporate delivery apps illustrated how efficiency and predictable routines take over everyday eating habits.",
+     "concepts": [
+      "McDonaldization",
+      "Rationalization",
+      "Efficiency",
+      "Calculability"
+     ],
+     "relevance": 5,
+     "words": 684
+    }
+   ],
+   "message": null
+  },
+  "oppression": {
+   "concept": "Oppression",
+   "definition": "Oppression is the systematic subjugation of one group by another, often analyzed by Karl Marx through economic exploitation.",
+   "options": [
+    {
+     "id": "ncbfb72c0",
+     "title": "Treatment at the campus gym",
+     "preview": "Facing dismissive interactions at the university recreation center led to reflections on family expectations and theoretical definitions of women's systematic restriction.",
+     "concepts": [
+      "Gender Roles",
+      "Male Gaze",
+      "Beauty Myth",
+      "Collective Consciousness"
+     ],
+     "relevance": 8,
+     "words": 1995
+    },
+    {
+     "id": "n1b139179",
+     "title": "Unequal pay at work",
+     "preview": "Learning male coworkers received higher pay led to a meeting with the supervisor that resulted in being reprimanded and silenced.",
+     "concepts": [
+      "Collective Consciousness",
+      "Othering",
+      "Gender Inequality",
+      "Patriarchy"
+     ],
+     "relevance": 8,
+     "words": 1864
+    },
+    {
+     "id": "nad96604b",
+     "title": "Slurs on a soccer team",
+     "preview": "Listening to teammates direct racial prejudice toward other minority players showed how members of subordinate groups can participate in subjugating others.",
+     "concepts": [
+      "Matrix of Domination",
+      "Racialization",
+      "Prejudice",
+      "Oppression"
+     ],
+     "relevance": 7,
+     "words": 1469
+    },
+    {
+     "id": "nd9db057e",
+     "title": "Class paths after high school",
+     "preview": "Comparing family expectations and resources with those of a working-class immigrant friend highlighted how systemic barriers restrict upward mobility.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Social Reproduction",
+      "Racial Discrimination"
+     ],
+     "relevance": 6,
+     "words": 938
+    },
+    {
+     "id": "n0b1f7abf",
+     "title": "Advanced science classroom dynamics",
+     "preview": "Taking advanced placement classes surrounded mostly by male peers revealed how intellectual credibility and opportunity are shaped by gender and race.",
+     "concepts": [
+      "White Privilege",
+      "Beauty Myth",
+      "Sexism",
+      "Intersectionality"
+     ],
+     "relevance": 5,
+     "words": 1489
+    }
+   ],
+   "message": null
+  },
+  "social inequality": {
+   "concept": "Social Inequality",
+   "definition": "Social inequality refers to the unequal distribution of resources, opportunities, and rewards among individuals within a society, as analyzed by Karl Marx and Max Weber.",
+   "options": [
+    {
+     "id": "nafbb3613",
+     "title": "Working in a restaurant",
+     "preview": "Working long shifts for low pay at a restaurant made the gap between managers and hourly workers very apparent.",
+     "concepts": [
+      "Social Stratification",
+      "Wealth Inequality",
+      "Social Class",
+      "Emotional Labor"
+     ],
+     "relevance": 9,
+     "words": 1413
+    },
+    {
+     "id": "n5adba178",
+     "title": "Hiding family money problems",
+     "preview": "Facing peer pressure over designer clothes and backpacks became stressful after a parent lost their corporate job.",
+     "concepts": [
+      "Social Class",
+      "Social Inequality",
+      "Class Reproduction",
+      "Materialism"
+     ],
+     "relevance": 9,
+     "words": 1521
+    },
+    {
+     "id": "nb4eea9f1",
+     "title": "Watching parents work hard",
+     "preview": "Growing up with parents working exhausting physical jobs showed how little financial return came from difficult daily labor.",
+     "concepts": [
+      "Social Class",
+      "Power Elite",
+      "Class-Domination Theory",
+      "Income Inequality"
+     ],
+     "relevance": 8,
+     "words": 1240
+    },
+    {
+     "id": "nd9db057e",
+     "title": "Comparing paths to college",
+     "preview": "Contrasting an upper middle class background and engineering ambitions with a friend's immigrant household revealed unequal access to opportunities.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Social Reproduction",
+      "Racial Discrimination"
+     ],
+     "relevance": 7,
+     "words": 938
+    },
+    {
+     "id": "nbdbac777",
+     "title": "Assumptions about college costs",
+     "preview": "A coworker assumed someone must be wealthy simply because they were planning to attend a four year university.",
+     "concepts": [
+      "Social Class",
+      "Power Elite",
+      "Collective Consciousness",
+      "Social Stratification"
+     ],
+     "relevance": 6,
+     "words": 414
+    }
+   ],
+   "message": null
+  },
+  "rational choice theory": {
+   "concept": "Rational Choice Theory",
+   "definition": "Rational choice theory, rooted in exchange theory, suggests individuals make decisions by weighing costs and benefits to maximize personal utility.",
+   "options": [
+    {
+     "id": "n8af94d00",
+     "title": "Choosing nursing for the salary",
+     "preview": "Weighing initial desires to help others against financial security led to choosing a nursing major for its income potential.",
+     "concepts": [
+      "Capitalism",
+      "Alienation",
+      "Estranged Labor",
+      "The Iron Cage"
+     ],
+     "relevance": 7,
+     "words": 429
+    },
+    {
+     "id": "n606f323c",
+     "title": "Brother picking pay over passion",
+     "preview": "Comparing two job offers after college resulted in picking a high-paying corporate role over a more engaging career.",
+     "concepts": [
+      "Iron Cage",
+      "Alienation",
+      "Labor Exploitation",
+      "Collective Consciousness"
+     ],
+     "relevance": 6,
+     "words": 426
+    },
+    {
+     "id": "nb44f9778",
+     "title": "Campus course registration dilemmas",
+     "preview": "Scrambling to secure required major classes against university credit rules revealed competing incentives among students.",
+     "concepts": [
+      "Utilitarianism",
+      "Libertarianism",
+      "Distributive Justice",
+      "Institutional Inequality"
+     ],
+     "relevance": 5,
+     "words": 1388
+    }
+   ],
+   "message": null
+  },
+  "commodity fetishism": {
+   "concept": "Commodity Fetishism",
+   "definition": "Karl Marx defined commodity fetishism as the perception of social relationships involved in production as economic relationships among money and commodities traded in market exchange.",
+   "options": [
+    {
+     "id": "n614923f2",
+     "title": "Childhood headbands and peer conformity",
+     "preview": "Wanting the exact same headband as every other girl in elementary school revealed how products take on social power.",
+     "concepts": [
+      "Conformity",
+      "Spirit of Capitalism",
+      "Iron Cage",
+      "Commodity Fetishism"
+     ],
+     "relevance": 7,
+     "words": 466
+    },
+    {
+     "id": "nf3955cc8",
+     "title": "Construction repairs after a hurricane",
+     "preview": "Watching a construction worker rebuild a damaged house every day highlighted how workers are treated as cheap commodities.",
+     "concepts": [
+      "Alienation",
+      "Spirit of Capitalism",
+      "Commodity Fetishism",
+      "Labor"
+     ],
+     "relevance": 5,
+     "words": 427
+    }
+   ],
+   "message": null
+  },
+  "cohabitation": {
+   "concept": "Cohabitation",
+   "definition": "Cohabitation is the practice of unmarried couples living together in a romantic relationship, often as a precursor or alternative to marriage.",
+   "options": [
+    {
+     "id": "nee890d48",
+     "title": "Military benefits and future marriage",
+     "preview": "Reflecting on childhood with unmarried parents, discussions begin with a military boyfriend about moving in together on base and getting married.",
+     "concepts": [
+      "Cohabitation",
+      "Divorce Rates",
+      "Family Structure",
+      "Division of Labor"
+     ],
+     "relevance": 7,
+     "words": 1284
+    },
+    {
+     "id": "nf8e1c544",
+     "title": "Testing relationships before marriage",
+     "preview": "Evaluating current trends shows couples moving in together to test compatibility before making a legal commitment to marry.",
+     "concepts": [
+      "Nuclear Family",
+      "Cohabitation",
+      "Gender Roles",
+      "Division of Labor"
+     ],
+     "relevance": 5,
+     "words": 1231
+    },
+    {
+     "id": "n62cadb30",
+     "title": "College peers living together",
+     "preview": "Observing classmates living with significant others highlights how unmarried couples share living spaces as an alternative to early marriage.",
+     "concepts": [
+      "Nuclear Family",
+      "Cohabitation",
+      "Gender Roles",
+      "Egalitarianism"
+     ],
+     "relevance": 5,
+     "words": 1292
+    },
+    {
+     "id": "n41dfa65e",
+     "title": "Choosing partnership without marriage",
+     "preview": "Considering rising wedding costs and divorce rates explains why long-term couples choose to live together without signing marriage licenses.",
+     "concepts": [
+      "Heteronormativity",
+      "Gender Roles",
+      "Cohabitation",
+      "Family Structure"
+     ],
+     "relevance": 5,
+     "words": 1171
+    }
+   ],
+   "message": null
+  },
+  "social solidarity": {
+   "concept": "Social Solidarity",
+   "definition": "Social solidarity refers to the ties that bind a society together, categorized by Émile Durkheim into mechanical and organic forms.",
+   "options": [
+    {
+     "id": "n3f43a6df",
+     "title": "Military culture and civilian life",
+     "preview": "Returning to college after military service revealed how deeply shared symbols and wartime bonds united fellow veterans.",
+     "concepts": [
+      "Subculture",
+      "Collective Consciousness",
+      "Collective Representations",
+      "Enculturation"
+     ],
+     "relevance": 8,
+     "words": 1208
+    },
+    {
+     "id": "n2f4eeb6f",
+     "title": "Preparing for a bar mitzvah",
+     "preview": "Studying prayers and playing piano at retirement homes showed how religious rituals connect individuals to a wider community.",
+     "concepts": [
+      "Collective Consciousness",
+      "Collective Representations",
+      "Ritual",
+      "Socialization"
+     ],
+     "relevance": 7,
+     "words": 1081
+    },
+    {
+     "id": "n65674bb4",
+     "title": "Faith and church community",
+     "preview": "Growing up in a religious household and attending parish events showed how shared beliefs bind people into close social circles.",
+     "concepts": [
+      "Collective Consciousness",
+      "Sociology of Religion",
+      "Social Solidarity",
+      "Community"
+     ],
+     "relevance": 6,
+     "words": 1249
+    },
+    {
+     "id": "nc7b980e0",
+     "title": "Questioning childhood religious beliefs",
+     "preview": "Questioning long-held religious traditions caused friction with devout family and friends who relied on faith for social cohesion.",
+     "concepts": [
+      "Social Solidarity",
+      "Social Cohesion",
+      "Othering",
+      "In-Group and Out-Group"
+     ],
+     "relevance": 5,
+     "words": 1508
+    }
+   ],
+   "message": null
+  },
+  "systemic racism": {
+   "concept": "Systemic Racism",
+   "definition": "Systemic racism is institutional policies and cultural practices that reinforce racial inequality across society, as described by Joe Feagin.",
+   "options": [
+    {
+     "id": "naf290ba0",
+     "title": "Police talks and ballet spaces",
+     "preview": "Growing up learning strict rules for interactions with police officers revealed structural racial inequalities that peers never faced.",
+     "concepts": [
+      "White Privilege",
+      "Institutional Racism",
+      "Color-Blind Racism",
+      "Stereotyping"
+     ],
+     "relevance": 9,
+     "words": 1516
+    },
+    {
+     "id": "nab61ca04",
+     "title": "Adoption and contrasting racial experiences",
+     "preview": "Living with adopted younger siblings from Ethiopia highlighted stark differences in school isolation and safety concerns.",
+     "concepts": [
+      "White Privilege",
+      "Systemic Racism",
+      "Conferred Dominance",
+      "Racial Socialization"
+     ],
+     "relevance": 8,
+     "words": 1973
+    },
+    {
+     "id": "n2002aab5",
+     "title": "Moving to a predominantly white campus",
+     "preview": "Leaving a diverse military community to attend university exposed institutional disparities and stories of exclusion from peers of color.",
+     "concepts": [
+      "Racialization",
+      "Systemic Racism",
+      "White Privilege",
+      "Ethnocentrism"
+     ],
+     "relevance": 7,
+     "words": 1538
+    },
+    {
+     "id": "nb7a36037",
+     "title": "Job hunting with a friend",
+     "preview": "Watching a qualified friend get passed over for a retail position exposed unearned racial advantages in the local job market.",
+     "concepts": [
+      "White Privilege",
+      "Systemic Racism",
+      "Racial Discrimination",
+      "Social Class"
+     ],
+     "relevance": 6,
+     "words": 1209
+    },
+    {
+     "id": "nd9db057e",
+     "title": "Differing family opportunities after school",
+     "preview": "Comparing post-graduation engineering plans with an immigrant friend's career prospects demonstrated how generational wealth shapes life chances.",
+     "concepts": [
+      "Social Class",
+      "Social Stratification",
+      "Social Reproduction",
+      "Racial Discrimination"
+     ],
+     "relevance": 5,
+     "words": 938
+    }
+   ],
+   "message": null
+  },
+  "rationalization": {
+   "concept": "Rationalization",
+   "definition": "Max Weber defined rationalization as the replacement of traditions and values with efficiency, calculation, and bureaucratic control in modern society.",
+   "options": [
+    {
+     "id": "n606f323c",
+     "title": "Choosing higher pay over passions",
+     "preview": "Facing post-college job choices, a brother accepts a high-paying, unfulfilling position over his personal passion due to economic expectations.",
+     "concepts": [
+      "Iron Cage",
+      "Alienation",
+      "Labor Exploitation",
+      "Collective Consciousness"
+     ],
+     "relevance": 7,
+     "words": 426
+    },
+    {
+     "id": "n7ad08f1b",
+     "title": "Cost and cremation over funerals",
+     "preview": "Analyzing modern end-of-life choices reveals how families often select direct cremation purely for speed, efficiency, and lower expenses.",
+     "concepts": [
+      "Social Class",
+      "Rationalization",
+      "McDonaldization",
+      "Iron Cage"
+     ],
+     "relevance": 6,
+     "words": 1225
+    },
+    {
+     "id": "n4f31db0a",
+     "title": "Standardized care in modern clinics",
+     "preview": "Visiting medical offices highlights how digital check-in kiosks and rigid appointment schedules process patients like fast-food customers.",
+     "concepts": [
+      "McDonaldization",
+      "Rationalization",
+      "Bureaucracy",
+      "Calculability"
+     ],
+     "relevance": 6,
+     "words": 789
+    },
+    {
+     "id": "nd6b74989",
+     "title": "Drive-thrus and order-ahead apps",
+     "preview": "Rushing through everyday routines shows how drive-thrus and self-checkouts replace traditional interactions with calculated efficiency.",
+     "concepts": [
+      "Rationalization",
+      "McDonaldization",
+      "Bureaucracy",
+      "Iron Cage"
+     ],
+     "relevance": 5,
+     "words": 836
+    },
+    {
+     "id": "n86bc9fd3",
+     "title": "Camp counseling versus financial return",
+     "preview": "Working for low pay at a beloved summer camp shows the contrast between meaningful work and jobs rewarded purely by financial calculation.",
+     "concepts": [
+      "Marxist Theory",
+      "Alienation",
+      "Iron Cage",
+      "Commodity Fetishism"
+     ],
+     "relevance": 5,
+     "words": 444
+    }
+   ],
+   "message": null
+  },
+  "backstage": {
+   "concept": "Backstage",
+   "definition": "Erving Goffman defined the backstage as a private space where individuals relax, drop their social masks, and prepare for future performances.",
    "options": [
     {
      "id": "nc0265b0e",
-     "title": "Hiding family illness at school",
-     "preview": "Masking personal distress at high school, a teenager acted cheerful and composed around classmates while dealing with a father's cancer diagnosis at home.",
+     "title": "Family illness and public composure",
+     "preview": "Masking personal fear and grief at high school while family members quietly dropped their cheerful fronts only inside their home.",
      "concepts": [
       "Presentation of Self",
       "Front Stage",
@@ -1906,7 +2764,7 @@
     {
      "id": "n9f192bcd",
      "title": "Conforming at Christian high school",
-     "preview": "Attending weekly chapel services, a student sang and acted devoutly to match classmates and teachers despite not feeling religious.",
+     "preview": "Preparing each morning to put on a deeply religious act for teachers and peers before finally taking it off in private.",
      "concepts": [
       "Presentation of Self",
       "Front Stage",
@@ -1919,7 +2777,7 @@
     {
      "id": "n152cd49f",
      "title": "Hiding depression with friends",
-     "preview": "Putting on a cheerful face while bowling with peers, an individual concealed severe depression behind social expectations.",
+     "preview": "Going out bowling and presenting a cheerful front to friends while privately dealing with severe emotional distress.",
      "concepts": [
       "Dramaturgy",
       "Front Stage",
@@ -1930,921 +2788,17 @@
      "words": 1199
     },
     {
-     "id": "nb1b3b2d3",
-     "title": "Sorority recruitment house visits",
-     "preview": "Going through sorority rush, an applicant carefully managed conversation, demeanor, and attire to impress members at each house.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Front Stage",
-      "Dramaturgy",
-      "Impression Management"
-     ],
-     "relevance": 6,
-     "words": 654
-    },
-    {
      "id": "n1ad48a7d",
-     "title": "Acting differently in classroom settings",
-     "preview": "Changing behavior across different groups, a student acted quiet and studious during class lectures to meet teacher expectations.",
+     "title": "Dropping roles when alone",
+     "preview": "Shifting between different expectations for family and friends, then dropping all social facades when sitting alone in a room.",
      "concepts": [
       "Presentation of Self",
       "Dramaturgy",
       "Ascribed Status",
       "Achieved Status"
      ],
-     "relevance": 5,
+     "relevance": 6,
      "words": 1844
-    }
-   ],
-   "message": null
-  },
-  "social norms": {
-   "concept": "Social Norms",
-   "definition": "Social norms are the unwritten rules and expectations that guide behavior within a specific group or society.",
-   "options": [
-    {
-     "id": "n881d7034",
-     "title": "Moving from rural rules to college",
-     "preview": "Growing up in a tiny farming community required keeping up with strict unspoken manners and fads before leaving for university.",
-     "concepts": [
-      "The Self, the I, and the Me",
-      "Social Self",
-      "Socialization",
-      "Conformity"
-     ],
-     "relevance": 9,
-     "words": 1310
-    },
-    {
-     "id": "nd8228f9f",
-     "title": "Greek life parties and feminine standards",
-     "preview": "Attending college fraternity events revealed unwritten requirements for women to dress and act in specific ways to gain entrance.",
-     "concepts": [
-      "Defensive Othering",
-      "Normative Identification",
-      "Collective Consciousness",
-      "Internalized Oppression"
-     ],
-     "relevance": 8,
-     "words": 1233
-    },
-    {
-     "id": "n330f58c8",
-     "title": "Wrestling team culture and hazing",
-     "preview": "Joining a high school wrestling team meant adopting aggressive behaviors and masculine standards to gain acceptance from teammates.",
-     "concepts": [
-      "Hegemonic Masculinity",
-      "Conformity",
-      "Social Hierarchy",
-      "Passing"
-     ],
-     "relevance": 8,
-     "words": 1269
-    },
-    {
-     "id": "nea95a30b",
-     "title": "Peer pressure and body standards",
-     "preview": "Starting high school with a new phone exposed harsh peer expectations about clothing, appearance, and body size.",
-     "concepts": [
-      "Beauty Myth",
-      "Socialization",
-      "Peer Pressure",
-      "Conformity"
-     ],
-     "relevance": 8,
-     "words": 2103
-    },
-    {
-     "id": "n3f05d15b",
-     "title": "Cadet rituals at military school",
-     "preview": "Attending a military boarding school meant watching new cadets face intense inspections and pressure to hide their emotions.",
-     "concepts": [
-      "Hegemonic Masculinity",
-      "Gender Socialization",
-      "Stigma",
-      "Conformity"
-     ],
-     "relevance": 7,
-     "words": 1214
-    }
-   ],
-   "message": null
-  },
-  "othering": {
-   "concept": "Othering",
-   "definition": "Othering is the process by which a dominant group marginalizes a subordinate group by reducing them to stereotyped outsiders, as described by Gayatri Spivak.",
-   "options": [
-    {
-     "id": "ne9049688",
-     "title": "Solo girl in weight training",
-     "preview": "Enrolling as the only girl in a high school weight training class resulted in exclusion from male peers and belittling remarks from a teacher.",
-     "concepts": [
-      "The Other",
-      "Hegemonic Masculinity",
-      "Gender Socialization",
-      "Sexism"
-     ],
-     "relevance": 9,
-     "words": 1222
-    },
-    {
-     "id": "n0311a9ea",
-     "title": "Manual labor job applications",
-     "preview": "Applying for warehouse labor at a local feed store led to rejection because the owner assumed women belonged only behind the counter.",
-     "concepts": [
-      "Othering",
-      "Beauty Myth",
-      "Gender Discrimination",
-      "Occupational Segregation"
-     ],
-     "relevance": 9,
-     "words": 1410
-    },
-    {
-     "id": "nc8983163",
-     "title": "Dynamics within male friend group",
-     "preview": "Hanging out as the only straight woman in a male friend group led to feeling treated as an object rather than an equal peer.",
-     "concepts": [
-      "Othering",
-      "Beauty Myth",
-      "Objectification",
-      "Gender Inequality"
-     ],
-     "relevance": 8,
-     "words": 1939
-    },
-    {
-     "id": "n354c6e48",
-     "title": "Ferry deckhand and engineering classes",
-     "preview": "Working as a ferry deckhand and taking engineering courses exposed a woman to constant doubts from male peers about her physical ability.",
-     "concepts": [
-      "Defensive Othering",
-      "Gender Discrimination",
-      "Subordinate Groups",
-      "Gender Roles"
-     ],
-     "relevance": 8,
-     "words": 1235
-    },
-    {
-     "id": "nf5aed9dd",
-     "title": "Door rejection at fraternity party",
-     "preview": "Arriving at a college fraternity house led to male hosts judging women at the entrance and turning a friend away after she declined a drink.",
-     "concepts": [
-      "Hegemonic Masculinity",
-      "Doing Gender",
-      "Othering",
-      "Subordination"
-     ],
-     "relevance": 7,
-     "words": 1411
-    }
-   ],
-   "message": null
-  },
-  "social self": {
-   "concept": "The Social Self",
-   "definition": "The social self is the part of an individual's identity developed through social interaction, as theorized by George Herbert Mead.",
-   "options": [
-    {
-     "id": "nf83a39ca",
-     "title": "Understanding the Complexity of the Self",
-     "preview": "A student examines theories of identity development, contrasting how individuals construct and present different versions of themselves across various social spheres.",
-     "concepts": [
-      "The \"I\" and the \"Me\"",
-      "Social Self",
-      "Material Self",
-      "Presentation of Self"
-     ],
-     "relevance": null,
-     "words": 378
-    },
-    {
-     "id": "n060f51fc",
-     "title": "Navigating Phases of the Social Self",
-     "preview": "A student analyzes theories of self-development by George Herbert Mead and William James, illustrating the interplay between social expectations, personal impulses, and multifaceted identity components.",
-     "concepts": [
-      "The 'I' and the 'Me'",
-      "Social Self",
-      "Material Self",
-      "Spiritual Self"
-     ],
-     "relevance": null,
-     "words": 744
-    },
-    {
-     "id": "nf375b739",
-     "title": "Perception and Identity on Social Media",
-     "preview": "A student reflects on how social media shapes self-image, comparing sociological theories of the self with general observations about online personas.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Social Self",
-      "Presentation of Self",
-      "Self-Perception"
-     ],
-     "relevance": null,
-     "words": 824
-    },
-    {
-     "id": "n76e49ff9",
-     "title": "Navigating Multiple Social Selves",
-     "preview": "A student reflects on theoretical perspectives from James and Mead to examine how social environments and collective consciousness shape individual identity and self-perception.",
-     "concepts": [
-      "Collective Consciousness",
-      "Social Self",
-      "Conception of Self",
-      "Presentation of Self"
-     ],
-     "relevance": null,
-     "words": 331
-    },
-    {
-     "id": "n0534c3f5",
-     "title": "Switching Voices as a Grocery Cashier",
-     "preview": "A student describes changing their voice and personality to match different customers while working as a grocery cashier, surprising their boyfriend who overheard the transformation.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Social Self",
-      "Presentation of Self",
-      "Impression Management"
-     ],
-     "relevance": null,
-     "words": 1344
-    }
-   ],
-   "message": null
-  },
-  "mcdonaldization": {
-   "concept": "McDonaldization",
-   "definition": "McDonaldization is a process where society adopts the characteristics of a fast-food restaurant, as introduced by George Ritzer.",
-   "options": [
-    {
-     "id": "n8e8f5fb4",
-     "title": "Childhood visits to fast food restaurants",
-     "preview": "Visits to fast food restaurants shifted from childhood excitement over playgrounds and toys to noticing how speed and standardization run the stores.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Efficiency",
-      "Calculability"
-     ],
-     "relevance": 7,
-     "words": 1355
-    },
-    {
-     "id": "n5b0eb2b7",
-     "title": "Everyday routines in rationalized systems",
-     "preview": "Ordering fast food through drive-thrus and mobile apps shows how pressure for efficiency shapes everyday consumer habits and corporate control.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Efficiency",
-      "Calculability"
-     ],
-     "relevance": 6,
-     "words": 684
-    },
-    {
-     "id": "n4f31db0a",
-     "title": "Standardized care in modern healthcare",
-     "preview": "Checking into medical clinics through digital kiosks highlights how healthcare facilities adopt fast food models of standardization and speed.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Bureaucracy",
-      "Calculability"
-     ],
-     "relevance": 6,
-     "words": 789
-    },
-    {
-     "id": "nd3872120",
-     "title": "Consumer convenience and service work",
-     "preview": "Replacing face to face interactions with automated curbside pickups and online ordering systems reshapes daily exchanges between consumers and workers.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Alienation",
-      "Iron Cage"
-     ],
-     "relevance": 5,
-     "words": 936
-    },
-    {
-     "id": "n822bf5f7",
-     "title": "Fast food scheduling and low wage labor",
-     "preview": "Rigid scheduling practices in corporate workplaces require on-call availability, imposing strict control over low wage and immigrant workers.",
-     "concepts": [
-      "McDonaldization",
-      "Labor Market Discrimination",
-      "Dehumanization",
-      "Social Stratification"
-     ],
-     "relevance": 5,
-     "words": 800
-    }
-   ],
-   "message": null
-  },
-  "oppression": {
-   "concept": "Oppression",
-   "definition": "Oppression is the systematic subjugation of one group by another, as described by structural inequality frameworks.",
-   "options": [
-    {
-     "id": "ncbfb72c0",
-     "title": "Respect in male spaces",
-     "preview": "Dealing with dismissive male peers at the campus gym and strict family expectations highlighted gendered barriers to everyday respect.",
-     "concepts": [
-      "Gender Roles",
-      "Male Gaze",
-      "Beauty Myth",
-      "Collective Consciousness"
-     ],
-     "relevance": 8,
-     "words": 1995
-    },
-    {
-     "id": "n0b1f7abf",
-     "title": "Gender bias in advanced science",
-     "preview": "Enrolling in advanced placement science classes led to being undermined by male classmates while recognizing personal racial advantages.",
-     "concepts": [
-      "White Privilege",
-      "Beauty Myth",
-      "Sexism",
-      "Intersectionality"
-     ],
-     "relevance": 7,
-     "words": 1489
-    },
-    {
-     "id": "nad96604b",
-     "title": "Prejudice among soccer teammates",
-     "preview": "Hearing teammates make derogatory remarks toward Black athletes revealed how members of minority groups can subordinate others.",
-     "concepts": [
-      "Matrix of Domination",
-      "Racialization",
-      "Prejudice",
-      "Oppression"
-     ],
-     "relevance": 7,
-     "words": 1469
-    },
-    {
-     "id": "n815fe4ff",
-     "title": "Isolation in advanced classes",
-     "preview": "Attending advanced placement courses as a minority student in a wealthy district exposed daily social hierarchies and feelings of exclusion.",
-     "concepts": [
-      "Matrix of Domination",
-      "Intersectionality",
-      "Educational Inequality",
-      "Racialization"
-     ],
-     "relevance": 7,
-     "words": 1214
-    },
-    {
-     "id": "n4cd39275",
-     "title": "Realizing unexamined racial privilege",
-     "preview": "Learning that an older Black family friend had to give his kids safety talks about police encounters revealed unexamined advantages.",
-     "concepts": [
-      "Intersectionality",
-      "Matrix of Domination",
-      "White Privilege",
-      "Oppression"
-     ],
-     "relevance": 5,
-     "words": 1485
-    }
-   ],
-   "message": null
-  },
-  "social inequality": {
-   "concept": "Social Inequality",
-   "definition": "Social inequality refers to unequal access to resources and opportunities within a society, often analyzed through social stratification by theorists like Karl Marx.",
-   "options": [
-    {
-     "id": "nafbb3613",
-     "title": "Serving food and wage disparities",
-     "preview": "Working as a low-wage restaurant server highlighted the stark divide between physical labor and the high earnings of managers and corporate executives.",
-     "concepts": [
-      "Social Stratification",
-      "Wealth Inequality",
-      "Social Class",
-      "Emotional Labor"
-     ],
-     "relevance": 9,
-     "words": 1413
-    },
-    {
-     "id": "n5adba178",
-     "title": "Middle school social class divisions",
-     "preview": "Losing a mother's job and health benefits created financial stress while peers at school enforced social cliques through expensive brand-name accessories.",
-     "concepts": [
-      "Social Class",
-      "Social Inequality",
-      "Class Reproduction",
-      "Materialism"
-     ],
-     "relevance": 9,
-     "words": 1521
-    },
-    {
-     "id": "nd9db057e",
-     "title": "Contrasting paths to higher education",
-     "preview": "Preparing for an engineering degree revealed sharp differences between upper-middle-class parental guidance and the limited educational support given to a working-class friend.",
-     "concepts": [
-      "Social Class",
-      "Social Stratification",
-      "Social Reproduction",
-      "Racial Discrimination"
-     ],
-     "relevance": 8,
-     "words": 938
-    },
-    {
-     "id": "nb4eea9f1",
-     "title": "Parents working long manual shifts",
-     "preview": "Watching parents work exhausting shifts as a mechanic and a nurse contrasted with the massive wealth earned by corporate elites and pro athletes.",
-     "concepts": [
-      "Social Class",
-      "Power Elite",
-      "Class-Domination Theory",
-      "Income Inequality"
-     ],
-     "relevance": 8,
-     "words": 1240
-    },
-    {
-     "id": "n3a26f09d",
-     "title": "Upward mobility through family remarriage",
-     "preview": "Moving from food stamps in an immigrant household into an upper-middle-class family exposed the distinct advantages that come with financial wealth.",
-     "concepts": [
-      "Social Mobility",
-      "Social Stratification",
-      "Intersectionality",
-      "White Privilege"
-     ],
-     "relevance": 7,
-     "words": 1235
-    }
-   ],
-   "message": null
-  },
-  "rationalization": {
-   "concept": "Rationalization",
-   "definition": "Rationalization, according to Max Weber, is the replacement of traditional values and motivations with efficiency and calculability in society.",
-   "options": [
-    {
-     "id": "ne97f6ff5",
-     "title": "Pressure in competitive high school classrooms",
-     "preview": "Competing in an intense International Baccalaureate program where student worth was judged entirely by numeric grade point averages exposed systemic inequality in education.",
-     "concepts": [
-      "Meritocracy",
-      "Privilege",
-      "Racial Inequality",
-      "Educational Inequality"
-     ],
-     "relevance": 7,
-     "words": 1523
-    },
-    {
-     "id": "n606f323c",
-     "title": "Choosing high pay over career interest",
-     "preview": "Watching a brother choose an uninteresting, high-paying corporate role over an engaging, lower-paying job showed how financial calculations override personal fulfillment.",
-     "concepts": [
-      "Iron Cage",
-      "Alienation",
-      "Labor Exploitation",
-      "Collective Consciousness"
-     ],
-     "relevance": 6,
-     "words": 426
-    },
-    {
-     "id": "nd3872120",
-     "title": "Calculability in modern retail exchanges",
-     "preview": "Examining modern conveniences like mobile ordering and curbside pickup showed how automated transactions replace social connection and turn workers into commodities.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Alienation",
-      "Iron Cage"
-     ],
-     "relevance": 6,
-     "words": 936
-    },
-    {
-     "id": "n4f31db0a",
-     "title": "Standardized care in modern healthcare",
-     "preview": "Analyzing digital check-in kiosks and tightly timed doctor visits revealed how hospitals adopt fast-food efficiency at the expense of individualized attention.",
-     "concepts": [
-      "McDonaldization",
-      "Rationalization",
-      "Bureaucracy",
-      "Calculability"
-     ],
-     "relevance": 5,
-     "words": 789
-    }
-   ],
-   "message": null
-  },
-  "utilitarianism": {
-   "concept": "Utilitarianism",
-   "definition": "Utilitarianism is an ethical theory suggesting actions are right if they promote the greatest happiness for the greatest number, famously associated with Jeremy Bentham.",
-   "options": [
-    {
-     "id": "n681c69d8",
-     "title": "Compromising with friends and high school",
-     "preview": "Choosing a restaurant to satisfy different friends and watching peers laugh at high school bullying prompted reflections on whether group happiness justifies harm.",
-     "concepts": [
-      "Utilitarianism",
-      "Distributive Justice",
-      "Veil of Ignorance",
-      "Affirmative Action"
-     ],
-     "relevance": 7,
-     "words": 1528
-    },
-    {
-     "id": "n2c02d44a",
-     "title": "First generation student and public policy",
-     "preview": "Growing up around economic exploitation led to questioning whether viewing people as statistical numbers to maximize general welfare ignores personal dignity.",
-     "concepts": [
-      "Social Class",
-      "Social Mobility",
-      "Meritocracy",
-      "Social Inequality"
-     ],
-     "relevance": 6,
-     "words": 1529
-    },
-    {
-     "id": "n056f84f2",
-     "title": "Allocating time and evaluating utility",
-     "preview": "Prioritizing helping a struggling teammate over polishing a presentation prompted an evaluation of rule utilitarianism and individual rights.",
-     "concepts": [
-      "Utilitarianism",
-      "Distributive Justice",
-      "Structural Inequality",
-      "Commodification"
-     ],
-     "relevance": 5,
-     "words": 1832
-    }
-   ],
-   "message": null
-  },
-  "commodity fetishism": {
-   "concept": "Commodity Fetishism",
-   "definition": "Karl Marx defined commodity fetishism as the perception of social relationships involved in production as economic relationships among money and commodities exchanged in market trade.",
-   "options": [
-    {
-     "id": "nb36a8fcc",
-     "title": "Buying goods without seeing labor",
-     "preview": "Reflecting on consumer habits showed how purchasing everyday products hides the difficult labor and corporate exploitation behind them.",
-     "concepts": [
-      "Power Elite",
-      "Commodity Fetishism",
-      "Capitalism",
-      "Labor Exploitation"
-     ],
-     "relevance": 7,
-     "words": 809
-    },
-    {
-     "id": "n614923f2",
-     "title": "Childhood trends and popular headbands",
-     "preview": "Conforming to a elementary school fashion trend meant begging for the exact same headband that every other girl wore.",
-     "concepts": [
-      "Conformity",
-      "Spirit of Capitalism",
-      "Iron Cage",
-      "Commodity Fetishism"
-     ],
-     "relevance": 7,
-     "words": 466
-    },
-    {
-     "id": "n5644023e",
-     "title": "Coffee culture and modern consumerism",
-     "preview": "Analyzing Starbucks showed how consumers attach social prestige to drinks while ignoring the underlying chain production process.",
-     "concepts": [
-      "Commodity Fetishism",
-      "McDonaldization",
-      "Rationalization",
-      "Consumerism"
-     ],
-     "relevance": 6,
-     "words": 763
-    },
-    {
-     "id": "na6e58a96",
-     "title": "Mall shopping for brand names",
-     "preview": "Shoppers routinely prioritize expensive name brands at the mall over cheaper alternatives to acquire perceived social value.",
-     "concepts": [
-      "Alienation",
-      "Commodity Fetishism",
-      "Marxism",
-      "Conformity"
-     ],
-     "relevance": 6,
-     "words": 843
-    },
-    {
-     "id": "n327160d9",
-     "title": "Marketing gadgets and social status",
-     "preview": "Examining consumer purchases of electronics illustrated how corporate marketing convinces people that products carry inherent social standing.",
-     "concepts": [
-      "Commodity Fetishism",
-      "Marxist Theory",
-      "Social Class",
-      "Power Elite"
-     ],
-     "relevance": 5,
-     "words": 603
-    }
-   ],
-   "message": null
-  },
-  "impression management": {
-   "concept": "Impression Management",
-   "definition": "Impression management is the process by which individuals attempt to control the impressions others form of them, as theorized by Erving Goffman.",
-   "options": [
-    {
-     "id": "n0534c3f5",
-     "title": "Changing voices at the grocery register",
-     "preview": "Working as a grocery cashier required shifting vocal tones and behavior for each customer until a boyfriend noticed the stark transformation in personality during a shift in checkout lane three after school was over for the day when several customers passed through quickly during the dinner rush without noticing anything strange about the service they were receiving from the counter at all before closing time arrived eventually at ten on that cold Tuesday night when everyone went home happily afterwards then next morning started all over again so quickly at the supermarket down the road near town center today always easily without much fuss ever made whatsoever by anyone involved here anyway throughout the entire duration of the work shift that night safely afterwards without failure or delay anytime soon today anyway always then next day soon afterward quietly forever perfectly fine every single time naturally during hours here quietly now then next again simply nicely alright today forever here easily safely every single working hour anyway calmly quietly properly nicely fine smoothly today throughout every moment here calmly alright continuously easily everyday always consistently properly now smoothly forever safely together alright easily nicely again fine here happily nicely perfectly everyday continuously nicely calm today properly alright calmly fine safely alright smoothly now continuously safely happily then quietly smoothly properly easily altogether fine perfectly nicely again calmly continuously simply smoothly fine safely altogether fine everyday properly calmly perfectly safely calmly alright properly smoothly safely calmly naturally forever peacefully alright properly safely smoothly nicely forever quietly together now smoothly here calmly again nicely properly continuously today smoothly calmly nicely fine simply nicely naturally alright safely easily perfectly calmly continuously properly here safely properly easily fine calmly forever nicely naturally smoothly calmly peacefully here smoothly anyway forever today properly together alright always safely fine properly together naturally safely easily fine smoothly properly alright nicely forever calmly easily smoothly quietly properly together continuously peacefully smoothly today always fine quietly happily safely together quietly nicely perfectly fine safely calmly properly smoothly easily naturally alright nicely peacefully easily calmly safely continuously fine nicely safely happily together properly quietly fine safely easily quietly smoothly nicely properly calm quietly peacefully smoothly easily alright smoothly nicely safely calm properly peacefully quietly calmly alright nicely smoothly easily properly nicely safely properly smoothly easily peacefully nicely calmly quietly safely smoothly nicely peacefully safely calmly smoothly nicely easily alright smoothly nicely peacefully safely calmly easily properly peacefully smoothly easily safely properly nicely peacefully safely quietly smoothly naturally safely peacefully quietly smoothly easily calmly peacefully nicely smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly easily nicely calmly properly peacefully safely calmly easily nicely peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely quietly peacefully smoothly safely calmly.",
-     "concepts": [
-      "Looking-Glass Self",
-      "Social Self",
-      "Presentation of Self",
-      "Impression Management"
-     ],
-     "relevance": 9,
-     "words": 1344
-    }
-   ],
-   "message": null
-  },
-  "systemic racism": {
-   "concept": "Systemic Racism",
-   "definition": "Systemic racism is institutional and cultural patterns that result in racial inequalities, formalized by sociologists like Joe Feagin.",
-   "options": [
-    {
-     "id": "nab61ca04",
-     "title": "Adoption and interracial family life",
-     "preview": "Living alongside adopted Black siblings revealed sharp contrasts in how police and neighbors treated family members based on skin color.",
-     "concepts": [
-      "White Privilege",
-      "Systemic Racism",
-      "Conferred Dominance",
-      "Racial Socialization"
-     ],
-     "relevance": 9,
-     "words": 1973
-    },
-    {
-     "id": "nd6b51944",
-     "title": "Restaurant hiring and job channeling",
-     "preview": "Working as a restaurant hostess exposed how Black staff were kept in the kitchen and excluded from customer facing server jobs.",
-     "concepts": [
-      "Categorical Exclusion",
-      "Job Channeling",
-      "Racial Discrimination",
-      "Stereotyping"
-     ],
-     "relevance": 8,
-     "words": 1231
-    },
-    {
-     "id": "naf290ba0",
-     "title": "Safety talks and school experiences",
-     "preview": "Learning early childhood rules for interacting with police officers contrasted sharply with the experiences of white peers in school and ballet.",
-     "concepts": [
-      "White Privilege",
-      "Institutional Racism",
-      "Color-Blind Racism",
-      "Stereotyping"
-     ],
-     "relevance": 8,
-     "words": 1516
-    },
-    {
-     "id": "nb7a36037",
-     "title": "Donut shop job application",
-     "preview": "Watching a qualified Black friend get passed over for a job at a local shop highlighted unearned white advantages.",
-     "concepts": [
-      "White Privilege",
-      "Systemic Racism",
-      "Racial Discrimination",
-      "Social Class"
-     ],
-     "relevance": 7,
-     "words": 1209
-    },
-    {
-     "id": "n2002aab5",
-     "title": "Moving to a white university",
-     "preview": "Leaving a diverse military community to attend a predominantly white college exposed institutional disparities and racial biases.",
-     "concepts": [
-      "Racialization",
-      "Systemic Racism",
-      "White Privilege",
-      "Ethnocentrism"
-     ],
-     "relevance": 6,
-     "words": 1538
-    }
-   ],
-   "message": null
-  },
-  "cohabitation": {
-   "concept": "Cohabitation",
-   "definition": "Cohabitation is the practice of unmarried partners living together in a romantic relationship, often as a precursor or alternative to marriage.",
-   "options": [
-    {
-     "id": "nee890d48",
-     "title": "Military support and future marriage",
-     "preview": "Growing up with unmarried teenage parents led to discussions with a military boyfriend about living together and moving toward marriage.",
-     "concepts": [
-      "Cohabitation",
-      "Divorce Rates",
-      "Family Structure",
-      "Division of Labor"
-     ],
-     "relevance": 6,
-     "words": 1284
-    },
-    {
-     "id": "n41dfa65e",
-     "title": "Changing attitudes toward marriage commitment",
-     "preview": "Watching a mother remain unmarried after divorce prompted reflections on why couples choose long-term cohabitation over legal marriage.",
-     "concepts": [
-      "Heteronormativity",
-      "Gender Roles",
-      "Cohabitation",
-      "Family Structure"
-     ],
-     "relevance": 5,
-     "words": 1171
-    },
-    {
-     "id": "nf8e1c544",
-     "title": "Cohabitation norms before marriage",
-     "preview": "Examining changing cultural patterns led to questions about why couples live together before deciding on marriage.",
-     "concepts": [
-      "Nuclear Family",
-      "Cohabitation",
-      "Gender Roles",
-      "Division of Labor"
-     ],
-     "relevance": 5,
-     "words": 1231
-    },
-    {
-     "id": "n62cadb30",
-     "title": "College relationships and cohabitation trends",
-     "preview": "Observing college peers choose to live together prompted analysis of how cohabitation serves as a stepping stone to marriage.",
-     "concepts": [
-      "Nuclear Family",
-      "Cohabitation",
-      "Gender Roles",
-      "Egalitarianism"
-     ],
-     "relevance": 5,
-     "words": 1292
-    }
-   ],
-   "message": null
-  },
-  "social solidarity": {
-   "concept": "Social Solidarity",
-   "definition": "Emile Durkheim defined social solidarity as the ties that bind a society together, categorized into mechanical and organic forms.",
-   "options": [
-    {
-     "id": "n3f43a6df",
-     "title": "Military veteran culture in college",
-     "preview": "Trained military reactions during civilian classes showed how wartime symbols and rituals forge deep bonds among veterans.",
-     "concepts": [
-      "Subculture",
-      "Collective Consciousness",
-      "Collective Representations",
-      "Enculturation"
-     ],
-     "relevance": 8,
-     "words": 1208
-    },
-    {
-     "id": "n2f4eeb6f",
-     "title": "Preparing for a Bar Mitzvah",
-     "preview": "Months of Hebrew lessons, volunteer piano performances, and temple rituals built a shared sense of community membership.",
-     "concepts": [
-      "Collective Consciousness",
-      "Collective Representations",
-      "Ritual",
-      "Socialization"
-     ],
-     "relevance": 7,
-     "words": 1081
-    },
-    {
-     "id": "nc7b980e0",
-     "title": "Questioning family religious traditions",
-     "preview": "Doubts about church beliefs caused friction with a religious family that depended on shared faith for unity.",
-     "concepts": [
-      "Social Solidarity",
-      "Social Cohesion",
-      "Othering",
-      "In-Group and Out-Group"
-     ],
-     "relevance": 6,
-     "words": 1508
-    },
-    {
-     "id": "n8f5608a8",
-     "title": "Growing up in a church community",
-     "preview": "Attending interfaith events with a minister parent revealed how religious groups bond internally while dividing from outsiders.",
-     "concepts": [
-      "Sociology of Religion",
-      "Social Integration",
-      "In-Group Bias",
-      "Ethnocentrism"
-     ],
-     "relevance": 5,
-     "words": 1777
-    }
-   ],
-   "message": null
-  },
-  "backstage": {
-   "concept": "Backstage",
-   "definition": "Erving Goffman defined the backstage as a place where individuals can relax and step out of character from their social performances.",
-   "options": [
-    {
-     "id": "nc0265b0e",
-     "title": "Hiding family illness at school",
-     "preview": "Masking personal fear and grief at school after a father's cancer diagnosis showed the exhaustion of keeping emotions behind closed doors.",
-     "concepts": [
-      "Presentation of Self",
-      "Front Stage",
-      "Backstage",
-      "Impression Management"
-     ],
-     "relevance": 9,
-     "words": 1696
-    },
-    {
-     "id": "n152cd49f",
-     "title": "Hiding depression while socializing",
-     "preview": "Forcing a cheerful attitude during a night of bowling with friends contrasted sharply with feelings of severe depression experienced alone.",
-     "concepts": [
-      "Dramaturgy",
-      "Front Stage",
-      "Backstage",
-      "Impression Management"
-     ],
-     "relevance": 8,
-     "words": 1199
-    },
-    {
-     "id": "n9f192bcd",
-     "title": "Conforming at a religious high school",
-     "preview": "Faking devout religious participation during weekly chapel services required mentally preparing before school and dropping the act in private.",
-     "concepts": [
-      "Presentation of Self",
-      "Front Stage",
-      "Backstage",
-      "The I and the Me"
-     ],
-     "relevance": 7,
-     "words": 1329
-    },
-    {
-     "id": "nae1c9f51",
-     "title": "Balancing family and team roles",
-     "preview": "Reflecting on behavioral changes between softball teams, college classrooms, and home life highlighted how backstage preparation shapes public roles.",
-     "concepts": [
-      "Dramaturgy",
-      "Front Stage",
-      "Backstage",
-      "Presentation of Self"
-     ],
-     "relevance": 6,
-     "words": 1831
-    },
-    {
-     "id": "nefbb1849",
-     "title": "Changing study habits in class",
-     "preview": "Switching from a laptop to a paper notebook to match classmates during a lecture showed the contrast with studying alone in a dorm.",
-     "concepts": [
-      "Dramaturgy",
-      "Frontstage Behavior",
-      "Backstage Behavior",
-      "Presentation of Self"
-     ],
-     "relevance": 5,
-     "words": 418
     }
    ],
    "message": null
@@ -2855,8 +2809,8 @@
    "options": [
     {
      "id": "ne9049688",
-     "title": "High school weightlifting as the only girl",
-     "preview": "Enrolling in a high school weight training class led to isolation and hostile remarks from male peers and a substitute teacher.",
+     "title": "High school weight training class",
+     "preview": "Enrolling as the only female in a weight training class led to isolation and hostile remarks from male peers and a substitute teacher.",
      "concepts": [
       "The Other",
       "Hegemonic Masculinity",
@@ -2868,21 +2822,21 @@
     },
     {
      "id": "n0311a9ea",
-     "title": "Applying for manual labor jobs",
-     "preview": "Applying for warehouse and shop positions resulted in male employers questioning physical capability and steering work toward the front counter.",
+     "title": "Job hunting for manual labor",
+     "preview": "Applying for a warehouse position at a local feed store led to immediate rejection when the owner told her to work the register.",
      "concepts": [
       "Othering",
       "Beauty Myth",
       "Gender Discrimination",
       "Occupational Segregation"
      ],
-     "relevance": 9,
+     "relevance": 8,
      "words": 1410
     },
     {
      "id": "nf5aed9dd",
-     "title": "Fraternity party door rejection",
-     "preview": "Attending a fraternity party led to being evaluated by male hosts at the door while a friend was turned away.",
+     "title": "Door security at fraternity parties",
+     "preview": "Arriving at a campus fraternity party resulted in fraternity members inspecting the group of women and abruptly turning one away.",
      "concepts": [
       "Hegemonic Masculinity",
       "Doing Gender",
@@ -2893,30 +2847,63 @@
      "words": 1411
     },
     {
+     "id": "n1b139179",
+     "title": "Pay disparity at summer camp",
+     "preview": "Comparing pay rates with coworkers revealed that female staff members were paid less than their male counterparts despite having more experience.",
+     "concepts": [
+      "Collective Consciousness",
+      "Othering",
+      "Gender Inequality",
+      "Patriarchy"
+     ],
+     "relevance": 7,
+     "words": 1864
+    },
+    {
      "id": "nc8983163",
-     "title": "Dynamics within a male friend group",
-     "preview": "Hanging out as the only woman in a male friend group led to feeling objectified and excluded from equal consideration.",
+     "title": "Dynamics in male friend groups",
+     "preview": "Hanging out as the only straight woman in a male friend group led to feeling objectified and excluded from equal social standing.",
      "concepts": [
       "Othering",
       "Beauty Myth",
       "Objectification",
       "Gender Inequality"
      ],
-     "relevance": 7,
+     "relevance": 6,
      "words": 1939
+    }
+   ],
+   "message": null
+  },
+  "anomie": {
+   "concept": "Anomie",
+   "definition": "Anomie is a condition of moral instability and normlessness resulting from a breakdown in social standards, as theorized by Émile Durkheim.",
+   "options": [
+    {
+     "id": "nf8878a48",
+     "title": "Changing norms and dating rules",
+     "preview": "Shifting expectations around dating and family roles made dating conventions confusing while altering traditional social expectations.",
+     "concepts": [
+      "Anomie",
+      "Nuclear Family",
+      "Social Norms",
+      "Counterculture"
+     ],
+     "relevance": 5,
+     "words": 1412
     },
     {
-     "id": "n43ba3df3",
-     "title": "Coaching a youth soccer team",
-     "preview": "Coaching youth soccer independently brought skeptical reactions from parents who questioned whether a woman could provide proper athletic instruction.",
+     "id": "n6eecf408",
+     "title": "Societal change and modern meaning",
+     "preview": "Comparing classical sociological theory with modern texts revealed how rapid changes in religion and technology leave people feeling normless.",
      "concepts": [
-      "Beauty Myth",
-      "The Other",
-      "Gender Roles",
-      "Gender Socialization"
+      "Collective Consciousness",
+      "Anomie",
+      "Strategic Action Fields",
+      "Social Integration"
      ],
-     "relevance": 6,
-     "words": 1163
+     "relevance": 5,
+     "words": 1670
     }
    ],
    "message": null
