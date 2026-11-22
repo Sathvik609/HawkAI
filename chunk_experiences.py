@@ -1,14 +1,15 @@
-"""Split a random sample of narratives into chunks, each labeled with the student experience it describes."""
+"""Split narratives into chunks, each labeled with the student experience it describes."""
 import argparse
 import json
 import random
 import re
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Literal
 
 from pydantic import BaseModel
 
 import gemini
+from build_index import PAGE_HEADER
 from config import DATA_DIR, GEN_MODEL
 
 
@@ -53,9 +54,6 @@ Only use what the narrative says. Never invent details. Call the writer "the stu
 Narrative:
 
 {numbered}"""
-
-
-PAGE_HEADER = re.compile(r"\d{1,3}|[A-Z][A-Za-z'’-]+( [A-Z][A-Za-z'’-]+)? \d{1,3}")
 
 
 def paragraphs(text: str) -> list[str]:
@@ -122,7 +120,7 @@ RUNS = 3
 
 def one_run(prompt: str, flat: list[str], nid: str) -> list[Chunk]:
     for _ in range(3):
-        result = gemini.generate_json(GEN_MODEL, prompt, Chunks, budget=1024, temperature=0).chunks
+        result = gemini.generate_json(GEN_MODEL, prompt, Chunks, budget=1024).chunks
         if valid(result, len(flat)):
             pull_setup_sentence(result, flat)
             return result
@@ -170,34 +168,68 @@ def chunk(narrative: dict) -> dict:
     return {"id": narrative["id"], "title": narrative["title"], "words": narrative.get("words"), "chunks": out}
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--count", type=int, default=10)
-    ap.add_argument("--seed", type=int, default=2026)
-    ap.add_argument("--out", default=str(DATA_DIR / "experience_chunks_sample.json"))
-    ap.add_argument("--clear-only", action="store_true", help="sample only narratives with a clear student experience")
-    ap.add_argument("--redo", action="store_true", help="re-chunk the narratives already in --out")
-    args = ap.parse_args()
+ALL_FILE = DATA_DIR / "experience_chunks.json"
+SAMPLE_FILE = DATA_DIR / "experience_chunks_sample.json"
+
+
+def chunk_all(workers: int) -> None:
     narratives = json.loads((DATA_DIR / "narratives.json").read_text())
-    if args.redo:
-        old = json.loads(open(args.out).read())
-        by_id = {n["id"]: n for n in narratives}
-        sample = [by_id[r["id"]] for r in old["narratives"]]
-        args.seed, args.clear_only = old["seed"], old["clear_only"]
-        narratives = [None] * old["pool"]
-    else:
-        if args.clear_only:
-            checks = json.loads((DATA_DIR / "experience_check.json").read_text())
-            clear = {c["id"] for c in checks if c["level"] == "clear"}
-            narratives = [n for n in narratives if n["id"] in clear]
-        sample = random.Random(args.seed).sample(narratives, args.count)
-    with ThreadPoolExecutor(5) as pool:
-        results = list(pool.map(chunk, sample))
-    with open(args.out, "w") as f:
-        json.dump({"seed": args.seed, "model": GEN_MODEL, "clear_only": args.clear_only, "pool": len(narratives), "narratives": results}, f, indent=2, ensure_ascii=False)
+    done = json.loads(ALL_FILE.read_text())["narratives"] if ALL_FILE.exists() else {}
+    current = {n["id"] for n in narratives}
+    done = {k: v for k, v in done.items() if k in current}
+    todo = [n for n in narratives if n["id"] not in done]
+    print(f"Chunking {len(todo)} narratives ({len(done)} already done, {RUNS} runs each)...")
+
+    def save():
+        ALL_FILE.write_text(json.dumps({"model": GEN_MODEL, "runs": RUNS, "narratives": done}, ensure_ascii=False))
+
+    failed = 0
+    with ThreadPoolExecutor(workers) as pool:
+        futures = {pool.submit(chunk, n): n["id"] for n in todo}
+        for k, fut in enumerate(as_completed(futures), 1):
+            try:
+                done[futures[fut]] = fut.result()
+            except Exception as exc:
+                failed += 1
+                print(f"  ! {futures[fut]}: {exc}")
+            if k % 10 == 0 or k == len(todo):
+                save()
+                print(f"  {k}/{len(todo)}", flush=True)
+    save()
+    print(f"Done: {len(done)}/{len(narratives)} chunked, {failed} failed" + (" (run again to retry)" if failed else ""))
+
+
+def draw_sample(count: int, seed: int) -> None:
+    done = json.loads(ALL_FILE.read_text())["narratives"]
+    checks = {c["id"]: c for c in json.loads((DATA_DIR / "experience_check.json").read_text())}
+    pool = sorted(i for i in done if checks.get(i, {}).get("level") == "clear")
+    picked = random.Random(seed).sample(pool, count)
+    results = []
+    for nid in picked:
+        c = checks[nid]
+        results.append({**done[nid], "experience_level": c["level"], "narrative_type": c.get("narrative_type"),
+                        "experience_evidence": c.get("evidence")})
+    SAMPLE_FILE.write_text(json.dumps({"seed": seed, "model": GEN_MODEL, "clear_only": True, "pool": len(pool),
+                                       "narratives": results}, indent=2, ensure_ascii=False))
     for r in results:
         kinds = [c["kind"] for c in r["chunks"]]
         print(f"{r['id']}  {r['title'][:50]:50}  {kinds.count('experience')} experiences, {kinds.count('reflection')} reflections")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--all", action="store_true", help="chunk every narrative into data/experience_chunks.json")
+    ap.add_argument("--sample", action="store_true", help="draw the review sample from data/experience_chunks.json")
+    ap.add_argument("--count", type=int, default=10)
+    ap.add_argument("--seed", type=int, default=2026)
+    ap.add_argument("--workers", type=int, default=8)
+    args = ap.parse_args()
+    if args.all:
+        chunk_all(args.workers)
+    if args.sample:
+        draw_sample(args.count, args.seed)
+    if not (args.all or args.sample):
+        ap.print_help()
 
 
 if __name__ == "__main__":

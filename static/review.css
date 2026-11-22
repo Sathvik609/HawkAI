@@ -83,3 +83,9 @@
   .rv-who #whoName { display: none; }
   .rv-name-row { flex-direction: column; }
 }
+
+.rv-check { margin: -12px 0 28px; padding: 14px 18px; background: var(--wash); border-radius: 8px; }
+.rv-check p { margin: 0; }
+.rv-check-line { font-weight: 600; }
+.rv-check-label { margin-top: 10px !important; font-size: .8rem; font-weight: 700; color: var(--ink-3); }
+.rv-check-quote { margin-top: 2px !important; font: 400 1rem/1.6 var(--serif); }

@@ -15,8 +15,6 @@ from config import BASE_DIR, DATA_DIR, EMBED_DIM, EMBED_MODEL, FAST_MODEL
 SOURCE = BASE_DIR / "embeddingDatabase.json"
 META_CACHE = DATA_DIR / "metadata_cache.json"
 
-CHUNK_WORDS = 260
-CHUNK_OVERLAP_WORDS = 60
 NEAR_DUPLICATE = 0.98
 
 
@@ -42,6 +40,13 @@ def clean_text(raw: str) -> str:
     return re.sub(r"\n{2,}", "\n", text).strip()
 
 
+PAGE_HEADER = re.compile(r"\d{1,3}|[A-Z][A-Za-z'’-]+( [A-Z][A-Za-z'’-]+)? \d{1,3}")
+
+
+def strip_page_headers(text: str) -> str:
+    return "\n".join(ln for ln in text.split("\n") if not PAGE_HEADER.fullmatch(ln.strip()))
+
+
 def stable_id(text: str) -> str:
     return "n" + hashlib.sha1(re.sub(r"\s+", " ", text.lower()).encode()).hexdigest()[:8]
 
@@ -57,6 +62,7 @@ def load_and_dedupe() -> list[dict]:
         if nid in seen:
             continue
         seen.add(nid)
+        text = strip_page_headers(text)
         essays.append({"id": nid, "text": text, "old_embedding": item.get("embedding")})
 
     vecs = np.asarray([e["old_embedding"] for e in essays], dtype=np.float32)
@@ -131,26 +137,70 @@ def catalogue_all(essays: list[dict]) -> None:
                  story_strength=max(1, min(5, int(m["story_strength"]))))
 
 
-SENTENCE_SPLIT = re.compile(r"(?<=[.!?”\"])\s+|\n+")
+PIECE_WORDS = 250
+EXPERIENCE_MAX_WORDS = 500
 
 
-def chunk_text(text: str) -> list[str]:
-    sentences = [s.strip() for s in SENTENCE_SPLIT.split(text) if s and s.strip()]
-    chunks, current, count = [], [], 0
-    for sent in sentences:
-        current.append(sent)
-        count += len(sent.split())
-        if count >= CHUNK_WORDS:
-            chunks.append(" ".join(current))
-            overlap, words = [], 0
-            for s in reversed(current):
-                if words >= CHUNK_OVERLAP_WORDS:
-                    break
-                overlap.insert(0, s)
-                words += len(s.split())
-            current, count = overlap, words
-    if current and (not chunks or count > CHUNK_OVERLAP_WORDS):
-        chunks.append(" ".join(current))
+def split_run(sents: list[str], paras: list[int], target: int) -> list[list[int]]:
+    words = [len(s.split()) for s in sents]
+    total = sum(words)
+    parts = max(1, round(total / target))
+    if parts == 1:
+        return [list(range(len(sents)))]
+    goal = total / parts
+
+    def heading(j):
+        return words[j] < 10 and not re.search(r"[.!?][\"”’)]*$", sents[j])
+
+    cuts, run = [], 0
+    for i in range(len(sents) - 1):
+        run += words[i]
+        if len(cuts) < parts - 1 and run >= goal * (len(cuts) + 1) - words[i] / 2:
+            ok = [j for j in range(max(0, i - 3), min(len(sents) - 1, i + 4)) if not heading(j)]
+            near = [j for j in ok if paras[j] != paras[j + 1]] or ok or [i]
+            cut = min(near, key=lambda j: abs(j - i))
+            if not cuts or cut > cuts[-1]:
+                cuts.append(cut)
+    bounds = [-1, *cuts, len(sents) - 1]
+    return [list(range(a + 1, b + 1)) for a, b in zip(bounds, bounds[1:]) if b > a]
+
+
+def join_sentences(sents: list[str], paras: list[int], idx: list[int]) -> str:
+    text = ""
+    for k, i in enumerate(idx):
+        text += ("" if k == 0 else "\n\n" if paras[i] != paras[idx[k - 1]] else " ") + sents[i]
+    return text
+
+
+def build_chunks(essays: list[dict]) -> list[dict]:
+    from chunk_experiences import ALL_FILE, sentences
+    semantic = json.loads(ALL_FILE.read_text())["narratives"] if ALL_FILE.exists() else {}
+    chunks, missing = [], 0
+    for e in essays:
+        chunks.append({"narrative_id": e["id"], "kind": "card", "text": card_text(e)})
+        groups = sentences(e["text"])
+        sents = [s for g in groups for s in g]
+        paras = [p for p, g in enumerate(groups) for _ in g]
+        plan = semantic.get(e["id"], {}).get("chunks")
+        if not plan or plan[-1]["sentences"][1] != len(sents):
+            missing += 1
+            plan = [{"kind": "reflection", "label": "", "what_happened": "", "sentences": [1, len(sents)]}]
+        for c in plan:
+            a, b = c["sentences"]
+            idx = list(range(a - 1, b))
+            words = sum(len(sents[i].split()) for i in idx)
+            if c["kind"] == "experience" and words <= EXPERIENCE_MAX_WORDS:
+                pieces = [idx]
+            else:
+                target = EXPERIENCE_MAX_WORDS if c["kind"] == "experience" else PIECE_WORDS
+                pieces = [[idx[j] for j in part] for part in split_run([sents[i] for i in idx], [paras[i] for i in idx], target)]
+            for part in pieces:
+                chunks.append({"narrative_id": e["id"], "kind": c["kind"], "label": c["label"],
+                               "what_happened": c["what_happened"] if c["kind"] == "experience" else "",
+                               "sentences": [part[0] + 1, part[-1] + 1],
+                               "text": join_sentences(sents, paras, part)})
+    if missing:
+        print(f"  ! {missing} narratives had no experience chunks yet and were split by length only")
     return chunks
 
 
@@ -158,13 +208,11 @@ def card_text(e: dict) -> str:
     return f"{e['title']}. {e['preview']} Concepts: {', '.join(e['concepts'])}."
 
 
-def build_chunks(essays: list[dict]) -> list[dict]:
-    chunks = []
-    for e in essays:
-        chunks.append({"narrative_id": e["id"], "kind": "card", "text": card_text(e)})
-        for c in chunk_text(e["text"]):
-            chunks.append({"narrative_id": e["id"], "kind": "text", "text": c})
-    return chunks
+def embed_text(c: dict) -> str:
+    if c["kind"] == "card":
+        return c["text"]
+    head = ". ".join(x for x in (c.get("label"), c.get("what_happened")) if x)
+    return f"{head}\n\n{c['text']}" if head else c["text"]
 
 
 def main():
@@ -174,7 +222,7 @@ def main():
     catalogue_all(essays)
     chunks = build_chunks(essays)
     print(f"Embedding {len(chunks)} passages with {EMBED_MODEL} ({EMBED_DIM} dims)...")
-    vectors = gemini.embed([c["text"] for c in chunks], "RETRIEVAL_DOCUMENT", EMBED_MODEL, EMBED_DIM)
+    vectors = gemini.embed([embed_text(c) for c in chunks], "RETRIEVAL_DOCUMENT", EMBED_MODEL, EMBED_DIM)
 
     narratives = [{"id": e["id"], "title": e["title"], "preview": e["preview"], "concepts": e["concepts"],
                    "has_personal_story": e["has_personal_story"], "story_strength": e["story_strength"],

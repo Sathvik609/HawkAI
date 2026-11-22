@@ -138,11 +138,29 @@
     return card;
   }
 
+  const LEVELS = {
+    clear: "has a clear lived experience",
+    brief: "mentions a lived experience only briefly",
+    none: "has no lived experience",
+  };
+
+  function renderCheck(n) {
+    const box = $("check");
+    if (!n.experience_level) { box.hidden = true; return; }
+    const parts = [el("p", "rv-check-line", `Whole narrative: HawkAI found that it ${LEVELS[n.experience_level] || n.experience_level}.`)];
+    if (n.experience_evidence) {
+      parts.push(el("p", "rv-check-label", "The sentence that shows it"), el("p", "rv-check-quote", n.experience_evidence));
+    }
+    box.replaceChildren(...parts);
+    box.hidden = false;
+  }
+
   function open(i) {
     state.current = Math.max(0, Math.min(state.narratives.length - 1, i));
     const n = state.narratives[state.current];
     $("pos").textContent = `Narrative ${state.current + 1} of ${state.narratives.length}`;
     $("title").textContent = n.title;
+    renderCheck(n);
     $("chunks").replaceChildren(...n.chunks.map((c) => chunkCard(n, c)));
     const overall = $("overallNote");
     overall.value = entry(n.id, 0).note || "";

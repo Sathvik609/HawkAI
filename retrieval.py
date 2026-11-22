@@ -106,7 +106,10 @@ class NarrativeIndex:
         self.row = {n["id"]: i for i, n in enumerate(self.narratives)}
         chunks = json.loads((data_dir / "chunks.json").read_text())
         self.chunk_text = [c["text"] for c in chunks]
-        self.chunk_is_text = np.asarray([c["kind"] == "text" for c in chunks])
+        self.chunk_kind = [c["kind"] for c in chunks]
+        self.chunk_label = [c.get("label", "") for c in chunks]
+        self.chunk_is_text = np.asarray([c["kind"] != "card" for c in chunks])
+        self.chunk_is_experience = np.asarray([c["kind"] == "experience" for c in chunks])
         self.chunk_owner = np.asarray([self.row[c["narrative_id"]] for c in chunks])
         self.vectors = np.load(data_dir / "chunk_embeddings.npy")
         self.bm25 = BM25(self.chunk_text)
@@ -142,9 +145,17 @@ class NarrativeIndex:
         for row in best:
             mask = (self.chunk_owner == row) & self.chunk_is_text
             idx = np.flatnonzero(mask)
-            top_chunks = idx[np.argsort(-passage_scores[idx])[:2]] if len(idx) else []
-            candidates.append((self.narratives[row], [self.chunk_text[i] for i in sorted(top_chunks)]))
+            top_chunks = list(idx[np.argsort(-passage_scores[idx])[:2]]) if len(idx) else []
+            lived = np.flatnonzero(mask & self.chunk_is_experience)
+            if len(lived) and not any(self.chunk_is_experience[i] for i in top_chunks):
+                top_chunks = [*top_chunks[:1], lived[np.argmax(passage_scores[lived])]]
+            candidates.append((self.narratives[row], [self._passage(i) for i in sorted(top_chunks)]))
         return candidates
+
+    def _passage(self, i: int) -> str:
+        if self.chunk_kind[i] == "experience":
+            return f"(Student experience: {self.chunk_label[i]}) {self.chunk_text[i]}"
+        return self.chunk_text[i]
 
 
 class Searcher:
