@@ -1,8 +1,7 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const MARKS = [["correct", "Correct"], ["partly", "Partly"], ["wrong", "Wrong"]];
-  const state = { reviewer: "", narratives: [], marks: {}, current: 0 };
-  const timers = {};
+  const state = { reviewer: "", narratives: [], marks: {}, drafts: {}, current: 0 };
 
   const store = {
     get(key) { try { return localStorage.getItem(key) || ""; } catch { return ""; } },
@@ -24,29 +23,42 @@
     $("error").hidden = !message;
   }
 
-  async function save(nid, chunk, statusEl) {
-    const { mark, note } = entry(nid, chunk);
-    statusEl.textContent = "Saving";
+  async function save(nid, chunk, change) {
+    const next = { ...entry(nid, chunk), ...change };
     try {
       const res = await fetchRetry("/api/review/mark", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ reviewer: state.reviewer, narrative_id: nid, chunk, mark, note }),
+        body: JSON.stringify({ reviewer: state.reviewer, narrative_id: nid, chunk, mark: next.mark, note: next.note }),
       });
       if (!res.ok) throw new Error((await res.json()).error || "Could not save");
-      statusEl.textContent = "Saved";
+      state.marks[key(nid, chunk)] = next;
       showError("");
+      return true;
     } catch (err) {
-      statusEl.textContent = "Not saved";
-      showError(`${err.message}. Check your connection and try again; your last change is still on screen.`);
+      showError(`${err.message}. Please try again.`);
+      return false;
     }
-    renderNav();
   }
 
-  function update(nid, chunk, change, statusEl, delay = 0) {
-    state.marks[key(nid, chunk)] = { ...entry(nid, chunk), ...change };
-    clearTimeout(timers[key(nid, chunk)]);
-    timers[key(nid, chunk)] = setTimeout(() => save(nid, chunk, statusEl), delay);
+  function noteBox(textarea, button, nid, chunk) {
+    const k = key(nid, chunk);
+    const saved = () => entry(nid, chunk).note || "";
+    textarea.value = k in state.drafts ? state.drafts[k] : saved();
+    const refresh = () => { button.hidden = textarea.value === saved(); };
+    textarea.oninput = () => {
+      if (textarea.value === saved()) delete state.drafts[k];
+      else state.drafts[k] = textarea.value;
+      refresh();
+    };
+    button.onclick = async () => {
+      button.disabled = true;
+      const value = textarea.value;
+      if (await save(nid, chunk, { note: value }) && textarea.value === value) delete state.drafts[k];
+      button.disabled = false;
+      refresh();
+    };
+    refresh();
   }
 
   function renderNav() {
@@ -77,8 +89,6 @@
     c.text.split(/\n\n+/).forEach((para) => words.append(el("p", null, para)));
     card.append(words);
 
-    const status = el("p", "rv-saved");
-    status.setAttribute("aria-live", "polite");
     const current = entry(n.id, c.chunk);
 
     const group = el("div", "rv-marks");
@@ -89,10 +99,12 @@
       b.type = "button";
       b.setAttribute("role", "radio");
       b.setAttribute("aria-checked", String(current.mark === value));
-      b.addEventListener("click", () => {
-        const next = entry(n.id, c.chunk).mark === value ? null : value;
-        group.querySelectorAll(".rv-mark").forEach((x) => x.setAttribute("aria-checked", String(x === b && next !== null)));
-        update(n.id, c.chunk, { mark: next }, status);
+      b.addEventListener("click", async () => {
+        const before = entry(n.id, c.chunk).mark;
+        const next = before === value ? null : value;
+        const show = (m) => group.querySelectorAll(".rv-mark").forEach((x) => x.setAttribute("aria-checked", String(x.classList.contains(m))));
+        show(next);
+        if (!(await save(n.id, c.chunk, { mark: next }))) show(before);
       });
       group.append(b);
     });
@@ -100,14 +112,15 @@
     const note = el("textarea", "rv-note");
     note.rows = 2;
     note.placeholder = "Note (optional): what should change?";
-    note.value = current.note || "";
     note.setAttribute("aria-label", `Note for chunk ${c.chunk}`);
-    note.addEventListener("input", () => update(n.id, c.chunk, { note: note.value }, status, 700));
+    const saveBtn = el("button", "btn-primary rv-save", "Save");
+    saveBtn.type = "button";
+    noteBox(note, saveBtn, n.id, c.chunk);
 
     const controls = el("div", "rv-controls");
     const row = el("div", "rv-controls-row");
-    row.append(el("span", "rv-question", "Is this chunk right?"), group, status);
-    controls.append(row, note);
+    row.append(el("span", "rv-question", "Is this chunk right?"), group);
+    controls.append(row, note, saveBtn);
     card.append(controls);
     return card;
   }
@@ -118,10 +131,7 @@
     $("pos").textContent = `Narrative ${state.current + 1} of ${state.narratives.length}`;
     $("title").textContent = n.title;
     $("chunks").replaceChildren(...n.chunks.map((c) => chunkCard(n, c)));
-    const overall = $("overallNote");
-    overall.value = entry(n.id, 0).note || "";
-    overall.oninput = () => update(n.id, 0, { note: overall.value }, $("overallSaved"), 700);
-    $("overallSaved").textContent = "";
+    noteBox($("overallNote"), $("overallSave"), n.id, 0);
     $("prevBtn").disabled = state.current === 0;
     $("nextBtn").hidden = state.current === state.narratives.length - 1;
     store.set("hawkai-review-current", String(state.current));
