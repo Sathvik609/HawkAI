@@ -1,6 +1,8 @@
 import csv
+import functools
 import io
 import json
+import random
 import time
 from collections import Counter
 
@@ -224,7 +226,8 @@ def review():
 @app.get("/api/review")
 def review_data():
     reviewer = _reviewer(request.args.get("reviewer"))
-    return jsonify({"narratives": _review_sample(), "marks": review_store.load(reviewer)})
+    marks = [m for m in review_store.load(reviewer) if m["chunk"] >= 0]
+    return jsonify({"narratives": _review_sample(), "marks": marks})
 
 
 @app.post("/api/review/mark")
@@ -253,7 +256,7 @@ def review_export():
     writer = csv.writer(out)
     writer.writerow(["reviewer", "narrative_id", "narrative_title", "chunk", "type", "label", "mark", "note", "updated_at"])
     for r in sorted(review_store.load(), key=lambda r: (r["reviewer"], r["narrative_id"], r["chunk"])):
-        if not r["mark"] and not (r["note"] or "").strip():
+        if r["chunk"] < 0 or (not r["mark"] and not (r["note"] or "").strip()):
             continue
         n = sample.get(r["narrative_id"], {})
         c = n.get("chunks", [])[r["chunk"] - 1] if r["chunk"] else {}
@@ -261,6 +264,81 @@ def review_export():
                          c.get("kind", ""), c.get("label", ""), r["mark"] or "", r["note"] or "", r["updated_at"]])
     return Response(out.getvalue(), mimetype="text/csv",
                     headers={"Content-Disposition": "attachment; filename=chunk_reviews.csv"})
+
+
+NO_EXPERIENCE_CHUNK = -1
+NO_EXPERIENCE_MARKS = {"correct", "wrong"}
+NO_EXPERIENCE_GROUPS = {"sample": "Random sample", "none": "No experience", "brief": "Brief mention only"}
+
+
+@functools.cache
+def _no_experience() -> dict:
+    chunks = json.loads((DATA_DIR / "experience_chunks.json").read_text())["narratives"]
+    checks = {r["id"]: r for r in json.loads((DATA_DIR / "experience_check.json").read_text())}
+    out = {}
+    for nid, r in chunks.items():
+        if any(c.get("kind") == "experience" for c in r["chunks"]) or nid not in checks:
+            continue
+        check = checks[nid]
+        out[nid] = {"id": nid, "title": r["title"], "type": check.get("narrative_type", ""),
+                    "group": "brief" if check["level"] == "brief" else "none",
+                    "brief": "; ".join(check.get("experiences") or []) if check["level"] == "brief" else "",
+                    "text": "\n\n".join(c["text"] for c in r["chunks"])}
+    none = sorted((n for n in out.values() if n["group"] == "none"), key=lambda n: n["title"])
+    sample = {n["id"] for n in random.Random(2026).sample(none, min(20, len(none)))}
+    for n in out.values():
+        n["sample"] = n["id"] in sample
+    return out
+
+
+@app.get("/no-experience")
+def no_experience():
+    return render_template("no_experience.html")
+
+
+@app.get("/api/no-experience")
+def no_experience_data():
+    reviewer = _reviewer(request.args.get("reviewer"))
+    items = sorted(_no_experience().values(), key=lambda n: n["title"])
+    marks = [m for m in review_store.load(reviewer) if m["chunk"] == NO_EXPERIENCE_CHUNK]
+    return jsonify({"narratives": [{k: v for k, v in n.items() if k != "text"} for n in items], "marks": marks})
+
+
+@app.get("/api/no-experience/<nid>")
+def no_experience_text(nid: str):
+    n = _no_experience().get(nid)
+    if not n:
+        abort(404, description="Unknown narrative.")
+    return jsonify({"id": nid, "text": n["text"]})
+
+
+@app.post("/api/no-experience/mark")
+def no_experience_mark():
+    data = _payload()
+    reviewer = _reviewer(data.get("reviewer"))
+    nid = str(data.get("narrative_id") or "")
+    if nid not in _no_experience():
+        abort(400, description="Unknown narrative.")
+    mark = data.get("mark") if data.get("mark") in NO_EXPERIENCE_MARKS else None
+    review_store.save(reviewer, nid, NO_EXPERIENCE_CHUNK, mark, _text(data.get("note"), 4000))
+    return jsonify({"ok": True})
+
+
+@app.get("/no-experience/export.csv")
+def no_experience_export():
+    items = _no_experience()
+    out = io.StringIO()
+    writer = csv.writer(out)
+    writer.writerow(["reviewer", "narrative_id", "narrative_title", "group", "has_no_experience", "note", "updated_at"])
+    for r in sorted(review_store.load(), key=lambda r: (r["reviewer"], r["narrative_id"])):
+        if r["chunk"] != NO_EXPERIENCE_CHUNK or (not r["mark"] and not (r["note"] or "").strip()):
+            continue
+        n = items.get(r["narrative_id"], {})
+        answer = {"correct": "Correct, no experience", "wrong": "Wrong, it has an experience"}.get(r["mark"], "")
+        writer.writerow([r["reviewer"], r["narrative_id"], n.get("title", ""), NO_EXPERIENCE_GROUPS.get(n.get("group"), ""),
+                         answer, r["note"] or "", r["updated_at"]])
+    return Response(out.getvalue(), mimetype="text/csv",
+                    headers={"Content-Disposition": "attachment; filename=no_experience_reviews.csv"})
 
 
 if __name__ == "__main__":
