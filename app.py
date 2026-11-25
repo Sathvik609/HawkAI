@@ -268,27 +268,18 @@ def review_export():
 
 NO_EXPERIENCE_CHUNK = -1
 NO_EXPERIENCE_MARKS = {"correct", "wrong"}
-NO_EXPERIENCE_GROUPS = {"sample": "Random sample", "none": "No experience", "brief": "Brief mention only"}
 
 
 @functools.cache
 def _no_experience() -> dict:
     chunks = json.loads((DATA_DIR / "experience_chunks.json").read_text())["narratives"]
     checks = {r["id"]: r for r in json.loads((DATA_DIR / "experience_check.json").read_text())}
-    out = {}
-    for nid, r in chunks.items():
-        if any(c.get("kind") == "experience" for c in r["chunks"]) or nid not in checks:
-            continue
-        check = checks[nid]
-        out[nid] = {"id": nid, "title": r["title"], "type": check.get("narrative_type", ""),
-                    "group": "brief" if check["level"] == "brief" else "none",
-                    "brief": "; ".join(check.get("experiences") or []) if check["level"] == "brief" else "",
-                    "text": "\n\n".join(c["text"] for c in r["chunks"])}
-    none = sorted((n for n in out.values() if n["group"] == "none"), key=lambda n: n["title"])
-    sample = {n["id"] for n in random.Random(2026).sample(none, min(10, len(none)))}
-    for n in out.values():
-        n["sample"] = n["id"] in sample
-    return out
+    none = sorted(({"id": nid, "title": r["title"], "text": "\n\n".join(c["text"] for c in r["chunks"])}
+                   for nid, r in chunks.items()
+                   if checks.get(nid, {}).get("level") == "none"
+                   and not any(c.get("kind") == "experience" for c in r["chunks"])), key=lambda n: n["title"])
+    sample = sorted(random.Random(2026).sample(none, min(10, len(none))), key=lambda n: n["title"])
+    return {n["id"]: n for n in sample}
 
 
 @app.get("/no-experience")
@@ -299,17 +290,8 @@ def no_experience():
 @app.get("/api/no-experience")
 def no_experience_data():
     reviewer = _reviewer(request.args.get("reviewer"))
-    items = sorted(_no_experience().values(), key=lambda n: n["title"])
     marks = [m for m in review_store.load(reviewer) if m["chunk"] == NO_EXPERIENCE_CHUNK]
-    return jsonify({"narratives": [{k: v for k, v in n.items() if k != "text"} for n in items], "marks": marks})
-
-
-@app.get("/api/no-experience/<nid>")
-def no_experience_text(nid: str):
-    n = _no_experience().get(nid)
-    if not n:
-        abort(404, description="Unknown narrative.")
-    return jsonify({"id": nid, "text": n["text"]})
+    return jsonify({"narratives": list(_no_experience().values()), "marks": marks})
 
 
 @app.post("/api/no-experience/mark")
@@ -329,13 +311,12 @@ def no_experience_export():
     items = _no_experience()
     out = io.StringIO()
     writer = csv.writer(out)
-    writer.writerow(["reviewer", "narrative_id", "narrative_title", "group", "has_no_experience", "note", "updated_at"])
+    writer.writerow(["reviewer", "narrative_id", "narrative_title", "no_experience_is", "note", "updated_at"])
     for r in sorted(review_store.load(), key=lambda r: (r["reviewer"], r["narrative_id"])):
         if r["chunk"] != NO_EXPERIENCE_CHUNK or (not r["mark"] and not (r["note"] or "").strip()):
             continue
-        n = items.get(r["narrative_id"], {})
-        answer = {"correct": "Correct, no experience", "wrong": "Wrong, it has an experience"}.get(r["mark"], "")
-        writer.writerow([r["reviewer"], r["narrative_id"], n.get("title", ""), NO_EXPERIENCE_GROUPS.get(n.get("group"), ""),
+        answer = {"correct": "Correct", "wrong": "Wrong, it has an experience"}.get(r["mark"], "")
+        writer.writerow([r["reviewer"], r["narrative_id"], items.get(r["narrative_id"], {}).get("title", ""),
                          answer, r["note"] or "", r["updated_at"]])
     return Response(out.getvalue(), mimetype="text/csv",
                     headers={"Content-Disposition": "attachment; filename=no_experience_reviews.csv"})

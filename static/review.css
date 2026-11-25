@@ -75,17 +75,9 @@
 .rv-lede, .rv-help, .rv-words p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .rv-save { display: block; height: 38px; margin-top: 10px; padding: 0 20px; }
 .rv-save[hidden] { display: none; }
-.nx-groups { display: flex; flex-direction: column; gap: 4px; margin: 12px 0 16px; }
-.nx-group { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; font-size: .9rem; font-weight: 600; color: var(--ink-2); text-align: left; }
-.nx-group:hover { background: var(--wash); }
-.nx-group[aria-selected="true"] { border-color: var(--teal); background: var(--teal-wash); color: var(--teal-dark); }
-.nx-group-count { font-weight: 500; color: var(--ink-3); }
 .nx-item-mark { font-size: .78rem; font-weight: 600; color: var(--ink-3); }
 .nx-item-mark.wrong { color: var(--danger); }
-.nx-brief { margin: -12px 0 24px; font-size: .95rem; color: var(--ink-2); }
-.nx-brief strong { color: var(--ink); }
 .nx-text { min-height: 120px; }
 .nx-controls { position: sticky; bottom: 0; background: #fff; box-shadow: 0 6px 24px rgba(16, 24, 32, .08); }
 @media (max-width: 900px) {
-  .nx-groups + .rv-list { max-height: 40vh; overflow-y: auto; }
-}
+  }

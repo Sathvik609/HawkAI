@@ -1,8 +1,7 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const MARKS = [["correct", "Correct"], ["wrong", "Wrong"]];
-  const GROUPS = [["sample", "Random sample"], ["none", "No experience"], ["brief", "Brief mention only"]];
-  const state = { reviewer: "", all: [], list: [], group: "sample", current: 0, marks: {}, drafts: {}, texts: {} };
+  const state = { reviewer: "", list: [], current: 0, marks: {}, drafts: {} };
   let clearTimer;
 
   const store = {
@@ -54,24 +53,6 @@
     }
   }
 
-  function inGroup(n, group) {
-    return group === "sample" ? n.sample : n.group === group;
-  }
-
-  function renderGroups() {
-    const box = $("groups");
-    box.replaceChildren();
-    GROUPS.forEach(([value, label]) => {
-      const b = el("button", "nx-group");
-      b.type = "button";
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-selected", String(state.group === value));
-      b.append(el("span", null, label), el("span", "nx-group-count", String(state.all.filter((n) => inGroup(n, value)).length)));
-      b.addEventListener("click", () => setGroup(value, 0));
-      box.append(b);
-    });
-  }
-
   function renderNav() {
     const list = $("narrList");
     list.replaceChildren();
@@ -92,14 +73,6 @@
     });
     const current = list.querySelector(".current");
     if (current) current.scrollIntoView({ block: "nearest" });
-  }
-
-  function setGroup(group, index) {
-    state.group = group;
-    state.list = state.all.filter((n) => inGroup(n, group));
-    store.set("hawkai-noexp-group", group);
-    renderGroups();
-    open(index);
   }
 
   function renderMarks(nid) {
@@ -151,35 +124,13 @@
     refresh();
   }
 
-  async function loadText(n) {
-    const box = $("text");
-    if (!state.texts[n.id]) {
-      box.replaceChildren(el("p", null, "Loading the narrative..."));
-      try {
-        const res = await fetchRetry(`/api/no-experience/${encodeURIComponent(n.id)}`);
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Could not load the narrative");
-        state.texts[n.id] = data.text;
-      } catch (err) {
-        showError(err.message);
-        return;
-      }
-    }
-    if (state.list[state.current] !== n) return;
-    box.replaceChildren(...state.texts[n.id].split(/\n\n+/).map((p) => el("p", null, p)));
-  }
-
   function open(i) {
     if (!state.list.length) return;
     state.current = Math.max(0, Math.min(state.list.length - 1, i));
     const n = state.list[state.current];
-    const label = GROUPS.find(([g]) => g === state.group)[1];
-    $("pos").textContent = `${label} · ${state.current + 1} of ${state.list.length}`;
+    $("pos").textContent = `Narrative ${state.current + 1} of ${state.list.length}`;
     $("title").textContent = n.title;
-    const brief = $("brief");
-    brief.hidden = !n.brief;
-    brief.replaceChildren();
-    if (n.brief) brief.append(el("strong", null, "Brief mention found: "), n.brief);
+    $("text").replaceChildren(...n.text.split(/\n\n+/).map((p) => el("p", null, p)));
     renderMarks(n.id);
     noteBox(n.id);
     $("prevBtn").disabled = state.current === 0;
@@ -187,7 +138,6 @@
     store.set("hawkai-noexp-current", String(state.current));
     renderNav();
     window.scrollTo({ top: 0 });
-    loadText(n);
   }
 
   async function begin(name) {
@@ -197,7 +147,7 @@
       const res = await fetchRetry(`/api/no-experience?reviewer=${encodeURIComponent(name)}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Could not load the narratives");
-      state.all = data.narratives;
+      state.list = data.narratives;
       state.marks = {};
       data.marks.forEach((m) => { state.marks[m.narrative_id] = { mark: m.mark, note: m.note || "" }; });
     } catch (err) {
@@ -209,8 +159,7 @@
     $("who").hidden = false;
     $("start").hidden = true;
     $("workspace").hidden = false;
-    const group = GROUPS.some(([g]) => g === store.get("hawkai-noexp-group")) ? store.get("hawkai-noexp-group") : "sample";
-    setGroup(group, Number(store.get("hawkai-noexp-current")) || 0);
+    open(Number(store.get("hawkai-noexp-current")) || 0);
   }
 
   $("nameForm").addEventListener("submit", (e) => {
