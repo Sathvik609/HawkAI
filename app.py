@@ -285,7 +285,7 @@ def _no_experience() -> dict:
                     "brief": "; ".join(check.get("experiences") or []) if check["level"] == "brief" else "",
                     "text": "\n\n".join(c["text"] for c in r["chunks"])}
     none = sorted((n for n in out.values() if n["group"] == "none"), key=lambda n: n["title"])
-    sample = {n["id"] for n in random.Random(2026).sample(none, min(20, len(none)))}
+    sample = {n["id"] for n in random.Random(2026).sample(none, min(10, len(none)))}
     for n in out.values():
         n["sample"] = n["id"] in sample
     return out
